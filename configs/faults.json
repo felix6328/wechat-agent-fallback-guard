@@ -1,0 +1,10 @@
+{
+  "_comment": "随机模式下的单次调用故障率（seeded）。只有 food / weather / pay 三个服务会注入故障；ride、map 保持健康，用作误报对照。数字是假设，不是微信线上真实故障率。",
+  "per_call_fault_rate": 0.10,
+  "kinds": {
+    "weather.query": {"timeout": 0.25, "http_500": 0.15, "http_429": 0.05, "schema_missing": 0.1, "sem_range_temp": 0.1, "sem_condition_precip": 0.1, "sem_inrange_temp": 0.1, "stale_hard": 0.1, "stale_soft": 0.05},
+    "food.search": {"timeout": 0.25, "http_500": 0.15, "schema_type": 0.1, "sem_price_zero": 0.1, "sem_price_unit": 0.1, "sem_wrong_menu": 0.1, "partial": 0.1, "stale_menu": 0.1},
+    "food.order": {"timeout": 0.4, "timeout_after_create": 0.3, "sem_qty": 0.3},
+    "pay.create": {"timeout_before_charge": 0.3, "timeout_after_charge": 0.3, "http_500": 0.2, "amount_mismatch": 0.2}
+  }
+}

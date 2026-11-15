@@ -1,0 +1,29 @@
+{
+  "_comment": "策略矩阵：异常类型 × 接口风险等级 → 动作。LLM 只负责判断异常类型，动作由本表确定性决定。支付永远不盲重试。",
+  "max_retries": {"read": 2, "write": 2, "pay": 1},
+  "backoff_ms": {"default": [300, 600], "rate_limited": [1000, 2000]},
+  "matrix": {
+    "read": {
+      "timeout": "retry_then_fallback", "http_5xx": "retry_then_fallback", "rate_limited": "retry_then_fallback",
+      "schema_error": "fallback", "semantic_wrong": "fallback", "context_mismatch": "fallback",
+      "stale": "fallback", "stale_soft": "degrade", "partial": "degrade", "amount_mismatch": "fallback"
+    },
+    "write": {
+      "timeout": "retry_same_token_then_human", "http_5xx": "retry_same_token_then_human", "rate_limited": "retry_same_token_then_human",
+      "schema_error": "human", "semantic_wrong": "human", "context_mismatch": "human",
+      "stale": "human", "stale_soft": "human", "partial": "human", "amount_mismatch": "human"
+    },
+    "pay": {
+      "timeout": "query_status_then_decide", "http_5xx": "query_status_then_decide", "rate_limited": "query_status_then_decide",
+      "schema_error": "query_status_then_decide", "semantic_wrong": "human", "context_mismatch": "human",
+      "amount_mismatch": "human", "pay_status": "human", "stale": "human", "stale_soft": "human", "partial": "human"
+    }
+  },
+  "fallback_targets": {
+    "weather.query": "weather_backup.query（备用气象源）",
+    "food.search": "页面接力：打开外卖小程序对应页面，由用户自己看",
+    "ride.estimate": "页面接力",
+    "map.route": "页面接力"
+  },
+  "menu_stale_in_read": "degrade"
+}

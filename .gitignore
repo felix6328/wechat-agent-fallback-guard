@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+
+# 密钥：任何 .env 都不入库（.env.example 除外）
+.env
+.env.*
+!.env.example
+
+# LLM 磁盘缓存与原始调用日志（含请求哈希/时延，不含密钥，但体积大且属运行产物）
+data/cache/
+data/cost/*.jsonl
+!data/cost/.gitkeep
+
+# 评测逐条轨迹（原始日志，11MB；可用 eval/run_eval.py 重新生成）
+eval/traces*.jsonl
+
+# 个人笔记（面试准备、署名说明）
+NOTES_PRIVATE.md
