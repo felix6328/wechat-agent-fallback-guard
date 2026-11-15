@@ -1,0 +1,4811 @@
+[
+ {
+  "gid": "G00-0",
+  "instruction": "北京今天天气怎么样",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "北京",
+   "date": "2026-11-15"
+  },
+  "clean": {
+   "city": "北京",
+   "date": "2026-11-15",
+   "condition": "晴",
+   "temp_high_c": 9,
+   "temp_low_c": -1,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:23+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "stale",
+  "description": "返回的是缓存的历史数据，日期与请求日期不符",
+  "data": {
+   "city": "北京",
+   "date": "2026-11-10",
+   "condition": "多云",
+   "temp_high_c": 12,
+   "temp_low_c": 3,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:23+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G00-1",
+  "instruction": "北京今天天气怎么样",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "北京",
+   "date": "2026-11-15"
+  },
+  "clean": {
+   "city": "北京",
+   "date": "2026-11-15",
+   "condition": "晴",
+   "temp_high_c": 9,
+   "temp_low_c": -1,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:23+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "semantic_wrong",
+  "description": "温度单位错误，摄氏度值被误当作华氏度返回",
+  "data": {
+   "city": "北京",
+   "date": "2026-11-15",
+   "condition": "晴",
+   "temp_high_c": 48,
+   "temp_low_c": 30,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:23+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G00-2",
+  "instruction": "北京今天天气怎么样",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "北京",
+   "date": "2026-11-15"
+  },
+  "clean": {
+   "city": "北京",
+   "date": "2026-11-15",
+   "condition": "晴",
+   "temp_high_c": 9,
+   "temp_low_c": -1,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:23+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "context_mismatch",
+  "description": "返回了其他城市的天气数据，可能是上游服务错误",
+  "data": {
+   "city": "上海",
+   "date": "2026-11-15",
+   "condition": "阴",
+   "temp_high_c": 18,
+   "temp_low_c": 12,
+   "precip_mm": 2.5,
+   "updated_at": "2026-11-15T11:23+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G00-3",
+  "instruction": "北京今天天气怎么样",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "北京",
+   "date": "2026-11-15"
+  },
+  "clean": {
+   "city": "北京",
+   "date": "2026-11-15",
+   "condition": "晴",
+   "temp_high_c": 9,
+   "temp_low_c": -1,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:23+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "schema_error",
+  "description": "字段类型错误，降水量被误返回为字符串",
+  "data": {
+   "city": "北京",
+   "date": "2026-11-15",
+   "condition": "晴",
+   "temp_high_c": 9,
+   "temp_low_c": -1,
+   "precip_mm": "0.0mm",
+   "updated_at": "2026-11-15T11:23+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G00-4",
+  "instruction": "北京今天天气怎么样",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "北京",
+   "date": "2026-11-15"
+  },
+  "clean": {
+   "city": "北京",
+   "date": "2026-11-15",
+   "condition": "晴",
+   "temp_high_c": 9,
+   "temp_low_c": -1,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:23+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "时区转换后时间显示不同，但数据正确",
+  "data": {
+   "city": "北京",
+   "date": "2026-11-15",
+   "condition": "晴",
+   "temp_high_c": 9,
+   "temp_low_c": -1,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T03:23Z",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G00-5",
+  "instruction": "北京今天天气怎么样",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "北京",
+   "date": "2026-11-15"
+  },
+  "clean": {
+   "city": "北京",
+   "date": "2026-11-15",
+   "condition": "晴",
+   "temp_high_c": 9,
+   "temp_low_c": -1,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:23+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "源标识变更，但数据来源实际相同",
+  "data": {
+   "city": "北京",
+   "date": "2026-11-15",
+   "condition": "晴",
+   "temp_high_c": 9,
+   "temp_low_c": -1,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:23+08:00",
+   "source": "小程序B·气象服务"
+  }
+ },
+ {
+  "gid": "G01-0",
+  "instruction": "上海明天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "上海",
+   "date": "2026-11-16"
+  },
+  "clean": {
+   "city": "上海",
+   "date": "2026-11-16",
+   "condition": "小雨",
+   "temp_high_c": 16,
+   "temp_low_c": 11,
+   "precip_mm": 6.5,
+   "updated_at": "2026-11-15T11:19+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "stale",
+  "description": "缓存数据未被更新，返回的是过期的天气信息",
+  "data": {
+   "city": "上海",
+   "date": "2026-11-16",
+   "condition": "多云",
+   "temp_high_c": 18,
+   "temp_low_c": 12,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-14T10:30+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G01-1",
+  "instruction": "上海明天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "上海",
+   "date": "2026-11-16"
+  },
+  "clean": {
+   "city": "上海",
+   "date": "2026-11-16",
+   "condition": "小雨",
+   "temp_high_c": 16,
+   "temp_low_c": 11,
+   "precip_mm": 6.5,
+   "updated_at": "2026-11-15T11:19+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "context_mismatch",
+  "description": "返回的是杭州的天气数据（城市字段正确但数据对应错误）",
+  "data": {
+   "city": "上海",
+   "date": "2026-11-16",
+   "condition": "晴",
+   "temp_high_c": 22,
+   "temp_low_c": 15,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:19+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G01-2",
+  "instruction": "上海明天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "上海",
+   "date": "2026-11-16"
+  },
+  "clean": {
+   "city": "上海",
+   "date": "2026-11-16",
+   "condition": "小雨",
+   "temp_high_c": 16,
+   "temp_low_c": 11,
+   "precip_mm": 6.5,
+   "updated_at": "2026-11-15T11:19+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "schema_error",
+  "description": "温度单位错误（应为摄氏度但返回了华氏度）",
+  "data": {
+   "city": "上海",
+   "date": "2026-11-16",
+   "condition": "小雨",
+   "temp_high_c": 60.8,
+   "temp_low_c": 51.8,
+   "precip_mm": 6.5,
+   "updated_at": "2026-11-15T11:19+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G01-3",
+  "instruction": "上海明天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "上海",
+   "date": "2026-11-16"
+  },
+  "clean": {
+   "city": "上海",
+   "date": "2026-11-16",
+   "condition": "小雨",
+   "temp_high_c": 16,
+   "temp_low_c": 11,
+   "precip_mm": 6.5,
+   "updated_at": "2026-11-15T11:19+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "partial",
+  "description": "缺失降水数据（上游服务暂时不可用）",
+  "data": {
+   "city": "上海",
+   "date": "2026-11-16",
+   "condition": "小雨",
+   "temp_high_c": 16,
+   "temp_low_c": 11,
+   "precip_mm": null,
+   "updated_at": "2026-11-15T11:19+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G01-4",
+  "instruction": "上海明天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "上海",
+   "date": "2026-11-16"
+  },
+  "clean": {
+   "city": "上海",
+   "date": "2026-11-16",
+   "condition": "小雨",
+   "temp_high_c": 16,
+   "temp_low_c": 11,
+   "precip_mm": 6.5,
+   "updated_at": "2026-11-15T11:19+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "时区转换正确（UTC时间戳转换为北京时间）",
+  "data": {
+   "city": "上海",
+   "date": "2026-11-16",
+   "condition": "小雨",
+   "temp_high_c": 16,
+   "temp_low_c": 11,
+   "precip_mm": 6.5,
+   "updated_at": "2026-11-15T03:19Z",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G01-5",
+  "instruction": "上海明天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "上海",
+   "date": "2026-11-16"
+  },
+  "clean": {
+   "city": "上海",
+   "date": "2026-11-16",
+   "condition": "小雨",
+   "temp_high_c": 16,
+   "temp_low_c": 11,
+   "precip_mm": 6.5,
+   "updated_at": "2026-11-15T11:19+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "数据来源不同但格式一致（第三方服务返回相同数据）",
+  "data": {
+   "city": "上海",
+   "date": "2026-11-16",
+   "condition": "小雨",
+   "temp_high_c": 16,
+   "temp_low_c": 11,
+   "precip_mm": 6.5,
+   "updated_at": "2026-11-15T11:19+08:00",
+   "source": "小程序B·气象服务"
+  }
+ },
+ {
+  "gid": "G02-0",
+  "instruction": "广州后天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "广州",
+   "date": "2026-11-17"
+  },
+  "clean": {
+   "city": "广州",
+   "date": "2026-11-17",
+   "condition": "多云",
+   "temp_high_c": 30,
+   "temp_low_c": 22,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:45+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "stale",
+  "description": "缓存未更新，返回过期的天气数据",
+  "data": {
+   "city": "广州",
+   "date": "2026-11-17",
+   "condition": "晴",
+   "temp_high_c": 28,
+   "temp_low_c": 20,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-14T11:45+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G02-1",
+  "instruction": "广州后天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "广州",
+   "date": "2026-11-17"
+  },
+  "clean": {
+   "city": "广州",
+   "date": "2026-11-17",
+   "condition": "多云",
+   "temp_high_c": 30,
+   "temp_low_c": 22,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:45+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "context_mismatch",
+  "description": "接口返回了另一个城市的天气数据",
+  "data": {
+   "city": "深圳",
+   "date": "2026-11-17",
+   "condition": "多云",
+   "temp_high_c": 30,
+   "temp_low_c": 22,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:45+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G02-2",
+  "instruction": "广州后天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "广州",
+   "date": "2026-11-17"
+  },
+  "clean": {
+   "city": "广州",
+   "date": "2026-11-17",
+   "condition": "多云",
+   "temp_high_c": 30,
+   "temp_low_c": 22,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:45+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "semantic_wrong",
+  "description": "温度单位错误，返回了华氏度但标记为摄氏度",
+  "data": {
+   "city": "广州",
+   "date": "2026-11-17",
+   "condition": "多云",
+   "temp_high_c": 86,
+   "temp_low_c": 72,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:45+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G02-3",
+  "instruction": "广州后天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "广州",
+   "date": "2026-11-17"
+  },
+  "clean": {
+   "city": "广州",
+   "date": "2026-11-17",
+   "condition": "多云",
+   "temp_high_c": 30,
+   "temp_low_c": 22,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:45+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "partial",
+  "description": "部分字段缺失，降水概率字段被误删",
+  "data": {
+   "city": "广州",
+   "date": "2026-11-17",
+   "condition": "多云",
+   "temp_high_c": 30,
+   "temp_low_c": 22,
+   "updated_at": "2026-11-15T11:45+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G02-4",
+  "instruction": "广州后天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "广州",
+   "date": "2026-11-17"
+  },
+  "clean": {
+   "city": "广州",
+   "date": "2026-11-17",
+   "condition": "多云",
+   "temp_high_c": 30,
+   "temp_low_c": 22,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:45+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "数据源更新，降水概率从0.0变为0.1",
+  "data": {
+   "city": "广州",
+   "date": "2026-11-17",
+   "condition": "多云",
+   "temp_high_c": 30,
+   "temp_low_c": 22,
+   "precip_mm": 0.1,
+   "updated_at": "2026-11-15T12:00+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G02-5",
+  "instruction": "广州后天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "广州",
+   "date": "2026-11-17"
+  },
+  "clean": {
+   "city": "广州",
+   "date": "2026-11-17",
+   "condition": "多云",
+   "temp_high_c": 30,
+   "temp_low_c": 22,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:45+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "时区显示不一致，但数据正确",
+  "data": {
+   "city": "广州",
+   "date": "2026-11-17",
+   "condition": "多云",
+   "temp_high_c": 30,
+   "temp_low_c": 22,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T03:45Z",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G03-0",
+  "instruction": "深圳今天天气如何",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "深圳",
+   "date": "2026-11-15"
+  },
+  "clean": {
+   "city": "深圳",
+   "date": "2026-11-15",
+   "condition": "晴",
+   "temp_high_c": 27,
+   "temp_low_c": 20,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:15+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "stale",
+  "description": "返回的是昨天的天气数据，可能是缓存未更新",
+  "data": {
+   "city": "深圳",
+   "date": "2026-11-15",
+   "condition": "多云",
+   "temp_high_c": 26,
+   "temp_low_c": 19,
+   "precip_mm": 0.2,
+   "updated_at": "2026-11-14T11:15+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G03-1",
+  "instruction": "深圳今天天气如何",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "深圳",
+   "date": "2026-11-15"
+  },
+  "clean": {
+   "city": "深圳",
+   "date": "2026-11-15",
+   "condition": "晴",
+   "temp_high_c": 27,
+   "temp_low_c": 20,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:15+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "context_mismatch",
+  "description": "温度单位错误，返回的是华氏度但字段仍标记为摄氏度",
+  "data": {
+   "city": "深圳",
+   "date": "2026-11-15",
+   "condition": "晴",
+   "temp_high_c": 80.6,
+   "temp_low_c": 68.0,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:15+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G03-2",
+  "instruction": "深圳今天天气如何",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "深圳",
+   "date": "2026-11-15"
+  },
+  "clean": {
+   "city": "深圳",
+   "date": "2026-11-15",
+   "condition": "晴",
+   "temp_high_c": 27,
+   "temp_low_c": 20,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:15+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "schema_error",
+  "description": "时间戳格式错误，缺少时区信息",
+  "data": {
+   "city": "深圳",
+   "date": "2026-11-15",
+   "condition": "晴",
+   "temp_high_c": 27,
+   "temp_low_c": 20,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:15",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G03-3",
+  "instruction": "深圳今天天气如何",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "深圳",
+   "date": "2026-11-15"
+  },
+  "clean": {
+   "city": "深圳",
+   "date": "2026-11-15",
+   "condition": "晴",
+   "temp_high_c": 27,
+   "temp_low_c": 20,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:15+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "semantic_wrong",
+  "description": "降水单位错误，返回的是百分比概率而非毫米",
+  "data": {
+   "city": "深圳",
+   "date": "2026-11-15",
+   "condition": "晴",
+   "temp_high_c": 27,
+   "temp_low_c": 20,
+   "precip_mm": 10.0,
+   "updated_at": "2026-11-15T11:15+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G03-4",
+  "instruction": "深圳今天天气如何",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "深圳",
+   "date": "2026-11-15"
+  },
+  "clean": {
+   "city": "深圳",
+   "date": "2026-11-15",
+   "condition": "晴",
+   "temp_high_c": 27,
+   "temp_low_c": 20,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:15+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "数据源更新，显示为实时监测数据",
+  "data": {
+   "city": "深圳",
+   "date": "2026-11-15",
+   "condition": "晴",
+   "temp_high_c": 27,
+   "temp_low_c": 20,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T12:00+08:00",
+   "source": "小程序A·气象服务 v2.0"
+  }
+ },
+ {
+  "gid": "G03-5",
+  "instruction": "深圳今天天气如何",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "深圳",
+   "date": "2026-11-15"
+  },
+  "clean": {
+   "city": "深圳",
+   "date": "2026-11-15",
+   "condition": "晴",
+   "temp_high_c": 27,
+   "temp_low_c": 20,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:15+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "多语言接口返回，字段值包含英文说明",
+  "data": {
+   "city": "深圳 (Shenzhen)",
+   "date": "2026-11-15",
+   "condition": "晴 (Clear)",
+   "temp_high_c": 27,
+   "temp_low_c": 20,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:15+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G04-0",
+  "instruction": "杭州明天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "杭州",
+   "date": "2026-11-16"
+  },
+  "clean": {
+   "city": "杭州",
+   "date": "2026-11-16",
+   "condition": "阴",
+   "temp_high_c": 15,
+   "temp_low_c": 9,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:10+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "stale",
+  "description": "数据长时间未更新，是缓存的历史数据",
+  "data": {
+   "city": "杭州",
+   "date": "2026-11-16",
+   "condition": "晴",
+   "temp_high_c": 28,
+   "temp_low_c": 18,
+   "precip_mm": 0.0,
+   "updated_at": "2026-10-01T08:00+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G04-1",
+  "instruction": "杭州明天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "杭州",
+   "date": "2026-11-16"
+  },
+  "clean": {
+   "city": "杭州",
+   "date": "2026-11-16",
+   "condition": "阴",
+   "temp_high_c": 15,
+   "temp_low_c": 9,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:10+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "semantic_wrong",
+  "description": "字段值类型错误，温度单位被误作字符串",
+  "data": {
+   "city": "杭州",
+   "date": "2026-11-16",
+   "condition": "阴",
+   "temp_high_c": "15°C",
+   "temp_low_c": "9°C",
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:10+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G04-2",
+  "instruction": "杭州明天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "杭州",
+   "date": "2026-11-16"
+  },
+  "clean": {
+   "city": "杭州",
+   "date": "2026-11-16",
+   "condition": "阴",
+   "temp_high_c": 15,
+   "temp_low_c": 9,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:10+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "context_mismatch",
+  "description": "城市与数据不匹配，返回了上海的天气",
+  "data": {
+   "city": "杭州",
+   "date": "2026-11-16",
+   "condition": "多云",
+   "temp_high_c": 18,
+   "temp_low_c": 12,
+   "precip_mm": 2.5,
+   "updated_at": "2026-11-15T12:00+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G04-3",
+  "instruction": "杭州明天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "杭州",
+   "date": "2026-11-16"
+  },
+  "clean": {
+   "city": "杭州",
+   "date": "2026-11-16",
+   "condition": "阴",
+   "temp_high_c": 15,
+   "temp_low_c": 9,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:10+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "partial",
+  "description": "部分数据缺失，降水概率字段被默认值填充",
+  "data": {
+   "city": "杭州",
+   "date": "2026-11-16",
+   "condition": "阴",
+   "temp_high_c": 15,
+   "temp_low_c": 9,
+   "precip_mm": null,
+   "updated_at": "2026-11-15T11:10+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G04-4",
+  "instruction": "杭州明天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "杭州",
+   "date": "2026-11-16"
+  },
+  "clean": {
+   "city": "杭州",
+   "date": "2026-11-16",
+   "condition": "阴",
+   "temp_high_c": 15,
+   "temp_low_c": 9,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:10+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "时区转换正确，UTC时间格式显示",
+  "data": {
+   "city": "杭州",
+   "date": "2026-11-16",
+   "condition": "阴",
+   "temp_high_c": 15,
+   "temp_low_c": 9,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T03:10Z",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G04-5",
+  "instruction": "杭州明天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "杭州",
+   "date": "2026-11-16"
+  },
+  "clean": {
+   "city": "杭州",
+   "date": "2026-11-16",
+   "condition": "阴",
+   "temp_high_c": 15,
+   "temp_low_c": 9,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:10+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "数据源切换，第三方服务返回不同格式但内容一致",
+  "data": {
+   "city": "杭州市",
+   "date": "2026-11-16",
+   "condition": "阴天",
+   "temp_high_c": 15,
+   "temp_low_c": 9,
+   "precip_mm": 0,
+   "updated_at": "2026-11-15T11:10:00+08:00",
+   "source": "小程序B·天气助手"
+  }
+ },
+ {
+  "gid": "G05-0",
+  "instruction": "成都后天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "成都",
+   "date": "2026-11-17"
+  },
+  "clean": {
+   "city": "成都",
+   "date": "2026-11-17",
+   "condition": "阴",
+   "temp_high_c": 14,
+   "temp_low_c": 10,
+   "precip_mm": 0.3,
+   "updated_at": "2026-11-15T11:16+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "stale",
+  "description": "返回的是缓存过期的旧数据，日期与请求日期不符",
+  "data": {
+   "city": "成都",
+   "date": "2026-11-17",
+   "condition": "晴",
+   "temp_high_c": 18,
+   "temp_low_c": 12,
+   "precip_mm": 0,
+   "updated_at": "2026-11-14T10:30+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G05-1",
+  "instruction": "成都后天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "成都",
+   "date": "2026-11-17"
+  },
+  "clean": {
+   "city": "成都",
+   "date": "2026-11-17",
+   "condition": "阴",
+   "temp_high_c": 14,
+   "temp_low_c": 10,
+   "precip_mm": 0.3,
+   "updated_at": "2026-11-15T11:16+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "context_mismatch",
+  "description": "返回了其他城市的天气数据（串数据）",
+  "data": {
+   "city": "北京",
+   "date": "2026-11-17",
+   "condition": "多云",
+   "temp_high_c": 8,
+   "temp_low_c": 2,
+   "precip_mm": 1.2,
+   "updated_at": "2026-11-15T11:16+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G05-2",
+  "instruction": "成都后天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "成都",
+   "date": "2026-11-17"
+  },
+  "clean": {
+   "city": "成都",
+   "date": "2026-11-17",
+   "condition": "阴",
+   "temp_high_c": 14,
+   "temp_low_c": 10,
+   "precip_mm": 0.3,
+   "updated_at": "2026-11-15T11:16+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "semantic_wrong",
+  "description": "温度单位错误，实际返回的是华氏度但字段名仍标为摄氏度",
+  "data": {
+   "city": "成都",
+   "date": "2026-11-17",
+   "condition": "阴",
+   "temp_high_c": 57,
+   "temp_low_c": 50,
+   "precip_mm": 0.3,
+   "updated_at": "2026-11-15T11:16+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G05-3",
+  "instruction": "成都后天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "成都",
+   "date": "2026-11-17"
+  },
+  "clean": {
+   "city": "成都",
+   "date": "2026-11-17",
+   "condition": "阴",
+   "temp_high_c": 14,
+   "temp_low_c": 10,
+   "precip_mm": 0.3,
+   "updated_at": "2026-11-15T11:16+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "partial",
+  "description": "部分字段缺失（可能因上游服务故障）",
+  "data": {
+   "city": "成都",
+   "date": "2026-11-17",
+   "condition": "阴",
+   "temp_high_c": 14,
+   "temp_low_c": 10,
+   "updated_at": "2026-11-15T11:16+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G05-4",
+  "instruction": "成都后天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "成都",
+   "date": "2026-11-17"
+  },
+  "clean": {
+   "city": "成都",
+   "date": "2026-11-17",
+   "condition": "阴",
+   "temp_high_c": 14,
+   "temp_low_c": 10,
+   "precip_mm": 0.3,
+   "updated_at": "2026-11-15T11:16+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "时区转换合理，UTC+8时间戳格式化正确",
+  "data": {
+   "city": "成都",
+   "date": "2026-11-17",
+   "condition": "阴",
+   "temp_high_c": 14,
+   "temp_low_c": 10,
+   "precip_mm": 0.3,
+   "updated_at": "2026-11-15T03:16Z",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G05-5",
+  "instruction": "成都后天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "成都",
+   "date": "2026-11-17"
+  },
+  "clean": {
+   "city": "成都",
+   "date": "2026-11-17",
+   "condition": "阴",
+   "temp_high_c": 14,
+   "temp_low_c": 10,
+   "precip_mm": 0.3,
+   "updated_at": "2026-11-15T11:16+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "数据源更新合理，降水量由0.3mm精确到0.30mm",
+  "data": {
+   "city": "成都",
+   "date": "2026-11-17",
+   "condition": "阴",
+   "temp_high_c": 14,
+   "temp_low_c": 10,
+   "precip_mm": 0.3,
+   "updated_at": "2026-11-15T11:16+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G06-0",
+  "instruction": "哈尔滨今天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "哈尔滨",
+   "date": "2026-11-15"
+  },
+  "clean": {
+   "city": "哈尔滨",
+   "date": "2026-11-15",
+   "condition": "多云",
+   "temp_high_c": -3,
+   "temp_low_c": -14,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:21+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "stale",
+  "description": "返回的是缓存数据，日期为前一天但未更新",
+  "data": {
+   "city": "哈尔滨",
+   "date": "2026-11-14",
+   "condition": "晴",
+   "temp_high_c": 2,
+   "temp_low_c": -8,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-14T11:21+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G06-1",
+  "instruction": "哈尔滨今天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "哈尔滨",
+   "date": "2026-11-15"
+  },
+  "clean": {
+   "city": "哈尔滨",
+   "date": "2026-11-15",
+   "condition": "多云",
+   "temp_high_c": -3,
+   "temp_low_c": -14,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:21+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "semantic_wrong",
+  "description": "温度单位错误，实际应为摄氏度但返回了华氏度未标注",
+  "data": {
+   "city": "哈尔滨",
+   "date": "2026-11-15",
+   "condition": "多云",
+   "temp_high_c": 26,
+   "temp_low_c": 7,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:21+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G06-2",
+  "instruction": "哈尔滨今天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "哈尔滨",
+   "date": "2026-11-15"
+  },
+  "clean": {
+   "city": "哈尔滨",
+   "date": "2026-11-15",
+   "condition": "多云",
+   "temp_high_c": -3,
+   "temp_low_c": -14,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:21+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "schema_error",
+  "description": "字段类型错误，降水概率应为百分比但返回了毫米值",
+  "data": {
+   "city": "哈尔滨",
+   "date": "2026-11-15",
+   "condition": "多云",
+   "temp_high_c": -3,
+   "temp_low_c": -14,
+   "precip_mm": 20,
+   "updated_at": "2026-11-15T11:21+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G06-3",
+  "instruction": "哈尔滨今天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "哈尔滨",
+   "date": "2026-11-15"
+  },
+  "clean": {
+   "city": "哈尔滨",
+   "date": "2026-11-15",
+   "condition": "多云",
+   "temp_high_c": -3,
+   "temp_low_c": -14,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:21+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "context_mismatch",
+  "description": "返回了其他城市的天气数据（缓存错位）",
+  "data": {
+   "city": "哈尔滨",
+   "date": "2026-11-15",
+   "condition": "晴",
+   "temp_high_c": 8,
+   "temp_low_c": -2,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:21+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G06-4",
+  "instruction": "哈尔滨今天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "哈尔滨",
+   "date": "2026-11-15"
+  },
+  "clean": {
+   "city": "哈尔滨",
+   "date": "2026-11-15",
+   "condition": "多云",
+   "temp_high_c": -3,
+   "temp_low_c": -14,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:21+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "时区不同，更新时间显示UTC但内容正确",
+  "data": {
+   "city": "哈尔滨",
+   "date": "2026-11-15",
+   "condition": "多云",
+   "temp_high_c": -3,
+   "temp_low_c": -14,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T03:21Z",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G06-5",
+  "instruction": "哈尔滨今天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "哈尔滨",
+   "date": "2026-11-15"
+  },
+  "clean": {
+   "city": "哈尔滨",
+   "date": "2026-11-15",
+   "condition": "多云",
+   "temp_high_c": -3,
+   "temp_low_c": -14,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:21+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "数据来自上游不同服务商，格式一致但数值偏差合理",
+  "data": {
+   "city": "哈尔滨",
+   "date": "2026-11-15",
+   "condition": "阴",
+   "temp_high_c": -2,
+   "temp_low_c": -13,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-15T11:30+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G07-0",
+  "instruction": "漠河明天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "漠河",
+   "date": "2026-11-16"
+  },
+  "clean": {
+   "city": "漠河",
+   "date": "2026-11-16",
+   "condition": "小雪",
+   "temp_high_c": -18,
+   "temp_low_c": -32,
+   "precip_mm": 1.2,
+   "updated_at": "2026-11-15T11:24+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "stale",
+  "description": "返回的是缓存的历史数据，日期参数明明是明天但返回的是昨天的天气",
+  "data": {
+   "city": "漠河",
+   "date": "2026-11-16",
+   "condition": "晴",
+   "temp_high_c": -5,
+   "temp_low_c": -22,
+   "precip_mm": 0.0,
+   "updated_at": "2026-11-14T10:00+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G07-1",
+  "instruction": "漠河明天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "漠河",
+   "date": "2026-11-16"
+  },
+  "clean": {
+   "city": "漠河",
+   "date": "2026-11-16",
+   "condition": "小雪",
+   "temp_high_c": -18,
+   "temp_low_c": -32,
+   "precip_mm": 1.2,
+   "updated_at": "2026-11-15T11:24+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "context_mismatch",
+  "description": "城市名称正确但返回的是其他城市的天气数据，可能是数据库查询错误",
+  "data": {
+   "city": "漠河",
+   "date": "2026-11-16",
+   "condition": "多云",
+   "temp_high_c": 15,
+   "temp_low_c": 8,
+   "precip_mm": 0.5,
+   "updated_at": "2026-11-15T11:30+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G07-2",
+  "instruction": "漠河明天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "漠河",
+   "date": "2026-11-16"
+  },
+  "clean": {
+   "city": "漠河",
+   "date": "2026-11-16",
+   "condition": "小雪",
+   "temp_high_c": -18,
+   "temp_low_c": -32,
+   "precip_mm": 1.2,
+   "updated_at": "2026-11-15T11:24+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "semantic_wrong",
+  "description": "温度单位错误，实际返回的是华氏度但字段名未标记",
+  "data": {
+   "city": "漠河",
+   "date": "2026-11-16",
+   "condition": "小雪",
+   "temp_high_c": 0,
+   "temp_low_c": -26,
+   "precip_mm": 1.2,
+   "updated_at": "2026-11-15T11:24+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G07-3",
+  "instruction": "漠河明天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "漠河",
+   "date": "2026-11-16"
+  },
+  "clean": {
+   "city": "漠河",
+   "date": "2026-11-16",
+   "condition": "小雪",
+   "temp_high_c": -18,
+   "temp_low_c": -32,
+   "precip_mm": 1.2,
+   "updated_at": "2026-11-15T11:24+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "partial",
+  "description": "返回数据不完整，缺少降水字段，可能是上游服务异常",
+  "data": {
+   "city": "漠河",
+   "date": "2026-11-16",
+   "condition": "小雪",
+   "temp_high_c": -18,
+   "temp_low_c": -32,
+   "updated_at": "2026-11-15T11:24+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G07-4",
+  "instruction": "漠河明天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "漠河",
+   "date": "2026-11-16"
+  },
+  "clean": {
+   "city": "漠河",
+   "date": "2026-11-16",
+   "condition": "小雪",
+   "temp_high_c": -18,
+   "temp_low_c": -32,
+   "precip_mm": 1.2,
+   "updated_at": "2026-11-15T11:24+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "返回数据正常但提前更新，显示的是最新预测结果",
+  "data": {
+   "city": "漠河",
+   "date": "2026-11-16",
+   "condition": "小雪",
+   "temp_high_c": -20,
+   "temp_low_c": -34,
+   "precip_mm": 1.5,
+   "updated_at": "2026-11-15T12:00+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G07-5",
+  "instruction": "漠河明天天气",
+  "op": "weather.query",
+  "path": "display",
+  "args": {
+   "city": "漠河",
+   "date": "2026-11-16"
+  },
+  "clean": {
+   "city": "漠河",
+   "date": "2026-11-16",
+   "condition": "小雪",
+   "temp_high_c": -18,
+   "temp_low_c": -32,
+   "precip_mm": 1.2,
+   "updated_at": "2026-11-15T11:24+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "返回正常但源数据更换，新气象服务的数据略有差异",
+  "data": {
+   "city": "漠河",
+   "date": "2026-11-16",
+   "condition": "阵雪",
+   "temp_high_c": -16,
+   "temp_low_c": -30,
+   "precip_mm": 1.0,
+   "updated_at": "2026-11-15T11:45+08:00",
+   "source": "小程序A·气象服务v2"
+  }
+ },
+ {
+  "gid": "G08-0",
+  "instruction": "明天上海要是下雨就帮我从家叫车去公司",
+  "op": "weather.query",
+  "path": "decision",
+  "args": {
+   "city": "上海",
+   "date": "2026-11-16"
+  },
+  "clean": {
+   "city": "上海",
+   "date": "2026-11-16",
+   "condition": "小雨",
+   "temp_high_c": 16,
+   "temp_low_c": 11,
+   "precip_mm": 6.5,
+   "updated_at": "2026-11-15T11:46+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "stale",
+  "description": "缓存过期但仍返回旧数据，导致天气信息过时",
+  "data": {
+   "city": "上海",
+   "date": "2026-11-16",
+   "condition": "晴",
+   "temp_high_c": 22,
+   "temp_low_c": 16,
+   "precip_mm": 0,
+   "updated_at": "2026-11-14T11:46+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G08-1",
+  "instruction": "明天上海要是下雨就帮我从家叫车去公司",
+  "op": "weather.query",
+  "path": "decision",
+  "args": {
+   "city": "上海",
+   "date": "2026-11-16"
+  },
+  "clean": {
+   "city": "上海",
+   "date": "2026-11-16",
+   "condition": "小雨",
+   "temp_high_c": 16,
+   "temp_low_c": 11,
+   "precip_mm": 6.5,
+   "updated_at": "2026-11-15T11:46+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "semantic_wrong",
+  "description": "单位错误，降水量单位错误导致误解",
+  "data": {
+   "city": "上海",
+   "date": "2026-11-16",
+   "condition": "小雨",
+   "temp_high_c": 16,
+   "temp_low_c": 11,
+   "precip_mm": 65,
+   "updated_at": "2026-11-15T11:46+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G08-2",
+  "instruction": "明天上海要是下雨就帮我从家叫车去公司",
+  "op": "weather.query",
+  "path": "decision",
+  "args": {
+   "city": "上海",
+   "date": "2026-11-16"
+  },
+  "clean": {
+   "city": "上海",
+   "date": "2026-11-16",
+   "condition": "小雨",
+   "temp_high_c": 16,
+   "temp_low_c": 11,
+   "precip_mm": 6.5,
+   "updated_at": "2026-11-15T11:46+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "context_mismatch",
+  "description": "返回其他城市的数据，接口返回错误",
+  "data": {
+   "city": "北京",
+   "date": "2026-11-16",
+   "condition": "多云",
+   "temp_high_c": 18,
+   "temp_low_c": 8,
+   "precip_mm": 0,
+   "updated_at": "2026-11-15T11:46+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G08-3",
+  "instruction": "明天上海要是下雨就帮我从家叫车去公司",
+  "op": "weather.query",
+  "path": "decision",
+  "args": {
+   "city": "上海",
+   "date": "2026-11-16"
+  },
+  "clean": {
+   "city": "上海",
+   "date": "2026-11-16",
+   "condition": "小雨",
+   "temp_high_c": 16,
+   "temp_low_c": 11,
+   "precip_mm": 6.5,
+   "updated_at": "2026-11-15T11:46+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "anomalous",
+  "type": "schema_error",
+  "description": "字段类型错误，温度字段为字符串",
+  "data": {
+   "city": "上海",
+   "date": "2026-11-16",
+   "condition": "小雨",
+   "temp_high_c": "16",
+   "temp_low_c": "11",
+   "precip_mm": 6.5,
+   "updated_at": "2026-11-15T11:46+08:00",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G08-4",
+  "instruction": "明天上海要是下雨就帮我从家叫车去公司",
+  "op": "weather.query",
+  "path": "decision",
+  "args": {
+   "city": "上海",
+   "date": "2026-11-16"
+  },
+  "clean": {
+   "city": "上海",
+   "date": "2026-11-16",
+   "condition": "小雨",
+   "temp_high_c": 16,
+   "temp_low_c": 11,
+   "precip_mm": 6.5,
+   "updated_at": "2026-11-15T11:46+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "数据来源不同，但信息完全正确",
+  "data": {
+   "city": "上海",
+   "date": "2026-11-16",
+   "condition": "小雨",
+   "temp_high_c": 16,
+   "temp_low_c": 11,
+   "precip_mm": 6.5,
+   "updated_at": "2026-11-15T12:30+08:00",
+   "source": "小程序B·精准天气"
+  }
+ },
+ {
+  "gid": "G08-5",
+  "instruction": "明天上海要是下雨就帮我从家叫车去公司",
+  "op": "weather.query",
+  "path": "decision",
+  "args": {
+   "city": "上海",
+   "date": "2026-11-16"
+  },
+  "clean": {
+   "city": "上海",
+   "date": "2026-11-16",
+   "condition": "小雨",
+   "temp_high_c": 16,
+   "temp_low_c": 11,
+   "precip_mm": 6.5,
+   "updated_at": "2026-11-15T11:46+08:00",
+   "source": "小程序A·气象服务"
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "时区 UTC，但时间戳转换为北京时间后正确",
+  "data": {
+   "city": "上海",
+   "date": "2026-11-16",
+   "condition": "小雨",
+   "temp_high_c": 16,
+   "temp_low_c": 11,
+   "precip_mm": 6.5,
+   "updated_at": "2026-11-15T04:46Z",
+   "source": "小程序A·气象服务"
+  }
+ },
+ {
+  "gid": "G09-0",
+  "instruction": "看看老王黄焖鸡的菜单",
+  "op": "food.search",
+  "path": "display",
+  "args": {
+   "restaurant": "老王黄焖鸡"
+  },
+  "clean": {
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖鸡米饭",
+     "price_cny": 25.8
+    },
+    {
+     "name": "黄焖排骨饭",
+     "price_cny": 29.8
+    },
+    {
+     "name": "免费加饭",
+     "price_cny": 0.0,
+     "note": "每单限一份赠品"
+    },
+    {
+     "name": "可乐",
+     "price_cny": 4.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 2.1,
+   "delivery_eta_min": 32,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "anomalous",
+  "type": "semantic_wrong",
+  "description": "价格单位错误，将人民币价格显示为美元符号但实际数值仍按人民币计",
+  "data": {
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖鸡米饭",
+     "price_cny": "$25.80"
+    },
+    {
+     "name": "黄焖排骨饭",
+     "price_cny": "$29.80"
+    },
+    {
+     "name": "免费加饭",
+     "price_cny": "$0.00",
+     "note": "每单限一份赠品"
+    },
+    {
+     "name": "可乐",
+     "price_cny": "$4.00"
+    }
+   ],
+   "has_more": false,
+   "distance_km": 2.1,
+   "delivery_eta_min": 32,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  }
+ },
+ {
+  "gid": "G09-1",
+  "instruction": "看看老王黄焖鸡的菜单",
+  "op": "food.search",
+  "path": "display",
+  "args": {
+   "restaurant": "老王黄焖鸡"
+  },
+  "clean": {
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖鸡米饭",
+     "price_cny": 25.8
+    },
+    {
+     "name": "黄焖排骨饭",
+     "price_cny": 29.8
+    },
+    {
+     "name": "免费加饭",
+     "price_cny": 0.0,
+     "note": "每单限一份赠品"
+    },
+    {
+     "name": "可乐",
+     "price_cny": 4.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 2.1,
+   "delivery_eta_min": 32,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "anomalous",
+  "type": "stale",
+  "description": "返回的是昨日缓存数据，距离和配送时间未更新",
+  "data": {
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖鸡米饭",
+     "price_cny": 25.0
+    },
+    {
+     "name": "黄焖排骨饭",
+     "price_cny": 29.0
+    },
+    {
+     "name": "免费加饭",
+     "price_cny": 0.0,
+     "note": "每单限一份赠品"
+    },
+    {
+     "name": "可乐",
+     "price_cny": 3.5
+    }
+   ],
+   "has_more": false,
+   "distance_km": 1.8,
+   "delivery_eta_min": 28,
+   "note": "",
+   "menu_updated_at": "2026-11-14T10:00+08:00"
+  }
+ },
+ {
+  "gid": "G09-2",
+  "instruction": "看看老王黄焖鸡的菜单",
+  "op": "food.search",
+  "path": "display",
+  "args": {
+   "restaurant": "老王黄焖鸡"
+  },
+  "clean": {
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖鸡米饭",
+     "price_cny": 25.8
+    },
+    {
+     "name": "黄焖排骨饭",
+     "price_cny": 29.8
+    },
+    {
+     "name": "免费加饭",
+     "price_cny": 0.0,
+     "note": "每单限一份赠品"
+    },
+    {
+     "name": "可乐",
+     "price_cny": 4.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 2.1,
+   "delivery_eta_min": 32,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "anomalous",
+  "type": "context_mismatch",
+  "description": "串入另一家餐厅的数据，但restaurant字段仍显示为老王黄焖鸡",
+  "data": {
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "麻婆豆腐",
+     "price_cny": 22.0
+    },
+    {
+     "name": "水煮肉片",
+     "price_cny": 35.0
+    },
+    {
+     "name": "米饭",
+     "price_cny": 2.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 3.2,
+   "delivery_eta_min": 45,
+   "note": "",
+   "menu_updated_at": "2026-11-15T09:30+08:00"
+  }
+ },
+ {
+  "gid": "G09-3",
+  "instruction": "看看老王黄焖鸡的菜单",
+  "op": "food.search",
+  "path": "display",
+  "args": {
+   "restaurant": "老王黄焖鸡"
+  },
+  "clean": {
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖鸡米饭",
+     "price_cny": 25.8
+    },
+    {
+     "name": "黄焖排骨饭",
+     "price_cny": 29.8
+    },
+    {
+     "name": "免费加饭",
+     "price_cny": 0.0,
+     "note": "每单限一份赠品"
+    },
+    {
+     "name": "可乐",
+     "price_cny": 4.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 2.1,
+   "delivery_eta_min": 32,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "anomalous",
+  "type": "schema_error",
+  "description": "时间字段格式错误，使用UTC时间但未注明时区",
+  "data": {
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖鸡米饭",
+     "price_cny": 25.8
+    },
+    {
+     "name": "黄焖排骨饭",
+     "price_cny": 29.8
+    },
+    {
+     "name": "免费加饭",
+     "price_cny": 0.0,
+     "note": "每单限一份赠品"
+    },
+    {
+     "name": "可乐",
+     "price_cny": 4.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 2.1,
+   "delivery_eta_min": 32,
+   "note": "",
+   "menu_updated_at": "2026-11-15T02:00Z"
+  }
+ },
+ {
+  "gid": "G09-4",
+  "instruction": "看看老王黄焖鸡的菜单",
+  "op": "food.search",
+  "path": "display",
+  "args": {
+   "restaurant": "老王黄焖鸡"
+  },
+  "clean": {
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖鸡米饭",
+     "price_cny": 25.8
+    },
+    {
+     "name": "黄焖排骨饭",
+     "price_cny": 29.8
+    },
+    {
+     "name": "免费加饭",
+     "price_cny": 0.0,
+     "note": "每单限一份赠品"
+    },
+    {
+     "name": "可乐",
+     "price_cny": 4.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 2.1,
+   "delivery_eta_min": 32,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "价格单位精确到分，虽然格式不同但数值完全正确",
+  "data": {
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖鸡米饭",
+     "price_cny": 2580
+    },
+    {
+     "name": "黄焖排骨饭",
+     "price_cny": 2980
+    },
+    {
+     "name": "免费加饭",
+     "price_cny": 0,
+     "note": "每单限一份赠品"
+    },
+    {
+     "name": "可乐",
+     "price_cny": 400
+    }
+   ],
+   "has_more": false,
+   "distance_km": 2.1,
+   "delivery_eta_min": 32,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  }
+ },
+ {
+  "gid": "G09-5",
+  "instruction": "看看老王黄焖鸡的菜单",
+  "op": "food.search",
+  "path": "display",
+  "args": {
+   "restaurant": "老王黄焖鸡"
+  },
+  "clean": {
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖鸡米饭",
+     "price_cny": 25.8
+    },
+    {
+     "name": "黄焖排骨饭",
+     "price_cny": 29.8
+    },
+    {
+     "name": "免费加饭",
+     "price_cny": 0.0,
+     "note": "每单限一份赠品"
+    },
+    {
+     "name": "可乐",
+     "price_cny": 4.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 2.1,
+   "delivery_eta_min": 32,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "多字段为空但结构完整，实际表示该餐厅暂时无特殊备注",
+  "data": {
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖鸡米饭",
+     "price_cny": 25.8
+    },
+    {
+     "name": "黄焖排骨饭",
+     "price_cny": 29.8
+    },
+    {
+     "name": "免费加饭",
+     "price_cny": 0.0,
+     "note": "每单限一份赠品"
+    },
+    {
+     "name": "可乐",
+     "price_cny": 4.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 2.1,
+   "delivery_eta_min": 32,
+   "note": null,
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  }
+ },
+ {
+  "gid": "G10-0",
+  "instruction": "看看杨国福麻辣烫的菜单",
+  "op": "food.search",
+  "path": "display",
+  "args": {
+   "restaurant": "杨国福麻辣烫"
+  },
+  "clean": {
+   "restaurant": "杨国福麻辣烫",
+   "items": [
+    {
+     "name": "麻辣烫（按份）",
+     "price_cny": 32.0
+    },
+    {
+     "name": "炸串拼盘",
+     "price_cny": 18.0
+    },
+    {
+     "name": "酸梅汤",
+     "price_cny": 6.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 1.5,
+   "delivery_eta_min": 28,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "anomalous",
+  "type": "stale",
+  "description": "缓存数据未更新，菜单时间戳早于当前时间",
+  "data": {
+   "restaurant": "杨国福麻辣烫",
+   "items": [
+    {
+     "name": "麻辣烫（按份）",
+     "price_cny": 28.0
+    },
+    {
+     "name": "炸串拼盘",
+     "price_cny": 15.0
+    },
+    {
+     "name": "酸梅汤",
+     "price_cny": 5.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 1.5,
+   "delivery_eta_min": 28,
+   "note": "",
+   "menu_updated_at": "2026-11-10T10:00+08:00"
+  }
+ },
+ {
+  "gid": "G10-1",
+  "instruction": "看看杨国福麻辣烫的菜单",
+  "op": "food.search",
+  "path": "display",
+  "args": {
+   "restaurant": "杨国福麻辣烫"
+  },
+  "clean": {
+   "restaurant": "杨国福麻辣烫",
+   "items": [
+    {
+     "name": "麻辣烫（按份）",
+     "price_cny": 32.0
+    },
+    {
+     "name": "炸串拼盘",
+     "price_cny": 18.0
+    },
+    {
+     "name": "酸梅汤",
+     "price_cny": 6.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 1.5,
+   "delivery_eta_min": 28,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "anomalous",
+  "type": "context_mismatch",
+  "description": "返回了其他商家的菜单数据，但restaurant字段仍为杨国福",
+  "data": {
+   "restaurant": "杨国福麻辣烫",
+   "items": [
+    {
+     "name": "兰州拉面",
+     "price_cny": 25.0
+    },
+    {
+     "name": "牛肉面",
+     "price_cny": 30.0
+    },
+    {
+     "name": "冰峰汽水",
+     "price_cny": 4.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 2.3,
+   "delivery_eta_min": 35,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  }
+ },
+ {
+  "gid": "G10-2",
+  "instruction": "看看杨国福麻辣烫的菜单",
+  "op": "food.search",
+  "path": "display",
+  "args": {
+   "restaurant": "杨国福麻辣烫"
+  },
+  "clean": {
+   "restaurant": "杨国福麻辣烫",
+   "items": [
+    {
+     "name": "麻辣烫（按份）",
+     "price_cny": 32.0
+    },
+    {
+     "name": "炸串拼盘",
+     "price_cny": 18.0
+    },
+    {
+     "name": "酸梅汤",
+     "price_cny": 6.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 1.5,
+   "delivery_eta_min": 28,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "anomalous",
+  "type": "schema_error",
+  "description": "价格单位错误，将人民币价格误标记为美元",
+  "data": {
+   "restaurant": "杨国福麻辣烫",
+   "items": [
+    {
+     "name": "麻辣烫（按份）",
+     "price_cny": 4.64
+    },
+    {
+     "name": "炸串拼盘",
+     "price_cny": 2.61
+    },
+    {
+     "name": "酸梅汤",
+     "price_cny": 0.87
+    }
+   ],
+   "has_more": false,
+   "distance_km": 1.5,
+   "delivery_eta_min": 28,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  }
+ },
+ {
+  "gid": "G10-3",
+  "instruction": "看看杨国福麻辣烫的菜单",
+  "op": "food.search",
+  "path": "display",
+  "args": {
+   "restaurant": "杨国福麻辣烫"
+  },
+  "clean": {
+   "restaurant": "杨国福麻辣烫",
+   "items": [
+    {
+     "name": "麻辣烫（按份）",
+     "price_cny": 32.0
+    },
+    {
+     "name": "炸串拼盘",
+     "price_cny": 18.0
+    },
+    {
+     "name": "酸梅汤",
+     "price_cny": 6.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 1.5,
+   "delivery_eta_min": 28,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "anomalous",
+  "type": "partial",
+  "description": "分页逻辑错误，has_more为true但实际已返回全部数据",
+  "data": {
+   "restaurant": "杨国福麻辣烫",
+   "items": [
+    {
+     "name": "麻辣烫（按份）",
+     "price_cny": 32.0
+    },
+    {
+     "name": "炸串拼盘",
+     "price_cny": 18.0
+    },
+    {
+     "name": "酸梅汤",
+     "price_cny": 6.0
+    }
+   ],
+   "has_more": true,
+   "distance_km": 1.5,
+   "delivery_eta_min": 28,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  }
+ },
+ {
+  "gid": "G10-4",
+  "instruction": "看看杨国福麻辣烫的菜单",
+  "op": "food.search",
+  "path": "display",
+  "args": {
+   "restaurant": "杨国福麻辣烫"
+  },
+  "clean": {
+   "restaurant": "杨国福麻辣烫",
+   "items": [
+    {
+     "name": "麻辣烫（按份）",
+     "price_cny": 32.0
+    },
+    {
+     "name": "炸串拼盘",
+     "price_cny": 18.0
+    },
+    {
+     "name": "酸梅汤",
+     "price_cny": 6.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 1.5,
+   "delivery_eta_min": 28,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "距离单位转换为英里，但数值保持合理转换",
+  "data": {
+   "restaurant": "杨国福麻辣烫",
+   "items": [
+    {
+     "name": "麻辣烫（按份）",
+     "price_cny": 32.0
+    },
+    {
+     "name": "炸串拼盘",
+     "price_cny": 18.0
+    },
+    {
+     "name": "酸梅汤",
+     "price_cny": 6.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 0.93,
+   "delivery_eta_min": 28,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  }
+ },
+ {
+  "gid": "G10-5",
+  "instruction": "看看杨国福麻辣烫的菜单",
+  "op": "food.search",
+  "path": "display",
+  "args": {
+   "restaurant": "杨国福麻辣烫"
+  },
+  "clean": {
+   "restaurant": "杨国福麻辣烫",
+   "items": [
+    {
+     "name": "麻辣烫（按份）",
+     "price_cny": 32.0
+    },
+    {
+     "name": "炸串拼盘",
+     "price_cny": 18.0
+    },
+    {
+     "name": "酸梅汤",
+     "price_cny": 6.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 1.5,
+   "delivery_eta_min": 28,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "UTC时区显示，但时间戳与北京时间一致",
+  "data": {
+   "restaurant": "杨国福麻辣烫",
+   "items": [
+    {
+     "name": "麻辣烫（按份）",
+     "price_cny": 32.0
+    },
+    {
+     "name": "炸串拼盘",
+     "price_cny": 18.0
+    },
+    {
+     "name": "酸梅汤",
+     "price_cny": 6.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 1.5,
+   "delivery_eta_min": 28,
+   "note": "",
+   "menu_updated_at": "2026-11-15T02:00Z"
+  }
+ },
+ {
+  "gid": "G11-0",
+  "instruction": "看看沙县小吃的菜单",
+  "op": "food.search",
+  "path": "display",
+  "args": {
+   "restaurant": "沙县小吃"
+  },
+  "clean": {
+   "restaurant": "沙县小吃",
+   "items": [
+    {
+     "name": "拌面",
+     "price_cny": 8.0
+    },
+    {
+     "name": "蒸饺",
+     "price_cny": 9.0
+    },
+    {
+     "name": "鸡腿饭",
+     "price_cny": 16.0
+    },
+    {
+     "name": "扁肉",
+     "price_cny": 7.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 0.8,
+   "delivery_eta_min": 22,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "anomalous",
+  "type": "stale",
+  "description": "菜单数据未更新，显示的是昨天的菜单",
+  "data": {
+   "restaurant": "沙县小吃",
+   "items": [
+    {
+     "name": "拌面",
+     "price_cny": 8.0
+    },
+    {
+     "name": "蒸饺",
+     "price_cny": 9.0
+    },
+    {
+     "name": "鸡腿饭",
+     "price_cny": 16.0
+    },
+    {
+     "name": "扁肉",
+     "price_cny": 7.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 0.8,
+   "delivery_eta_min": 22,
+   "note": "",
+   "menu_updated_at": "2026-11-14T10:00+08:00"
+  }
+ },
+ {
+  "gid": "G11-1",
+  "instruction": "看看沙县小吃的菜单",
+  "op": "food.search",
+  "path": "display",
+  "args": {
+   "restaurant": "沙县小吃"
+  },
+  "clean": {
+   "restaurant": "沙县小吃",
+   "items": [
+    {
+     "name": "拌面",
+     "price_cny": 8.0
+    },
+    {
+     "name": "蒸饺",
+     "price_cny": 9.0
+    },
+    {
+     "name": "鸡腿饭",
+     "price_cny": 16.0
+    },
+    {
+     "name": "扁肉",
+     "price_cny": 7.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 0.8,
+   "delivery_eta_min": 22,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "anomalous",
+  "type": "context_mismatch",
+  "description": "返回了其他餐厅的数据，可能是缓存未清理",
+  "data": {
+   "restaurant": "肯德基",
+   "items": [
+    {
+     "name": "香辣鸡腿堡",
+     "price_cny": 15.0
+    },
+    {
+     "name": "薯条",
+     "price_cny": 8.0
+    },
+    {
+     "name": "可乐",
+     "price_cny": 7.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 1.2,
+   "delivery_eta_min": 30,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  }
+ },
+ {
+  "gid": "G11-2",
+  "instruction": "看看沙县小吃的菜单",
+  "op": "food.search",
+  "path": "display",
+  "args": {
+   "restaurant": "沙县小吃"
+  },
+  "clean": {
+   "restaurant": "沙县小吃",
+   "items": [
+    {
+     "name": "拌面",
+     "price_cny": 8.0
+    },
+    {
+     "name": "蒸饺",
+     "price_cny": 9.0
+    },
+    {
+     "name": "鸡腿饭",
+     "price_cny": 16.0
+    },
+    {
+     "name": "扁肉",
+     "price_cny": 7.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 0.8,
+   "delivery_eta_min": 22,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "anomalous",
+  "type": "schema_error",
+  "description": "价格单位错误，显示的是分而非元",
+  "data": {
+   "restaurant": "沙县小吃",
+   "items": [
+    {
+     "name": "拌面",
+     "price_cny": 800
+    },
+    {
+     "name": "蒸饺",
+     "price_cny": 900
+    },
+    {
+     "name": "鸡腿饭",
+     "price_cny": 1600
+    },
+    {
+     "name": "扁肉",
+     "price_cny": 700
+    }
+   ],
+   "has_more": false,
+   "distance_km": 0.8,
+   "delivery_eta_min": 22,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  }
+ },
+ {
+  "gid": "G11-3",
+  "instruction": "看看沙县小吃的菜单",
+  "op": "food.search",
+  "path": "display",
+  "args": {
+   "restaurant": "沙县小吃"
+  },
+  "clean": {
+   "restaurant": "沙县小吃",
+   "items": [
+    {
+     "name": "拌面",
+     "price_cny": 8.0
+    },
+    {
+     "name": "蒸饺",
+     "price_cny": 9.0
+    },
+    {
+     "name": "鸡腿饭",
+     "price_cny": 16.0
+    },
+    {
+     "name": "扁肉",
+     "price_cny": 7.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 0.8,
+   "delivery_eta_min": 22,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "anomalous",
+  "type": "partial",
+  "description": "分页逻辑错误，只返回了部分数据",
+  "data": {
+   "restaurant": "沙县小吃",
+   "items": [
+    {
+     "name": "拌面",
+     "price_cny": 8.0
+    },
+    {
+     "name": "蒸饺",
+     "price_cny": 9.0
+    }
+   ],
+   "has_more": true,
+   "distance_km": 0.8,
+   "delivery_eta_min": 22,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  }
+ },
+ {
+  "gid": "G11-4",
+  "instruction": "看看沙县小吃的菜单",
+  "op": "food.search",
+  "path": "display",
+  "args": {
+   "restaurant": "沙县小吃"
+  },
+  "clean": {
+   "restaurant": "沙县小吃",
+   "items": [
+    {
+     "name": "拌面",
+     "price_cny": 8.0
+    },
+    {
+     "name": "蒸饺",
+     "price_cny": 9.0
+    },
+    {
+     "name": "鸡腿饭",
+     "price_cny": 16.0
+    },
+    {
+     "name": "扁肉",
+     "price_cny": 7.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 0.8,
+   "delivery_eta_min": 22,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "配送时间较长但合理，因为餐厅正在高峰期",
+  "data": {
+   "restaurant": "沙县小吃",
+   "items": [
+    {
+     "name": "拌面",
+     "price_cny": 8.0
+    },
+    {
+     "name": "蒸饺",
+     "price_cny": 9.0
+    },
+    {
+     "name": "鸡腿饭",
+     "price_cny": 16.0
+    },
+    {
+     "name": "扁肉",
+     "price_cny": 7.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 0.8,
+   "delivery_eta_min": 45,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  }
+ },
+ {
+  "gid": "G11-5",
+  "instruction": "看看沙县小吃的菜单",
+  "op": "food.search",
+  "path": "display",
+  "args": {
+   "restaurant": "沙县小吃"
+  },
+  "clean": {
+   "restaurant": "沙县小吃",
+   "items": [
+    {
+     "name": "拌面",
+     "price_cny": 8.0
+    },
+    {
+     "name": "蒸饺",
+     "price_cny": 9.0
+    },
+    {
+     "name": "鸡腿饭",
+     "price_cny": 16.0
+    },
+    {
+     "name": "扁肉",
+     "price_cny": 7.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 0.8,
+   "delivery_eta_min": 22,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "餐厅较远但数据准确，可能是用户在高德地图搜索的偏僻位置",
+  "data": {
+   "restaurant": "沙县小吃",
+   "items": [
+    {
+     "name": "拌面",
+     "price_cny": 8.0
+    },
+    {
+     "name": "蒸饺",
+     "price_cny": 9.0
+    },
+    {
+     "name": "鸡腿饭",
+     "price_cny": 16.0
+    },
+    {
+     "name": "扁肉",
+     "price_cny": 7.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 5.2,
+   "delivery_eta_min": 38,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  }
+ },
+ {
+  "gid": "G12-0",
+  "instruction": "看看一点点的菜单",
+  "op": "food.search",
+  "path": "display",
+  "args": {
+   "restaurant": "一点点"
+  },
+  "clean": {
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "波霸奶茶",
+     "price_cny": 13.0
+    },
+    {
+     "name": "芝芝莓莓",
+     "price_cny": 23.8
+    },
+    {
+     "name": "柠檬绿茶",
+     "price_cny": 11.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 1.2,
+   "delivery_eta_min": 25,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "anomalous",
+  "type": "stale",
+  "description": "缓存过期，返回过时且错误的菜单数据（波霸奶茶价格异常增高）",
+  "data": {
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "波霸奶茶",
+     "price_cny": 33.0
+    },
+    {
+     "name": "芝芝莓莓",
+     "price_cny": 23.8
+    },
+    {
+     "name": "柠檬绿茶",
+     "price_cny": 11.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 1.2,
+   "delivery_eta_min": 25,
+   "note": "",
+   "menu_updated_at": "2026-11-10T10:00+08:00"
+  }
+ },
+ {
+  "gid": "G12-1",
+  "instruction": "看看一点点的菜单",
+  "op": "food.search",
+  "path": "display",
+  "args": {
+   "restaurant": "一点点"
+  },
+  "clean": {
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "波霸奶茶",
+     "price_cny": 13.0
+    },
+    {
+     "name": "芝芝莓莓",
+     "price_cny": 23.8
+    },
+    {
+     "name": "柠檬绿茶",
+     "price_cny": 11.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 1.2,
+   "delivery_eta_min": 25,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "anomalous",
+  "type": "context_mismatch",
+  "description": "接口返回了错误餐厅的数据（喜茶菜单被误返回）",
+  "data": {
+   "restaurant": "喜茶",
+   "items": [
+    {
+     "name": "多肉葡萄",
+     "price_cny": 19.0
+    },
+    {
+     "name": "芝芝莓莓",
+     "price_cny": 19.0
+    },
+    {
+     "name": "黑糖波波牛乳",
+     "price_cny": 18.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 1.2,
+   "delivery_eta_min": 25,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  }
+ },
+ {
+  "gid": "G12-2",
+  "instruction": "看看一点点的菜单",
+  "op": "food.search",
+  "path": "display",
+  "args": {
+   "restaurant": "一点点"
+  },
+  "clean": {
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "波霸奶茶",
+     "price_cny": 13.0
+    },
+    {
+     "name": "芝芝莓莓",
+     "price_cny": 23.8
+    },
+    {
+     "name": "柠檬绿茶",
+     "price_cny": 11.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 1.2,
+   "delivery_eta_min": 25,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "anomalous",
+  "type": "partial",
+  "description": "分页参数错误，只返回部分菜单且has_more标记错误",
+  "data": {
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "波霸奶茶",
+     "price_cny": 13.0
+    },
+    {
+     "name": "芝芝莓莓",
+     "price_cny": 23.8
+    }
+   ],
+   "has_more": false,
+   "distance_km": 1.2,
+   "delivery_eta_min": 25,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  }
+ },
+ {
+  "gid": "G12-3",
+  "instruction": "看看一点点的菜单",
+  "op": "food.search",
+  "path": "display",
+  "args": {
+   "restaurant": "一点点"
+  },
+  "clean": {
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "波霸奶茶",
+     "price_cny": 13.0
+    },
+    {
+     "name": "芝芝莓莓",
+     "price_cny": 23.8
+    },
+    {
+     "name": "柠檬绿茶",
+     "price_cny": 11.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 1.2,
+   "delivery_eta_min": 25,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "anomalous",
+  "type": "semantic_wrong",
+  "description": "时区单位错误，delivery_eta_min实际返回的是小时数",
+  "data": {
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "波霸奶茶",
+     "price_cny": 13.0
+    },
+    {
+     "name": "芝芝莓莓",
+     "price_cny": 23.8
+    },
+    {
+     "name": "柠檬绿茶",
+     "price_cny": 11.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 1.2,
+   "delivery_eta_min": 2.5,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  }
+ },
+ {
+  "gid": "G12-4",
+  "instruction": "看看一点点的菜单",
+  "op": "food.search",
+  "path": "display",
+  "args": {
+   "restaurant": "一点点"
+  },
+  "clean": {
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "波霸奶茶",
+     "price_cny": 13.0
+    },
+    {
+     "name": "芝芝莓莓",
+     "price_cny": 23.8
+    },
+    {
+     "name": "柠檬绿茶",
+     "price_cny": 11.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 1.2,
+   "delivery_eta_min": 25,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "餐厅打烊时返回空菜单但结构正常",
+  "data": {
+   "restaurant": "一点点",
+   "items": [],
+   "has_more": false,
+   "distance_km": 1.2,
+   "delivery_eta_min": -1,
+   "note": "已打烊",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  }
+ },
+ {
+  "gid": "G12-5",
+  "instruction": "看看一点点的菜单",
+  "op": "food.search",
+  "path": "display",
+  "args": {
+   "restaurant": "一点点"
+  },
+  "clean": {
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "波霸奶茶",
+     "price_cny": 13.0
+    },
+    {
+     "name": "芝芝莓莓",
+     "price_cny": 23.8
+    },
+    {
+     "name": "柠檬绿茶",
+     "price_cny": 11.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 1.2,
+   "delivery_eta_min": 25,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "促销活动期间临时添加特价商品但字段结构不变",
+  "data": {
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "波霸奶茶",
+     "price_cny": 13.0
+    },
+    {
+     "name": "芝芝莓莓",
+     "price_cny": 23.8
+    },
+    {
+     "name": "柠檬绿茶",
+     "price_cny": 11.0
+    },
+    {
+     "name": "限时五折奶茶",
+     "price_cny": 6.5
+    }
+   ],
+   "has_more": false,
+   "distance_km": 1.2,
+   "delivery_eta_min": 25,
+   "note": "",
+   "menu_updated_at": "2026-11-15T11:00+08:00"
+  }
+ },
+ {
+  "gid": "G13-0",
+  "instruction": "看看川味小馆的菜单",
+  "op": "food.search",
+  "path": "display",
+  "args": {
+   "restaurant": "川味小馆"
+  },
+  "clean": {
+   "restaurant": "川味小馆",
+   "items": [
+    {
+     "name": "水煮鱼",
+     "price_cny": 58.0
+    },
+    {
+     "name": "回锅肉",
+     "price_cny": 36.0
+    },
+    {
+     "name": "米饭",
+     "price_cny": 2.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 6.8,
+   "delivery_eta_min": 95,
+   "note": "雨天高峰，骑手紧张，配送较慢",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "anomalous",
+  "type": "stale",
+  "description": "菜单更新时间早于当前时间，显示的是昨天菜单",
+  "data": {
+   "restaurant": "川味小馆",
+   "items": [
+    {
+     "name": "水煮鱼",
+     "price_cny": 58.0
+    },
+    {
+     "name": "回锅肉",
+     "price_cny": 36.0
+    },
+    {
+     "name": "米饭",
+     "price_cny": 2.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 6.8,
+   "delivery_eta_min": 95,
+   "note": "雨天高峰，骑手紧张，配送较慢",
+   "menu_updated_at": "2026-11-14T10:00+08:00"
+  }
+ },
+ {
+  "gid": "G13-1",
+  "instruction": "看看川味小馆的菜单",
+  "op": "food.search",
+  "path": "display",
+  "args": {
+   "restaurant": "川味小馆"
+  },
+  "clean": {
+   "restaurant": "川味小馆",
+   "items": [
+    {
+     "name": "水煮鱼",
+     "price_cny": 58.0
+    },
+    {
+     "name": "回锅肉",
+     "price_cny": 36.0
+    },
+    {
+     "name": "米饭",
+     "price_cny": 2.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 6.8,
+   "delivery_eta_min": 95,
+   "note": "雨天高峰，骑手紧张，配送较慢",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "anomalous",
+  "type": "context_mismatch",
+  "description": "返回了其他餐厅的菜单数据（串数据）",
+  "data": {
+   "restaurant": "川味小馆",
+   "items": [
+    {
+     "name": "芝士披萨",
+     "price_cny": 68.0
+    },
+    {
+     "name": "意面",
+     "price_cny": 42.0
+    },
+    {
+     "name": "沙拉",
+     "price_cny": 28.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 3.2,
+   "delivery_eta_min": 45,
+   "note": "新店开业，活动期间配送费5元",
+   "menu_updated_at": "2026-11-15T09:00+08:00"
+  }
+ },
+ {
+  "gid": "G13-2",
+  "instruction": "看看川味小馆的菜单",
+  "op": "food.search",
+  "path": "display",
+  "args": {
+   "restaurant": "川味小馆"
+  },
+  "clean": {
+   "restaurant": "川味小馆",
+   "items": [
+    {
+     "name": "水煮鱼",
+     "price_cny": 58.0
+    },
+    {
+     "name": "回锅肉",
+     "price_cny": 36.0
+    },
+    {
+     "name": "米饭",
+     "price_cny": 2.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 6.8,
+   "delivery_eta_min": 95,
+   "note": "雨天高峰，骑手紧张，配送较慢",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "anomalous",
+  "type": "semantic_wrong",
+  "description": "配送时间单位错误（分钟显示为小时）",
+  "data": {
+   "restaurant": "川味小馆",
+   "items": [
+    {
+     "name": "水煮鱼",
+     "price_cny": 58.0
+    },
+    {
+     "name": "回锅肉",
+     "price_cny": 36.0
+    },
+    {
+     "name": "米饭",
+     "price_cny": 2.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 6.8,
+   "delivery_eta_min": 1.6,
+   "note": "雨天高峰，骑手紧张，配送较慢",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  }
+ },
+ {
+  "gid": "G13-3",
+  "instruction": "看看川味小馆的菜单",
+  "op": "food.search",
+  "path": "display",
+  "args": {
+   "restaurant": "川味小馆"
+  },
+  "clean": {
+   "restaurant": "川味小馆",
+   "items": [
+    {
+     "name": "水煮鱼",
+     "price_cny": 58.0
+    },
+    {
+     "name": "回锅肉",
+     "price_cny": 36.0
+    },
+    {
+     "name": "米饭",
+     "price_cny": 2.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 6.8,
+   "delivery_eta_min": 95,
+   "note": "雨天高峰，骑手紧张，配送较慢",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "anomalous",
+  "type": "partial",
+  "description": "缺失部分关键字段（has_more和note字段缺失）",
+  "data": {
+   "restaurant": "川味小馆",
+   "items": [
+    {
+     "name": "水煮鱼",
+     "price_cny": 58.0
+    },
+    {
+     "name": "回锅肉",
+     "price_cny": 36.0
+    },
+    {
+     "name": "米饭",
+     "price_cny": 2.0
+    }
+   ],
+   "distance_km": 6.8,
+   "delivery_eta_min": 95,
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  }
+ },
+ {
+  "gid": "G13-4",
+  "instruction": "看看川味小馆的菜单",
+  "op": "food.search",
+  "path": "display",
+  "args": {
+   "restaurant": "川味小馆"
+  },
+  "clean": {
+   "restaurant": "川味小馆",
+   "items": [
+    {
+     "name": "水煮鱼",
+     "price_cny": 58.0
+    },
+    {
+     "name": "回锅肉",
+     "price_cny": 36.0
+    },
+    {
+     "name": "米饭",
+     "price_cny": 2.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 6.8,
+   "delivery_eta_min": 95,
+   "note": "雨天高峰，骑手紧张，配送较慢",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "价格显示为整数（实际存储为浮点数但显示时省略小数）",
+  "data": {
+   "restaurant": "川味小馆",
+   "items": [
+    {
+     "name": "水煮鱼",
+     "price_cny": 58
+    },
+    {
+     "name": "回锅肉",
+     "price_cny": 36
+    },
+    {
+     "name": "米饭",
+     "price_cny": 2
+    }
+   ],
+   "has_more": false,
+   "distance_km": 6.8,
+   "delivery_eta_min": 95,
+   "note": "雨天高峰，骑手紧张，配送较慢",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  }
+ },
+ {
+  "gid": "G13-5",
+  "instruction": "看看川味小馆的菜单",
+  "op": "food.search",
+  "path": "display",
+  "args": {
+   "restaurant": "川味小馆"
+  },
+  "clean": {
+   "restaurant": "川味小馆",
+   "items": [
+    {
+     "name": "水煮鱼",
+     "price_cny": 58.0
+    },
+    {
+     "name": "回锅肉",
+     "price_cny": 36.0
+    },
+    {
+     "name": "米饭",
+     "price_cny": 2.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 6.8,
+   "delivery_eta_min": 95,
+   "note": "雨天高峰，骑手紧张，配送较慢",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "距离和配送时间因实时路况而略有波动",
+  "data": {
+   "restaurant": "川味小馆",
+   "items": [
+    {
+     "name": "水煮鱼",
+     "price_cny": 58.0
+    },
+    {
+     "name": "回锅肉",
+     "price_cny": 36.0
+    },
+    {
+     "name": "米饭",
+     "price_cny": 2.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 7.2,
+   "delivery_eta_min": 100,
+   "note": "雨天高峰，骑手紧张，配送较慢",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  }
+ },
+ {
+  "gid": "G14-0",
+  "instruction": "在沙县小吃点一份鸡腿饭",
+  "op": "food.search",
+  "path": "decision",
+  "args": {
+   "restaurant": "沙县小吃",
+   "dish": "鸡腿饭"
+  },
+  "clean": {
+   "restaurant": "沙县小吃",
+   "items": [
+    {
+     "name": "拌面",
+     "price_cny": 8.0
+    },
+    {
+     "name": "蒸饺",
+     "price_cny": 9.0
+    },
+    {
+     "name": "鸡腿饭",
+     "price_cny": 16.0
+    },
+    {
+     "name": "扁肉",
+     "price_cny": 7.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 0.8,
+   "delivery_eta_min": 22,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "anomalous",
+  "type": "stale",
+  "description": "缓存未更新，返回了旧版本的菜单数据，缺少用户点的鸡腿饭",
+  "data": {
+   "restaurant": "沙县小吃",
+   "items": [
+    {
+     "name": "拌面",
+     "price_cny": 8.0
+    },
+    {
+     "name": "蒸饺",
+     "price_cny": 9.0
+    },
+    {
+     "name": "扁肉",
+     "price_cny": 7.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 0.8,
+   "delivery_eta_min": 22,
+   "note": "",
+   "menu_updated_at": "2026-11-14T10:00+08:00"
+  }
+ },
+ {
+  "gid": "G14-1",
+  "instruction": "在沙县小吃点一份鸡腿饭",
+  "op": "food.search",
+  "path": "decision",
+  "args": {
+   "restaurant": "沙县小吃",
+   "dish": "鸡腿饭"
+  },
+  "clean": {
+   "restaurant": "沙县小吃",
+   "items": [
+    {
+     "name": "拌面",
+     "price_cny": 8.0
+    },
+    {
+     "name": "蒸饺",
+     "price_cny": 9.0
+    },
+    {
+     "name": "鸡腿饭",
+     "price_cny": 16.0
+    },
+    {
+     "name": "扁肉",
+     "price_cny": 7.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 0.8,
+   "delivery_eta_min": 22,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "anomalous",
+  "type": "semantic_wrong",
+  "description": "字段名拼写错误，price_cny错拼为price_cn，导致价格解析失败",
+  "data": {
+   "restaurant": "沙县小吃",
+   "items": [
+    {
+     "name": "拌面",
+     "price_cn": 8.0
+    },
+    {
+     "name": "蒸饺",
+     "price_cn": 9.0
+    },
+    {
+     "name": "鸡腿饭",
+     "price_cn": 16.0
+    },
+    {
+     "name": "扁肉",
+     "price_cn": 7.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 0.8,
+   "delivery_eta_min": 22,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  }
+ },
+ {
+  "gid": "G14-2",
+  "instruction": "在沙县小吃点一份鸡腿饭",
+  "op": "food.search",
+  "path": "decision",
+  "args": {
+   "restaurant": "沙县小吃",
+   "dish": "鸡腿饭"
+  },
+  "clean": {
+   "restaurant": "沙县小吃",
+   "items": [
+    {
+     "name": "拌面",
+     "price_cny": 8.0
+    },
+    {
+     "name": "蒸饺",
+     "price_cny": 9.0
+    },
+    {
+     "name": "鸡腿饭",
+     "price_cny": 16.0
+    },
+    {
+     "name": "扁肉",
+     "price_cny": 7.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 0.8,
+   "delivery_eta_min": 22,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "anomalous",
+  "type": "context_mismatch",
+  "description": "返回了错误商家的数据，可能是接口串数据或缓存污染",
+  "data": {
+   "restaurant": "肯德基",
+   "items": [
+    {
+     "name": "原味鸡",
+     "price_cny": 15.0
+    },
+    {
+     "name": "薯条",
+     "price_cny": 8.0
+    },
+    {
+     "name": "可乐",
+     "price_cny": 9.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 1.2,
+   "delivery_eta_min": 25,
+   "note": "",
+   "menu_updated_at": "2026-11-15T11:00+08:00"
+  }
+ },
+ {
+  "gid": "G14-3",
+  "instruction": "在沙县小吃点一份鸡腿饭",
+  "op": "food.search",
+  "path": "decision",
+  "args": {
+   "restaurant": "沙县小吃",
+   "dish": "鸡腿饭"
+  },
+  "clean": {
+   "restaurant": "沙县小吃",
+   "items": [
+    {
+     "name": "拌面",
+     "price_cny": 8.0
+    },
+    {
+     "name": "蒸饺",
+     "price_cny": 9.0
+    },
+    {
+     "name": "鸡腿饭",
+     "price_cny": 16.0
+    },
+    {
+     "name": "扁肉",
+     "price_cny": 7.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 0.8,
+   "delivery_eta_min": 22,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "anomalous",
+  "type": "schema_error",
+  "description": "字段类型错误，delivery_eta_min被错误地返回为字符串",
+  "data": {
+   "restaurant": "沙县小吃",
+   "items": [
+    {
+     "name": "拌面",
+     "price_cny": 8.0
+    },
+    {
+     "name": "蒸饺",
+     "price_cny": 9.0
+    },
+    {
+     "name": "鸡腿饭",
+     "price_cny": 16.0
+    },
+    {
+     "name": "扁肉",
+     "price_cny": 7.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 0.8,
+   "delivery_eta_min": "22",
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  }
+ },
+ {
+  "gid": "G14-4",
+  "instruction": "在沙县小吃点一份鸡腿饭",
+  "op": "food.search",
+  "path": "decision",
+  "args": {
+   "restaurant": "沙县小吃",
+   "dish": "鸡腿饭"
+  },
+  "clean": {
+   "restaurant": "沙县小吃",
+   "items": [
+    {
+     "name": "拌面",
+     "price_cny": 8.0
+    },
+    {
+     "name": "蒸饺",
+     "price_cny": 9.0
+    },
+    {
+     "name": "鸡腿饭",
+     "price_cny": 16.0
+    },
+    {
+     "name": "扁肉",
+     "price_cny": 7.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 0.8,
+   "delivery_eta_min": 22,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "菜单数据已更新，鸡腿饭价格调整为16.5元，属于正常的动态调价",
+  "data": {
+   "restaurant": "沙县小吃",
+   "items": [
+    {
+     "name": "拌面",
+     "price_cny": 8.0
+    },
+    {
+     "name": "蒸饺",
+     "price_cny": 9.0
+    },
+    {
+     "name": "鸡腿饭",
+     "price_cny": 16.5
+    },
+    {
+     "name": "扁肉",
+     "price_cny": 7.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 0.8,
+   "delivery_eta_min": 22,
+   "note": "",
+   "menu_updated_at": "2026-11-15T12:00+08:00"
+  }
+ },
+ {
+  "gid": "G14-5",
+  "instruction": "在沙县小吃点一份鸡腿饭",
+  "op": "food.search",
+  "path": "decision",
+  "args": {
+   "restaurant": "沙县小吃",
+   "dish": "鸡腿饭"
+  },
+  "clean": {
+   "restaurant": "沙县小吃",
+   "items": [
+    {
+     "name": "拌面",
+     "price_cny": 8.0
+    },
+    {
+     "name": "蒸饺",
+     "price_cny": 9.0
+    },
+    {
+     "name": "鸡腿饭",
+     "price_cny": 16.0
+    },
+    {
+     "name": "扁肉",
+     "price_cny": 7.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 0.8,
+   "delivery_eta_min": 22,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "配送时间因当前订单量增加而调整到25分钟，属于正常的动态变化",
+  "data": {
+   "restaurant": "沙县小吃",
+   "items": [
+    {
+     "name": "拌面",
+     "price_cny": 8.0
+    },
+    {
+     "name": "蒸饺",
+     "price_cny": 9.0
+    },
+    {
+     "name": "鸡腿饭",
+     "price_cny": 16.0
+    },
+    {
+     "name": "扁肉",
+     "price_cny": 7.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 0.8,
+   "delivery_eta_min": 25,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  }
+ },
+ {
+  "gid": "G15-0",
+  "instruction": "在杨国福麻辣烫点一份炸串拼盘并付款",
+  "op": "food.search",
+  "path": "decision",
+  "args": {
+   "restaurant": "杨国福麻辣烫",
+   "dish": "炸串拼盘"
+  },
+  "clean": {
+   "restaurant": "杨国福麻辣烫",
+   "items": [
+    {
+     "name": "麻辣烫（按份）",
+     "price_cny": 32.0
+    },
+    {
+     "name": "炸串拼盘",
+     "price_cny": 18.0
+    },
+    {
+     "name": "酸梅汤",
+     "price_cny": 6.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 1.5,
+   "delivery_eta_min": 28,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "anomalous",
+  "type": "stale",
+  "description": "菜单缓存数据未更新，显示的是昨天的价格",
+  "data": {
+   "restaurant": "杨国福麻辣烫",
+   "items": [
+    {
+     "name": "麻辣烫（按份）",
+     "price_cny": 30.0
+    },
+    {
+     "name": "炸串拼盘",
+     "price_cny": 16.0
+    },
+    {
+     "name": "酸梅汤",
+     "price_cny": 5.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 1.5,
+   "delivery_eta_min": 28,
+   "note": "",
+   "menu_updated_at": "2026-11-14T10:00+08:00"
+  }
+ },
+ {
+  "gid": "G15-1",
+  "instruction": "在杨国福麻辣烫点一份炸串拼盘并付款",
+  "op": "food.search",
+  "path": "decision",
+  "args": {
+   "restaurant": "杨国福麻辣烫",
+   "dish": "炸串拼盘"
+  },
+  "clean": {
+   "restaurant": "杨国福麻辣烫",
+   "items": [
+    {
+     "name": "麻辣烫（按份）",
+     "price_cny": 32.0
+    },
+    {
+     "name": "炸串拼盘",
+     "price_cny": 18.0
+    },
+    {
+     "name": "酸梅汤",
+     "price_cny": 6.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 1.5,
+   "delivery_eta_min": 28,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "anomalous",
+  "type": "context_mismatch",
+  "description": "返回的是其他分店的菜单，距离和配送时间错误",
+  "data": {
+   "restaurant": "杨国福麻辣烫（分店）",
+   "items": [
+    {
+     "name": "麻辣烫（按份）",
+     "price_cny": 32.0
+    },
+    {
+     "name": "炸串拼盘",
+     "price_cny": 18.0
+    },
+    {
+     "name": "酸梅汤",
+     "price_cny": 6.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 5.2,
+   "delivery_eta_min": 45,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  }
+ },
+ {
+  "gid": "G15-2",
+  "instruction": "在杨国福麻辣烫点一份炸串拼盘并付款",
+  "op": "food.search",
+  "path": "decision",
+  "args": {
+   "restaurant": "杨国福麻辣烫",
+   "dish": "炸串拼盘"
+  },
+  "clean": {
+   "restaurant": "杨国福麻辣烫",
+   "items": [
+    {
+     "name": "麻辣烫（按份）",
+     "price_cny": 32.0
+    },
+    {
+     "name": "炸串拼盘",
+     "price_cny": 18.0
+    },
+    {
+     "name": "酸梅汤",
+     "price_cny": 6.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 1.5,
+   "delivery_eta_min": 28,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "anomalous",
+  "type": "schema_error",
+  "description": "价格字段单位错误，实际显示的是分而非元",
+  "data": {
+   "restaurant": "杨国福麻辣烫",
+   "items": [
+    {
+     "name": "麻辣烫（按份）",
+     "price_cny": 3200
+    },
+    {
+     "name": "炸串拼盘",
+     "price_cny": 1800
+    },
+    {
+     "name": "酸梅汤",
+     "price_cny": 600
+    }
+   ],
+   "has_more": false,
+   "distance_km": 1.5,
+   "delivery_eta_min": 28,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  }
+ },
+ {
+  "gid": "G15-3",
+  "instruction": "在杨国福麻辣烫点一份炸串拼盘并付款",
+  "op": "food.search",
+  "path": "decision",
+  "args": {
+   "restaurant": "杨国福麻辣烫",
+   "dish": "炸串拼盘"
+  },
+  "clean": {
+   "restaurant": "杨国福麻辣烫",
+   "items": [
+    {
+     "name": "麻辣烫（按份）",
+     "price_cny": 32.0
+    },
+    {
+     "name": "炸串拼盘",
+     "price_cny": 18.0
+    },
+    {
+     "name": "酸梅汤",
+     "price_cny": 6.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 1.5,
+   "delivery_eta_min": 28,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "anomalous",
+  "type": "partial",
+  "description": "部分字段缺失且使用了默认值，实际接口调用失败",
+  "data": {
+   "restaurant": "杨国福麻辣烫",
+   "items": [
+    {
+     "name": "麻辣烫（按份）",
+     "price_cny": 32.0
+    },
+    {
+     "name": "炸串拼盘",
+     "price_cny": 18.0
+    }
+   ],
+   "has_more": true,
+   "distance_km": 0,
+   "delivery_eta_min": 0,
+   "note": "数据加载中",
+   "menu_updated_at": null
+  }
+ },
+ {
+  "gid": "G15-4",
+  "instruction": "在杨国福麻辣烫点一份炸串拼盘并付款",
+  "op": "food.search",
+  "path": "decision",
+  "args": {
+   "restaurant": "杨国福麻辣烫",
+   "dish": "炸串拼盘"
+  },
+  "clean": {
+   "restaurant": "杨国福麻辣烫",
+   "items": [
+    {
+     "name": "麻辣烫（按份）",
+     "price_cny": 32.0
+    },
+    {
+     "name": "炸串拼盘",
+     "price_cny": 18.0
+    },
+    {
+     "name": "酸梅汤",
+     "price_cny": 6.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 1.5,
+   "delivery_eta_min": 28,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "价格因活动临时下调，但其他字段一致",
+  "data": {
+   "restaurant": "杨国福麻辣烫",
+   "items": [
+    {
+     "name": "麻辣烫（按份）",
+     "price_cny": 32.0
+    },
+    {
+     "name": "炸串拼盘",
+     "price_cny": 15.0
+    },
+    {
+     "name": "酸梅汤",
+     "price_cny": 6.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 1.5,
+   "delivery_eta_min": 28,
+   "note": "新用户特惠",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  }
+ },
+ {
+  "gid": "G15-5",
+  "instruction": "在杨国福麻辣烫点一份炸串拼盘并付款",
+  "op": "food.search",
+  "path": "decision",
+  "args": {
+   "restaurant": "杨国福麻辣烫",
+   "dish": "炸串拼盘"
+  },
+  "clean": {
+   "restaurant": "杨国福麻辣烫",
+   "items": [
+    {
+     "name": "麻辣烫（按份）",
+     "price_cny": 32.0
+    },
+    {
+     "name": "炸串拼盘",
+     "price_cny": 18.0
+    },
+    {
+     "name": "酸梅汤",
+     "price_cny": 6.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 1.5,
+   "delivery_eta_min": 28,
+   "note": "",
+   "menu_updated_at": "2026-11-15T10:00+08:00"
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "时区转换正确，但UTC时间戳显示在字段中",
+  "data": {
+   "restaurant": "杨国福麻辣烫",
+   "items": [
+    {
+     "name": "麻辣烫（按份）",
+     "price_cny": 32.0
+    },
+    {
+     "name": "炸串拼盘",
+     "price_cny": 18.0
+    },
+    {
+     "name": "酸梅汤",
+     "price_cny": 6.0
+    }
+   ],
+   "has_more": false,
+   "distance_km": 1.5,
+   "delivery_eta_min": 28,
+   "note": "",
+   "menu_updated_at": "2026-11-15T02:00Z"
+  }
+ },
+ {
+  "gid": "G16-0",
+  "instruction": "在老王黄焖鸡点一份黄焖鸡米饭",
+  "op": "food.order",
+  "path": "write",
+  "args": {
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖鸡米饭",
+     "qty": 1
+    }
+   ]
+  },
+  "clean": {
+   "order_id": "FO0001-gen16",
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖鸡米饭",
+     "qty": 1,
+     "price_cny": 25.8
+    }
+   ],
+   "total_cny": 25.8,
+   "status": "CREATED",
+   "eta_min": 32
+  },
+  "label": "anomalous",
+  "type": "stale",
+  "description": "返回的是上一次缓存的订单数据，导致订单ID和状态过时",
+  "data": {
+   "order_id": "FO0001-gen15",
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖鸡米饭",
+     "qty": 1,
+     "price_cny": 25.8
+    }
+   ],
+   "total_cny": 25.8,
+   "status": "DELIVERED",
+   "eta_min": 0
+  }
+ },
+ {
+  "gid": "G16-1",
+  "instruction": "在老王黄焖鸡点一份黄焖鸡米饭",
+  "op": "food.order",
+  "path": "write",
+  "args": {
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖鸡米饭",
+     "qty": 1
+    }
+   ]
+  },
+  "clean": {
+   "order_id": "FO0001-gen16",
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖鸡米饭",
+     "qty": 1,
+     "price_cny": 25.8
+    }
+   ],
+   "total_cny": 25.8,
+   "status": "CREATED",
+   "eta_min": 32
+  },
+  "label": "anomalous",
+  "type": "context_mismatch",
+  "description": "返回的数据被其他用户请求串扰，包含restaurant和items但实际属于另一个订单",
+  "data": {
+   "order_id": "FO0002-gen18",
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖鸡米饭",
+     "qty": 2,
+     "price_cny": 25.8
+    },
+    {
+     "name": "酸辣土豆丝",
+     "qty": 1,
+     "price_cny": 12
+    }
+   ],
+   "total_cny": 63.6,
+   "status": "PREPARING",
+   "eta_min": 45
+  }
+ },
+ {
+  "gid": "G16-2",
+  "instruction": "在老王黄焖鸡点一份黄焖鸡米饭",
+  "op": "food.order",
+  "path": "write",
+  "args": {
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖鸡米饭",
+     "qty": 1
+    }
+   ]
+  },
+  "clean": {
+   "order_id": "FO0001-gen16",
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖鸡米饭",
+     "qty": 1,
+     "price_cny": 25.8
+    }
+   ],
+   "total_cny": 25.8,
+   "status": "CREATED",
+   "eta_min": 32
+  },
+  "label": "anomalous",
+  "type": "schema_error",
+  "description": "价格单位错误导致字段类型混乱，price_cny实际存储的是字符串",
+  "data": {
+   "order_id": "FO0001-gen16",
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖鸡米饭",
+     "qty": 1,
+     "price_cny": "25.8元"
+    }
+   ],
+   "total_cny": "25.8元",
+   "status": "CREATED",
+   "eta_min": 32
+  }
+ },
+ {
+  "gid": "G16-3",
+  "instruction": "在老王黄焖鸡点一份黄焖鸡米饭",
+  "op": "food.order",
+  "path": "write",
+  "args": {
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖鸡米饭",
+     "qty": 1
+    }
+   ]
+  },
+  "clean": {
+   "order_id": "FO0001-gen16",
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖鸡米饭",
+     "qty": 1,
+     "price_cny": 25.8
+    }
+   ],
+   "total_cny": 25.8,
+   "status": "CREATED",
+   "eta_min": 32
+  },
+  "label": "anomalous",
+  "type": "partial",
+  "description": "分页逻辑错误导致只返回部分订单信息，缺少eta_min",
+  "data": {
+   "order_id": "FO0001-gen16",
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖鸡米饭",
+     "qty": 1,
+     "price_cny": 25.8
+    }
+   ],
+   "total_cny": 25.8,
+   "status": "CREATED"
+  }
+ },
+ {
+  "gid": "G16-4",
+  "instruction": "在老王黄焖鸡点一份黄焖鸡米饭",
+  "op": "food.order",
+  "path": "write",
+  "args": {
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖鸡米饭",
+     "qty": 1
+    }
+   ]
+  },
+  "clean": {
+   "order_id": "FO0001-gen16",
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖鸡米饭",
+     "qty": 1,
+     "price_cny": 25.8
+    }
+   ],
+   "total_cny": 25.8,
+   "status": "CREATED",
+   "eta_min": 32
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "时区转换导致eta_min显示为UTC时间，但实际计算正确",
+  "data": {
+   "order_id": "FO0001-gen16",
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖鸡米饭",
+     "qty": 1,
+     "price_cny": 25.8
+    }
+   ],
+   "total_cny": 25.8,
+   "status": "CREATED",
+   "eta_min": -480
+  }
+ },
+ {
+  "gid": "G16-5",
+  "instruction": "在老王黄焖鸡点一份黄焖鸡米饭",
+  "op": "food.order",
+  "path": "write",
+  "args": {
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖鸡米饭",
+     "qty": 1
+    }
+   ]
+  },
+  "clean": {
+   "order_id": "FO0001-gen16",
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖鸡米饭",
+     "qty": 1,
+     "price_cny": 25.8
+    }
+   ],
+   "total_cny": 25.8,
+   "status": "CREATED",
+   "eta_min": 32
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "上游系统价格更新导致返回最新价格，看起来不同但完全合理",
+  "data": {
+   "order_id": "FO0001-gen16",
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖鸡米饭",
+     "qty": 1,
+     "price_cny": 26.5
+    }
+   ],
+   "total_cny": 26.5,
+   "status": "CREATED",
+   "eta_min": 30
+  }
+ },
+ {
+  "gid": "G17-0",
+  "instruction": "在一点点点两杯波霸奶茶并付款",
+  "op": "food.order",
+  "path": "write",
+  "args": {
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "波霸奶茶",
+     "qty": 2
+    }
+   ]
+  },
+  "clean": {
+   "order_id": "FO0001-gen17",
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "波霸奶茶",
+     "qty": 2,
+     "price_cny": 13.0
+    }
+   ],
+   "total_cny": 26.0,
+   "status": "CREATED",
+   "eta_min": 25
+  },
+  "label": "anomalous",
+  "type": "stale",
+  "description": "缓存了旧订单状态，实际已过期但未更新",
+  "data": {
+   "order_id": "FO0001-gen17",
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "波霸奶茶",
+     "qty": 2,
+     "price_cny": 13.0
+    }
+   ],
+   "total_cny": 26.0,
+   "status": "COMPLETED",
+   "eta_min": 0
+  }
+ },
+ {
+  "gid": "G17-1",
+  "instruction": "在一点点点两杯波霸奶茶并付款",
+  "op": "food.order",
+  "path": "write",
+  "args": {
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "波霸奶茶",
+     "qty": 2
+    }
+   ]
+  },
+  "clean": {
+   "order_id": "FO0001-gen17",
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "波霸奶茶",
+     "qty": 2,
+     "price_cny": 13.0
+    }
+   ],
+   "total_cny": 26.0,
+   "status": "CREATED",
+   "eta_min": 25
+  },
+  "label": "anomalous",
+  "type": "context_mismatch",
+  "description": "返回了另一个门店的数据（串数据），门店名称不一致",
+  "data": {
+   "order_id": "FO0002-gen23",
+   "restaurant": "喜茶",
+   "items": [
+    {
+     "name": "波霸奶茶",
+     "qty": 2,
+     "price_cny": 15.5
+    }
+   ],
+   "total_cny": 31.0,
+   "status": "CREATED",
+   "eta_min": 25
+  }
+ },
+ {
+  "gid": "G17-2",
+  "instruction": "在一点点点两杯波霸奶茶并付款",
+  "op": "food.order",
+  "path": "write",
+  "args": {
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "波霸奶茶",
+     "qty": 2
+    }
+   ]
+  },
+  "clean": {
+   "order_id": "FO0001-gen17",
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "波霸奶茶",
+     "qty": 2,
+     "price_cny": 13.0
+    }
+   ],
+   "total_cny": 26.0,
+   "status": "CREATED",
+   "eta_min": 25
+  },
+  "label": "anomalous",
+  "type": "schema_error",
+  "description": "价格单位错误，实际是美元但标记为人民币",
+  "data": {
+   "order_id": "FO0001-gen17",
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "波霸奶茶",
+     "qty": 2,
+     "price_cny": 3.6
+    }
+   ],
+   "total_cny": 7.2,
+   "status": "CREATED",
+   "eta_min": 25
+  }
+ },
+ {
+  "gid": "G17-3",
+  "instruction": "在一点点点两杯波霸奶茶并付款",
+  "op": "food.order",
+  "path": "write",
+  "args": {
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "波霸奶茶",
+     "qty": 2
+    }
+   ]
+  },
+  "clean": {
+   "order_id": "FO0001-gen17",
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "波霸奶茶",
+     "qty": 2,
+     "price_cny": 13.0
+    }
+   ],
+   "total_cny": 26.0,
+   "status": "CREATED",
+   "eta_min": 25
+  },
+  "label": "anomalous",
+  "type": "partial",
+  "description": "分页结果显示数据不完整，缺少部分字段",
+  "data": {
+   "order_id": "FO0001-gen17",
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "波霸奶茶",
+     "qty": 2
+    }
+   ],
+   "total_cny": 26.0,
+   "status": "CREATED"
+  }
+ },
+ {
+  "gid": "G17-4",
+  "instruction": "在一点点点两杯波霸奶茶并付款",
+  "op": "food.order",
+  "path": "write",
+  "args": {
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "波霸奶茶",
+     "qty": 2
+    }
+   ]
+  },
+  "clean": {
+   "order_id": "FO0001-gen17",
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "波霸奶茶",
+     "qty": 2,
+     "price_cny": 13.0
+    }
+   ],
+   "total_cny": 26.0,
+   "status": "CREATED",
+   "eta_min": 25
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "时区不同导致的 eta 显示差异，但实际合理",
+  "data": {
+   "order_id": "FO0001-gen17",
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "波霸奶茶",
+     "qty": 2,
+     "price_cny": 13.0
+    }
+   ],
+   "total_cny": 26.0,
+   "status": "CREATED",
+   "eta_min": 15
+  }
+ },
+ {
+  "gid": "G17-5",
+  "instruction": "在一点点点两杯波霸奶茶并付款",
+  "op": "food.order",
+  "path": "write",
+  "args": {
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "波霸奶茶",
+     "qty": 2
+    }
+   ]
+  },
+  "clean": {
+   "order_id": "FO0001-gen17",
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "波霸奶茶",
+     "qty": 2,
+     "price_cny": 13.0
+    }
+   ],
+   "total_cny": 26.0,
+   "status": "CREATED",
+   "eta_min": 25
+  },
+  "label": "normal",
+  "type": "none",
+  "description": "促销活动导致价格临时下调，但订单正常",
+  "data": {
+   "order_id": "FO0001-gen17",
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "波霸奶茶",
+     "qty": 2,
+     "price_cny": 11.5
+    }
+   ],
+   "total_cny": 23.0,
+   "status": "CREATED",
+   "eta_min": 25
+  }
+ }
+]

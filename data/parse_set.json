@@ -1,0 +1,1505 @@
+[
+ {
+  "id": "C01",
+  "source": "testset",
+  "instruction": "北京今天天气怎么样",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "北京",
+   "date": "2026-11-15"
+  }
+ },
+ {
+  "id": "C02",
+  "source": "testset",
+  "instruction": "杭州明天冷不冷",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "杭州",
+   "date": "2026-11-16"
+  }
+ },
+ {
+  "id": "C03",
+  "source": "testset",
+  "instruction": "在沙县小吃点一份拌面",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "沙县小吃",
+   "items": [
+    {
+     "name": "拌面",
+     "qty": 1
+    }
+   ],
+   "pay": false
+  }
+ },
+ {
+  "id": "C04",
+  "source": "testset",
+  "instruction": "看看杨国福麻辣烫的菜单",
+  "gold_plan": {
+   "intent": "food_menu",
+   "restaurant": "杨国福麻辣烫",
+   "dish": null
+  }
+ },
+ {
+  "id": "C05",
+  "source": "testset",
+  "instruction": "从家打车去公司多少钱",
+  "gold_plan": {
+   "intent": "ride",
+   "origin": "家",
+   "dest": "公司"
+  }
+ },
+ {
+  "id": "C06",
+  "source": "testset",
+  "instruction": "从家到虹桥火车站的路线",
+  "gold_plan": {
+   "intent": "route",
+   "origin": "家",
+   "dest": "虹桥火车站",
+   "mode": "drive"
+  }
+ },
+ {
+  "id": "C07",
+  "source": "testset",
+  "instruction": "在老王黄焖鸡点一份黄焖鸡米饭并付款",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖鸡米饭",
+     "qty": 1
+    }
+   ],
+   "pay": true
+  }
+ },
+ {
+  "id": "C08",
+  "source": "testset",
+  "instruction": "成都后天天气",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "成都",
+   "date": "2026-11-17"
+  }
+ },
+ {
+  "id": "C09",
+  "source": "testset",
+  "instruction": "明天北京要是下雨就帮我从家叫车去公司",
+  "gold_plan": {
+   "intent": "weather_ride",
+   "city": "北京",
+   "date": "2026-11-16",
+   "origin": "家",
+   "dest": "公司"
+  }
+ },
+ {
+  "id": "C10",
+  "source": "testset",
+  "instruction": "明天上海要是下雨就帮我从家叫车去公司",
+  "gold_plan": {
+   "intent": "weather_ride",
+   "city": "上海",
+   "date": "2026-11-16",
+   "origin": "家",
+   "dest": "公司"
+  }
+ },
+ {
+  "id": "C11",
+  "source": "testset",
+  "instruction": "在杨国福麻辣烫点一份麻辣烫和一份酸梅汤，付款",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "杨国福麻辣烫",
+   "items": [
+    {
+     "name": "麻辣烫（按份）",
+     "qty": 1
+    },
+    {
+     "name": "酸梅汤",
+     "qty": 1
+    }
+   ],
+   "pay": true
+  }
+ },
+ {
+  "id": "H01",
+  "source": "testset",
+  "instruction": "漠河明天天气怎么样，要穿多少",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "漠河",
+   "date": "2026-11-16"
+  }
+ },
+ {
+  "id": "H02",
+  "source": "testset",
+  "instruction": "从公司打车去浦东机场多少钱",
+  "gold_plan": {
+   "intent": "ride",
+   "origin": "公司",
+   "dest": "浦东机场"
+  }
+ },
+ {
+  "id": "H03",
+  "source": "testset",
+  "instruction": "看看川味小馆的菜单",
+  "gold_plan": {
+   "intent": "food_menu",
+   "restaurant": "川味小馆",
+   "dish": null
+  }
+ },
+ {
+  "id": "H04",
+  "source": "testset",
+  "instruction": "一点点点二十杯芝芝莓莓，直接付款",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "芝芝莓莓",
+     "qty": 20
+    }
+   ],
+   "pay": true
+  }
+ },
+ {
+  "id": "H05",
+  "source": "testset",
+  "instruction": "广州今天天气",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "广州",
+   "date": "2026-11-15"
+  }
+ },
+ {
+  "id": "H06",
+  "source": "testset",
+  "instruction": "从家步行到地铁站怎么走",
+  "gold_plan": {
+   "intent": "route",
+   "origin": "家",
+   "dest": "地铁站",
+   "mode": "walk"
+  }
+ },
+ {
+  "id": "H07",
+  "source": "testset",
+  "instruction": "看看老王黄焖鸡的菜单",
+  "gold_plan": {
+   "intent": "food_menu",
+   "restaurant": "老王黄焖鸡",
+   "dish": null
+  }
+ },
+ {
+  "id": "H08",
+  "source": "testset",
+  "instruction": "哈尔滨明天天气",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "哈尔滨",
+   "date": "2026-11-16"
+  }
+ },
+ {
+  "id": "T01",
+  "source": "testset",
+  "instruction": "上海明天天气怎么样",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "上海",
+   "date": "2026-11-16"
+  }
+ },
+ {
+  "id": "T02",
+  "source": "testset",
+  "instruction": "看看沙县小吃的菜单",
+  "gold_plan": {
+   "intent": "food_menu",
+   "restaurant": "沙县小吃",
+   "dish": null
+  }
+ },
+ {
+  "id": "T03",
+  "source": "testset",
+  "instruction": "深圳今天天气",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "深圳",
+   "date": "2026-11-15"
+  }
+ },
+ {
+  "id": "T04",
+  "source": "testset",
+  "instruction": "杭州今天天气",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "杭州",
+   "date": "2026-11-15"
+  }
+ },
+ {
+  "id": "T05",
+  "source": "testset",
+  "instruction": "看看一点点的菜单",
+  "gold_plan": {
+   "intent": "food_menu",
+   "restaurant": "一点点",
+   "dish": null
+  }
+ },
+ {
+  "id": "T06",
+  "source": "testset",
+  "instruction": "在沙县小吃点一份鸡腿饭",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "沙县小吃",
+   "items": [
+    {
+     "name": "鸡腿饭",
+     "qty": 1
+    }
+   ],
+   "pay": false
+  }
+ },
+ {
+  "id": "T07",
+  "source": "testset",
+  "instruction": "在沙县小吃点一份蒸饺",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "沙县小吃",
+   "items": [
+    {
+     "name": "蒸饺",
+     "qty": 1
+    }
+   ],
+   "pay": false
+  }
+ },
+ {
+  "id": "T08",
+  "source": "testset",
+  "instruction": "北京明天天气",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "北京",
+   "date": "2026-11-16"
+  }
+ },
+ {
+  "id": "S01",
+  "source": "testset",
+  "instruction": "上海今天天气",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "上海",
+   "date": "2026-11-15"
+  }
+ },
+ {
+  "id": "S02",
+  "source": "testset",
+  "instruction": "老王黄焖鸡有什么吃的",
+  "gold_plan": {
+   "intent": "food_menu",
+   "restaurant": "老王黄焖鸡",
+   "dish": null
+  }
+ },
+ {
+  "id": "S03",
+  "source": "testset",
+  "instruction": "深圳明天天气",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "深圳",
+   "date": "2026-11-16"
+  }
+ },
+ {
+  "id": "R01",
+  "source": "testset",
+  "instruction": "广州明天天气",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "广州",
+   "date": "2026-11-16"
+  }
+ },
+ {
+  "id": "R02",
+  "source": "testset",
+  "instruction": "成都今天天气",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "成都",
+   "date": "2026-11-15"
+  }
+ },
+ {
+  "id": "R03",
+  "source": "testset",
+  "instruction": "杭州后天天气",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "杭州",
+   "date": "2026-11-17"
+  }
+ },
+ {
+  "id": "R04",
+  "source": "testset",
+  "instruction": "看看杨国福麻辣烫有什么",
+  "gold_plan": {
+   "intent": "food_menu",
+   "restaurant": "杨国福麻辣烫",
+   "dish": null
+  }
+ },
+ {
+  "id": "R05",
+  "source": "testset",
+  "instruction": "在老王黄焖鸡点一份黄焖鸡米饭",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖鸡米饭",
+     "qty": 1
+    }
+   ],
+   "pay": false
+  }
+ },
+ {
+  "id": "R06",
+  "source": "testset",
+  "instruction": "在老王黄焖鸡点一份黄焖鸡米饭并付款",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖鸡米饭",
+     "qty": 1
+    }
+   ],
+   "pay": true
+  }
+ },
+ {
+  "id": "R07",
+  "source": "testset",
+  "instruction": "在沙县小吃点一份扁肉",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "沙县小吃",
+   "items": [
+    {
+     "name": "扁肉",
+     "qty": 1
+    }
+   ],
+   "pay": false
+  }
+ },
+ {
+  "id": "L01",
+  "source": "testset",
+  "instruction": "北京后天天气",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "北京",
+   "date": "2026-11-17"
+  }
+ },
+ {
+  "id": "L02",
+  "source": "testset",
+  "instruction": "上海明天天气，要带伞吗",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "上海",
+   "date": "2026-11-16"
+  }
+ },
+ {
+  "id": "L03",
+  "source": "testset",
+  "instruction": "广州后天天气",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "广州",
+   "date": "2026-11-17"
+  }
+ },
+ {
+  "id": "L04",
+  "source": "testset",
+  "instruction": "看看杨国福麻辣烫的菜单",
+  "gold_plan": {
+   "intent": "food_menu",
+   "restaurant": "杨国福麻辣烫",
+   "dish": null
+  }
+ },
+ {
+  "id": "L05",
+  "source": "testset",
+  "instruction": "看看沙县小吃的菜单，多久能送到",
+  "gold_plan": {
+   "intent": "food_menu",
+   "restaurant": "沙县小吃",
+   "dish": null
+  }
+ },
+ {
+  "id": "L06",
+  "source": "testset",
+  "instruction": "在沙县小吃点一份拌面并付款",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "沙县小吃",
+   "items": [
+    {
+     "name": "拌面",
+     "qty": 1
+    }
+   ],
+   "pay": true
+  }
+ },
+ {
+  "id": "L07",
+  "source": "testset",
+  "instruction": "看看一点点的菜单",
+  "gold_plan": {
+   "intent": "food_menu",
+   "restaurant": "一点点",
+   "dish": null
+  }
+ },
+ {
+  "id": "L08",
+  "source": "testset",
+  "instruction": "明天杭州要是下雨就帮我从家叫车去公司",
+  "gold_plan": {
+   "intent": "weather_ride",
+   "city": "杭州",
+   "date": "2026-11-16",
+   "origin": "家",
+   "dest": "公司"
+  }
+ },
+ {
+  "id": "ST01",
+  "source": "testset",
+  "instruction": "北京今天天气",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "北京",
+   "date": "2026-11-15"
+  }
+ },
+ {
+  "id": "ST02",
+  "source": "testset",
+  "instruction": "成都明天天气",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "成都",
+   "date": "2026-11-16"
+  }
+ },
+ {
+  "id": "ST03",
+  "source": "testset",
+  "instruction": "看看杨国福麻辣烫的菜单",
+  "gold_plan": {
+   "intent": "food_menu",
+   "restaurant": "杨国福麻辣烫",
+   "dish": null
+  }
+ },
+ {
+  "id": "P01",
+  "source": "testset",
+  "instruction": "沙县小吃有拌面吗",
+  "gold_plan": {
+   "intent": "food_menu",
+   "restaurant": "沙县小吃",
+   "dish": "拌面"
+  }
+ },
+ {
+  "id": "P02",
+  "source": "testset",
+  "instruction": "看看川味小馆的菜单",
+  "gold_plan": {
+   "intent": "food_menu",
+   "restaurant": "川味小馆",
+   "dish": null
+  }
+ },
+ {
+  "id": "PAY01",
+  "source": "testset",
+  "instruction": "在沙县小吃点一份鸡腿饭并付款",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "沙县小吃",
+   "items": [
+    {
+     "name": "鸡腿饭",
+     "qty": 1
+    }
+   ],
+   "pay": true
+  }
+ },
+ {
+  "id": "PAY02",
+  "source": "testset",
+  "instruction": "在杨国福麻辣烫点一份炸串拼盘并付款",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "杨国福麻辣烫",
+   "items": [
+    {
+     "name": "炸串拼盘",
+     "qty": 1
+    }
+   ],
+   "pay": true
+  }
+ },
+ {
+  "id": "PAY03",
+  "source": "testset",
+  "instruction": "在一点点点一杯柠檬绿茶并付款",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "柠檬绿茶",
+     "qty": 1
+    }
+   ],
+   "pay": true
+  }
+ },
+ {
+  "id": "PAY04",
+  "source": "testset",
+  "instruction": "在老王黄焖鸡点一份黄焖排骨饭并付款",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖排骨饭",
+     "qty": 1
+    }
+   ],
+   "pay": true
+  }
+ },
+ {
+  "id": "PAY05",
+  "source": "testset",
+  "instruction": "在川味小馆点一份回锅肉并付款",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "川味小馆",
+   "items": [
+    {
+     "name": "回锅肉",
+     "qty": 1
+    }
+   ],
+   "pay": true
+  }
+ },
+ {
+  "id": "PAY06",
+  "source": "testset",
+  "instruction": "在沙县小吃点一份蒸饺并付款",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "沙县小吃",
+   "items": [
+    {
+     "name": "蒸饺",
+     "qty": 1
+    }
+   ],
+   "pay": true
+  }
+ },
+ {
+  "id": "PAY07",
+  "source": "testset",
+  "instruction": "在一点点点两杯波霸奶茶并付款",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "波霸奶茶",
+     "qty": 2
+    }
+   ],
+   "pay": true
+  }
+ },
+ {
+  "id": "PAY08",
+  "source": "testset",
+  "instruction": "在杨国福麻辣烫点一份麻辣烫并付款",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "杨国福麻辣烫",
+   "items": [
+    {
+     "name": "麻辣烫（按份）",
+     "qty": 1
+    }
+   ],
+   "pay": true
+  }
+ },
+ {
+  "id": "HC01",
+  "source": "holdout",
+  "instruction": "后天杭州会下雨吗？下的话从公司叫车回家",
+  "gold_plan": {
+   "intent": "weather_ride",
+   "city": "杭州",
+   "date": "2026-11-17",
+   "origin": "公司",
+   "dest": "家"
+  }
+ },
+ {
+  "id": "HC02",
+  "source": "holdout",
+  "instruction": "如果明天成都下雨，就从家叫车去虹桥火车站",
+  "gold_plan": {
+   "intent": "weather_ride",
+   "city": "成都",
+   "date": "2026-11-16",
+   "origin": "家",
+   "dest": "虹桥火车站"
+  }
+ },
+ {
+  "id": "HC03",
+  "source": "holdout",
+  "instruction": "沙县小吃点两份蒸饺，付款",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "沙县小吃",
+   "items": [
+    {
+     "name": "蒸饺",
+     "qty": 2
+    }
+   ],
+   "pay": true
+  }
+ },
+ {
+  "id": "HC04",
+  "source": "holdout",
+  "instruction": "深圳后天天气怎么样",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "深圳",
+   "date": "2026-11-17"
+  }
+ },
+ {
+  "id": "HN01",
+  "source": "holdout",
+  "instruction": "漠河今天冷吗",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "漠河",
+   "date": "2026-11-15"
+  }
+ },
+ {
+  "id": "HN02",
+  "source": "holdout",
+  "instruction": "从浦东机场打车去公司多少钱",
+  "gold_plan": {
+   "intent": "ride",
+   "origin": "浦东机场",
+   "dest": "公司"
+  }
+ },
+ {
+  "id": "HN03",
+  "source": "holdout",
+  "instruction": "在川味小馆点一份水煮鱼和一份米饭",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "川味小馆",
+   "items": [
+    {
+     "name": "水煮鱼",
+     "qty": 1
+    },
+    {
+     "name": "米饭",
+     "qty": 1
+    }
+   ],
+   "pay": false
+  }
+ },
+ {
+  "id": "HL01",
+  "source": "holdout",
+  "instruction": "如果后天上海下雨就从公司叫车回家",
+  "gold_plan": {
+   "intent": "weather_ride",
+   "city": "上海",
+   "date": "2026-11-17",
+   "origin": "公司",
+   "dest": "家"
+  }
+ },
+ {
+  "id": "HL02",
+  "source": "holdout",
+  "instruction": "看看沙县小吃的菜单",
+  "gold_plan": {
+   "intent": "food_menu",
+   "restaurant": "沙县小吃",
+   "dish": null
+  }
+ },
+ {
+  "id": "HL03",
+  "source": "holdout",
+  "instruction": "一点点有什么喝的",
+  "gold_plan": {
+   "intent": "food_menu",
+   "restaurant": "一点点",
+   "dish": null
+  }
+ },
+ {
+  "id": "HL04",
+  "source": "holdout",
+  "instruction": "深圳明天天气",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "深圳",
+   "date": "2026-11-16"
+  }
+ },
+ {
+  "id": "HL05",
+  "source": "holdout",
+  "instruction": "成都后天天气",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "成都",
+   "date": "2026-11-17"
+  }
+ },
+ {
+  "id": "HL06",
+  "source": "holdout",
+  "instruction": "看看老王黄焖鸡的菜单，多久送到",
+  "gold_plan": {
+   "intent": "food_menu",
+   "restaurant": "老王黄焖鸡",
+   "dish": null
+  }
+ },
+ {
+  "id": "HR01",
+  "source": "holdout",
+  "instruction": "在杨国福麻辣烫点一份酸梅汤并付款",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "杨国福麻辣烫",
+   "items": [
+    {
+     "name": "酸梅汤",
+     "qty": 1
+    }
+   ],
+   "pay": true
+  }
+ },
+ {
+  "id": "HR02",
+  "source": "holdout",
+  "instruction": "在老王黄焖鸡点一份可乐",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "可乐",
+     "qty": 1
+    }
+   ],
+   "pay": false
+  }
+ },
+ {
+  "id": "HP01",
+  "source": "holdout",
+  "instruction": "在一点点点一杯芝芝莓莓并付款",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "芝芝莓莓",
+     "qty": 1
+    }
+   ],
+   "pay": true
+  }
+ },
+ {
+  "id": "H-U01",
+  "source": "holdout",
+  "instruction": "哈尔滨后天天气",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "哈尔滨",
+   "date": "2026-11-17"
+  }
+ },
+ {
+  "id": "HC05",
+  "source": "holdout",
+  "instruction": "从家步行到地铁站要走多久",
+  "gold_plan": {
+   "intent": "route",
+   "origin": "家",
+   "dest": "地铁站",
+   "mode": "walk"
+  }
+ },
+ {
+  "id": "HC06",
+  "source": "holdout",
+  "instruction": "在一点点点三杯柠檬绿茶",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "柠檬绿茶",
+     "qty": 3
+    }
+   ],
+   "pay": false
+  }
+ },
+ {
+  "id": "HN04",
+  "source": "holdout",
+  "instruction": "从公司打车去浦东机场",
+  "gold_plan": {
+   "intent": "ride",
+   "origin": "公司",
+   "dest": "浦东机场"
+  }
+ },
+ {
+  "id": "HN05",
+  "source": "holdout",
+  "instruction": "一点点点二十杯波霸奶茶并付款",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "波霸奶茶",
+     "qty": 20
+    }
+   ],
+   "pay": true
+  }
+ },
+ {
+  "id": "HT01",
+  "source": "holdout",
+  "instruction": "哈尔滨今天天气",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "哈尔滨",
+   "date": "2026-11-15"
+  }
+ },
+ {
+  "id": "HT02",
+  "source": "holdout",
+  "instruction": "看看川味小馆有什么菜",
+  "gold_plan": {
+   "intent": "food_menu",
+   "restaurant": "川味小馆",
+   "dish": null
+  }
+ },
+ {
+  "id": "HS01",
+  "source": "holdout",
+  "instruction": "成都明天天气",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "成都",
+   "date": "2026-11-16"
+  }
+ },
+ {
+  "id": "HST01",
+  "source": "holdout",
+  "instruction": "杭州明天天气",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "杭州",
+   "date": "2026-11-16"
+  }
+ },
+ {
+  "id": "HST02",
+  "source": "holdout",
+  "instruction": "看看沙县小吃的菜单",
+  "gold_plan": {
+   "intent": "food_menu",
+   "restaurant": "沙县小吃",
+   "dish": null
+  }
+ },
+ {
+  "id": "HR03",
+  "source": "holdout",
+  "instruction": "北京明天天气",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "北京",
+   "date": "2026-11-16"
+  }
+ },
+ {
+  "id": "HL07",
+  "source": "holdout",
+  "instruction": "看看一点点的菜单，几分钟能到",
+  "gold_plan": {
+   "intent": "food_menu",
+   "restaurant": "一点点",
+   "dish": null
+  }
+ },
+ {
+  "id": "HP02",
+  "source": "holdout",
+  "instruction": "在老王黄焖鸡点一份黄焖鸡米饭并付款",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖鸡米饭",
+     "qty": 1
+    }
+   ],
+   "pay": true
+  }
+ },
+ {
+  "id": "HP03",
+  "source": "holdout",
+  "instruction": "在杨国福麻辣烫点一份酸梅汤并付款",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "杨国福麻辣烫",
+   "items": [
+    {
+     "name": "酸梅汤",
+     "qty": 1
+    }
+   ],
+   "pay": true
+  }
+ },
+ {
+  "id": "PP01",
+  "source": "paraphrase",
+  "instruction": "帮我瞅瞅魔都明儿个天气",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "上海",
+   "date": "2026-11-16"
+  }
+ },
+ {
+  "id": "PP02",
+  "source": "paraphrase",
+  "instruction": "帝都今天冷不冷啊",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "北京",
+   "date": "2026-11-15"
+  }
+ },
+ {
+  "id": "PP03",
+  "source": "paraphrase",
+  "instruction": "羊城后天会不会下雨",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "广州",
+   "date": "2026-11-17"
+  }
+ },
+ {
+  "id": "PP04",
+  "source": "paraphrase",
+  "instruction": "冰城明天要穿羽绒服吗",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "哈尔滨",
+   "date": "2026-11-16"
+  }
+ },
+ {
+  "id": "PP05",
+  "source": "paraphrase",
+  "instruction": "蓉城今儿个天儿咋样",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "成都",
+   "date": "2026-11-15"
+  }
+ },
+ {
+  "id": "PP06",
+  "source": "paraphrase",
+  "instruction": "杭州明天出门要带伞不",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "杭州",
+   "date": "2026-11-16"
+  }
+ },
+ {
+  "id": "PP07",
+  "source": "paraphrase",
+  "instruction": "深圳后天热吗",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "深圳",
+   "date": "2026-11-17"
+  }
+ },
+ {
+  "id": "PP08",
+  "source": "paraphrase",
+  "instruction": "漠河那边现在多少度",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "漠河",
+   "date": "2026-11-15"
+  }
+ },
+ {
+  "id": "PP09",
+  "source": "paraphrase",
+  "instruction": "明天魔都要下雨的话从家给我叫个车去单位",
+  "gold_plan": {
+   "intent": "weather_ride",
+   "city": "上海",
+   "date": "2026-11-16",
+   "origin": "家",
+   "dest": "公司"
+  }
+ },
+ {
+  "id": "PP10",
+  "source": "paraphrase",
+  "instruction": "后天杭州下雨就打车从公司回家",
+  "gold_plan": {
+   "intent": "weather_ride",
+   "city": "杭州",
+   "date": "2026-11-17",
+   "origin": "公司",
+   "dest": "家"
+  }
+ },
+ {
+  "id": "PP11",
+  "source": "paraphrase",
+  "instruction": "帝都明天下雨的话，帮我从家叫车到虹桥火车站",
+  "gold_plan": {
+   "intent": "weather_ride",
+   "city": "北京",
+   "date": "2026-11-16",
+   "origin": "家",
+   "dest": "虹桥火车站"
+  }
+ },
+ {
+  "id": "PP12",
+  "source": "paraphrase",
+  "instruction": "杨国福有啥好吃的",
+  "gold_plan": {
+   "intent": "food_menu",
+   "restaurant": "杨国福麻辣烫",
+   "dish": null
+  }
+ },
+ {
+  "id": "PP13",
+  "source": "paraphrase",
+  "instruction": "沙县那家有没有扁肉",
+  "gold_plan": {
+   "intent": "food_menu",
+   "restaurant": "沙县小吃",
+   "dish": "扁肉"
+  }
+ },
+ {
+  "id": "PP14",
+  "source": "paraphrase",
+  "instruction": "一点点都有些啥喝的",
+  "gold_plan": {
+   "intent": "food_menu",
+   "restaurant": "一点点",
+   "dish": null
+  }
+ },
+ {
+  "id": "PP15",
+  "source": "paraphrase",
+  "instruction": "川味小馆今天能送吗，菜单给我看看",
+  "gold_plan": {
+   "intent": "food_menu",
+   "restaurant": "川味小馆",
+   "dish": null
+  }
+ },
+ {
+  "id": "PP16",
+  "source": "paraphrase",
+  "instruction": "老王家黄焖鸡有排骨饭不",
+  "gold_plan": {
+   "intent": "food_menu",
+   "restaurant": "老王黄焖鸡",
+   "dish": "黄焖排骨饭"
+  }
+ },
+ {
+  "id": "PP17",
+  "source": "paraphrase",
+  "instruction": "老王家黄焖鸡给我来个黄焖鸡米饭，钱直接付了",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖鸡米饭",
+     "qty": 1
+    }
+   ],
+   "pay": true
+  }
+ },
+ {
+  "id": "PP18",
+  "source": "paraphrase",
+  "instruction": "沙县整两份蒸饺一碗拌面",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "沙县小吃",
+   "items": [
+    {
+     "name": "蒸饺",
+     "qty": 2
+    },
+    {
+     "name": "拌面",
+     "qty": 1
+    }
+   ],
+   "pay": false
+  }
+ },
+ {
+  "id": "PP19",
+  "source": "paraphrase",
+  "instruction": "一点点下单三杯柠檬绿茶，顺便付了",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "柠檬绿茶",
+     "qty": 3
+    }
+   ],
+   "pay": true
+  }
+ },
+ {
+  "id": "PP20",
+  "source": "paraphrase",
+  "instruction": "杨国福给我来一份炸串拼盘加一瓶酸梅汤，微信支付",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "杨国福麻辣烫",
+   "items": [
+    {
+     "name": "炸串拼盘",
+     "qty": 1
+    },
+    {
+     "name": "酸梅汤",
+     "qty": 1
+    }
+   ],
+   "pay": true
+  }
+ },
+ {
+  "id": "PP21",
+  "source": "paraphrase",
+  "instruction": "川味小馆要个水煮鱼",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "川味小馆",
+   "items": [
+    {
+     "name": "水煮鱼",
+     "qty": 1
+    }
+   ],
+   "pay": false
+  }
+ },
+ {
+  "id": "PP22",
+  "source": "paraphrase",
+  "instruction": "帮我订份鸡腿饭，沙县的，付款",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "沙县小吃",
+   "items": [
+    {
+     "name": "鸡腿饭",
+     "qty": 1
+    }
+   ],
+   "pay": true
+  }
+ },
+ {
+  "id": "PP23",
+  "source": "paraphrase",
+  "instruction": "给我点杯芝芝莓莓",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "芝芝莓莓",
+     "qty": 1
+    }
+   ],
+   "pay": false
+  }
+ },
+ {
+  "id": "PP24",
+  "source": "paraphrase",
+  "instruction": "老王黄焖鸡点个排骨饭再来瓶可乐",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "老王黄焖鸡",
+   "items": [
+    {
+     "name": "黄焖排骨饭",
+     "qty": 1
+    },
+    {
+     "name": "可乐",
+     "qty": 1
+    }
+   ],
+   "pay": false
+  }
+ },
+ {
+  "id": "PP25",
+  "source": "paraphrase",
+  "instruction": "从单位打车去机场大概多少钱",
+  "gold_plan": {
+   "intent": "ride",
+   "origin": "公司",
+   "dest": "浦东机场"
+  }
+ },
+ {
+  "id": "PP26",
+  "source": "paraphrase",
+  "instruction": "家到公司打个车要多少",
+  "gold_plan": {
+   "intent": "ride",
+   "origin": "家",
+   "dest": "公司"
+  }
+ },
+ {
+  "id": "PP27",
+  "source": "paraphrase",
+  "instruction": "机场打车回公司多少钱",
+  "gold_plan": {
+   "intent": "ride",
+   "origin": "浦东机场",
+   "dest": "公司"
+  }
+ },
+ {
+  "id": "PP28",
+  "source": "paraphrase",
+  "instruction": "帮我叫个车，从家去火车站",
+  "gold_plan": {
+   "intent": "ride",
+   "origin": "家",
+   "dest": "虹桥火车站"
+  }
+ },
+ {
+  "id": "PP29",
+  "source": "paraphrase",
+  "instruction": "从家走到地铁站要多久",
+  "gold_plan": {
+   "intent": "route",
+   "origin": "家",
+   "dest": "地铁站",
+   "mode": "walk"
+  }
+ },
+ {
+  "id": "PP30",
+  "source": "paraphrase",
+  "instruction": "家到虹桥站开车怎么走",
+  "gold_plan": {
+   "intent": "route",
+   "origin": "家",
+   "dest": "虹桥火车站",
+   "mode": "drive"
+  }
+ },
+ {
+  "id": "PP31",
+  "source": "paraphrase",
+  "instruction": "公司回家开车多远",
+  "gold_plan": {
+   "intent": "route",
+   "origin": "公司",
+   "dest": "家",
+   "mode": "drive"
+  }
+ },
+ {
+  "id": "PP32",
+  "source": "paraphrase",
+  "instruction": "地铁站离家多远，走路",
+  "gold_plan": {
+   "intent": "route",
+   "origin": "地铁站",
+   "dest": "家",
+   "mode": "walk"
+  }
+ },
+ {
+  "id": "PP33",
+  "source": "paraphrase",
+  "instruction": "明天上海下不下雨？下的话从公司叫车去浦东机场",
+  "gold_plan": {
+   "intent": "weather_ride",
+   "city": "上海",
+   "date": "2026-11-16",
+   "origin": "公司",
+   "dest": "浦东机场"
+  }
+ },
+ {
+  "id": "PP34",
+  "source": "paraphrase",
+  "instruction": "成都后天天气，顺便说下要不要带伞",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "成都",
+   "date": "2026-11-17"
+  }
+ },
+ {
+  "id": "PP35",
+  "source": "paraphrase",
+  "instruction": "哈尔滨明天零下几度",
+  "gold_plan": {
+   "intent": "weather",
+   "city": "哈尔滨",
+   "date": "2026-11-16"
+  }
+ },
+ {
+  "id": "PP36",
+  "source": "paraphrase",
+  "instruction": "一点点两杯波霸奶茶，付钱",
+  "gold_plan": {
+   "intent": "food_order",
+   "restaurant": "一点点",
+   "items": [
+    {
+     "name": "波霸奶茶",
+     "qty": 2
+    }
+   ],
+   "pay": true
+  }
+ }
+]

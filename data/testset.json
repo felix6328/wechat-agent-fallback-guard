@@ -1,0 +1,1028 @@
+[
+ {
+  "id": "C01",
+  "category": "clean",
+  "instruction": "北京今天天气怎么样",
+  "gold_intent": "weather",
+  "fault_plan": {},
+  "gt_anomalous": false,
+  "gt_types": [],
+  "acceptable": [
+   "ok"
+  ],
+  "why": ""
+ },
+ {
+  "id": "C02",
+  "category": "clean",
+  "instruction": "杭州明天冷不冷",
+  "gold_intent": "weather",
+  "fault_plan": {},
+  "gt_anomalous": false,
+  "gt_types": [],
+  "acceptable": [
+   "ok"
+  ],
+  "why": ""
+ },
+ {
+  "id": "C03",
+  "category": "clean",
+  "instruction": "在沙县小吃点一份拌面",
+  "gold_intent": "food_order",
+  "fault_plan": {},
+  "gt_anomalous": false,
+  "gt_types": [],
+  "acceptable": [
+   "ok"
+  ],
+  "why": ""
+ },
+ {
+  "id": "C04",
+  "category": "clean",
+  "instruction": "看看杨国福麻辣烫的菜单",
+  "gold_intent": "food_menu",
+  "fault_plan": {},
+  "gt_anomalous": false,
+  "gt_types": [],
+  "acceptable": [
+   "ok"
+  ],
+  "why": ""
+ },
+ {
+  "id": "C05",
+  "category": "clean",
+  "instruction": "从家打车去公司多少钱",
+  "gold_intent": "ride",
+  "fault_plan": {},
+  "gt_anomalous": false,
+  "gt_types": [],
+  "acceptable": [
+   "ok"
+  ],
+  "why": ""
+ },
+ {
+  "id": "C06",
+  "category": "clean",
+  "instruction": "从家到虹桥火车站的路线",
+  "gold_intent": "route",
+  "fault_plan": {},
+  "gt_anomalous": false,
+  "gt_types": [],
+  "acceptable": [
+   "ok"
+  ],
+  "why": ""
+ },
+ {
+  "id": "C07",
+  "category": "clean",
+  "instruction": "在老王黄焖鸡点一份黄焖鸡米饭并付款",
+  "gold_intent": "food_order",
+  "fault_plan": {},
+  "gt_anomalous": false,
+  "gt_types": [],
+  "acceptable": [
+   "ok"
+  ],
+  "why": ""
+ },
+ {
+  "id": "C08",
+  "category": "clean",
+  "instruction": "成都后天天气",
+  "gold_intent": "weather",
+  "fault_plan": {},
+  "gt_anomalous": false,
+  "gt_types": [],
+  "acceptable": [
+   "ok"
+  ],
+  "why": ""
+ },
+ {
+  "id": "C09",
+  "category": "clean",
+  "instruction": "明天北京要是下雨就帮我从家叫车去公司",
+  "gold_intent": "weather_ride",
+  "fault_plan": {},
+  "gt_anomalous": false,
+  "gt_types": [],
+  "acceptable": [
+   "ok"
+  ],
+  "why": ""
+ },
+ {
+  "id": "C10",
+  "category": "clean",
+  "instruction": "明天上海要是下雨就帮我从家叫车去公司",
+  "gold_intent": "weather_ride",
+  "fault_plan": {},
+  "gt_anomalous": false,
+  "gt_types": [],
+  "acceptable": [
+   "ok"
+  ],
+  "why": ""
+ },
+ {
+  "id": "C11",
+  "category": "clean",
+  "instruction": "在杨国福麻辣烫点一份麻辣烫和一份酸梅汤，付款",
+  "gold_intent": "food_order",
+  "fault_plan": {},
+  "gt_anomalous": false,
+  "gt_types": [],
+  "acceptable": [
+   "ok"
+  ],
+  "why": ""
+ },
+ {
+  "id": "H01",
+  "category": "hard_negative",
+  "instruction": "漠河明天天气怎么样，要穿多少",
+  "gold_intent": "weather",
+  "fault_plan": {},
+  "gt_anomalous": false,
+  "gt_types": [],
+  "acceptable": [
+   "ok"
+  ],
+  "why": "漠河 11 月最低 -32°C 是真实量级，触发 soft 规则"
+ },
+ {
+  "id": "H02",
+  "category": "hard_negative",
+  "instruction": "从公司打车去浦东机场多少钱",
+  "gold_intent": "ride",
+  "fault_plan": {},
+  "gt_anomalous": false,
+  "gt_types": [],
+  "acceptable": [
+   "ok"
+  ],
+  "why": "62km 机场单 221 元，触发 soft 规则"
+ },
+ {
+  "id": "H03",
+  "category": "hard_negative",
+  "instruction": "看看川味小馆的菜单",
+  "gold_intent": "food_menu",
+  "fault_plan": {},
+  "gt_anomalous": false,
+  "gt_types": [],
+  "acceptable": [
+   "ok"
+  ],
+  "why": "雨天高峰配送 95 分钟，商家已备注"
+ },
+ {
+  "id": "H04",
+  "category": "hard_negative",
+  "instruction": "一点点点二十杯芝芝莓莓，直接付款",
+  "gold_intent": "food_order",
+  "fault_plan": {},
+  "gt_anomalous": false,
+  "gt_types": [],
+  "acceptable": [
+   "ok"
+  ],
+  "why": "团单 476 元，触发 soft 规则"
+ },
+ {
+  "id": "H05",
+  "category": "hard_negative",
+  "instruction": "广州今天天气",
+  "gold_intent": "weather",
+  "fault_plan": {},
+  "gt_anomalous": false,
+  "gt_types": [],
+  "acceptable": [
+   "ok"
+  ],
+  "why": "广州 11 月 30°C 偏热但合理，规则不报，考 LLM 误报"
+ },
+ {
+  "id": "H06",
+  "category": "hard_negative",
+  "instruction": "从家步行到地铁站怎么走",
+  "gold_intent": "route",
+  "fault_plan": {},
+  "gt_anomalous": false,
+  "gt_types": [],
+  "acceptable": [
+   "ok"
+  ],
+  "why": "0.2km 3 分钟，考 LLM 误报"
+ },
+ {
+  "id": "H07",
+  "category": "hard_negative",
+  "instruction": "看看老王黄焖鸡的菜单",
+  "gold_intent": "food_menu",
+  "fault_plan": {},
+  "gt_anomalous": false,
+  "gt_types": [],
+  "acceptable": [
+   "ok"
+  ],
+  "why": "含 0 元赠品「免费加饭」"
+ },
+ {
+  "id": "H08",
+  "category": "hard_negative",
+  "instruction": "哈尔滨明天天气",
+  "gold_intent": "weather",
+  "fault_plan": {},
+  "gt_anomalous": false,
+  "gt_types": [],
+  "acceptable": [
+   "ok"
+  ],
+  "why": "-14°C 正常"
+ },
+ {
+  "id": "T01",
+  "category": "transient",
+  "instruction": "上海明天天气怎么样",
+  "gold_intent": "weather",
+  "fault_plan": {
+   "weather.query": [
+    "timeout",
+    "ok"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "timeout"
+  ],
+  "acceptable": [
+   "ok",
+   "fallback"
+  ],
+  "why": "首次超时，重试即可"
+ },
+ {
+  "id": "T02",
+  "category": "transient",
+  "instruction": "看看沙县小吃的菜单",
+  "gold_intent": "food_menu",
+  "fault_plan": {
+   "food.search": [
+    "http_500",
+    "ok"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "http_500"
+  ],
+  "acceptable": [
+   "ok",
+   "fallback"
+  ],
+  "why": ""
+ },
+ {
+  "id": "T03",
+  "category": "transient",
+  "instruction": "深圳今天天气",
+  "gold_intent": "weather",
+  "fault_plan": {
+   "weather.query": [
+    "http_429",
+    "ok"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "http_429"
+  ],
+  "acceptable": [
+   "ok",
+   "fallback"
+  ],
+  "why": ""
+ },
+ {
+  "id": "T04",
+  "category": "transient",
+  "instruction": "杭州今天天气",
+  "gold_intent": "weather",
+  "fault_plan": {
+   "weather.query": [
+    "timeout",
+    "timeout",
+    "timeout"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "timeout"
+  ],
+  "acceptable": [
+   "fallback"
+  ],
+  "why": "持续超时，应切备用源"
+ },
+ {
+  "id": "T05",
+  "category": "transient",
+  "instruction": "看看一点点的菜单",
+  "gold_intent": "food_menu",
+  "fault_plan": {
+   "food.search": [
+    "timeout",
+    "timeout",
+    "timeout"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "timeout"
+  ],
+  "acceptable": [
+   "fallback"
+  ],
+  "why": "持续超时，应页面接力"
+ },
+ {
+  "id": "T06",
+  "category": "transient",
+  "instruction": "在沙县小吃点一份鸡腿饭",
+  "gold_intent": "food_order",
+  "fault_plan": {
+   "food.order": [
+    "timeout",
+    "ok"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "timeout"
+  ],
+  "acceptable": [
+   "ok",
+   "human"
+  ],
+  "why": "下单超时且未落单，带 token 重试安全"
+ },
+ {
+  "id": "T07",
+  "category": "transient",
+  "instruction": "在沙县小吃点一份蒸饺",
+  "gold_intent": "food_order",
+  "fault_plan": {
+   "food.order": [
+    "timeout_after_create",
+    "ok"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "timeout_after_create"
+  ],
+  "acceptable": [
+   "ok",
+   "human"
+  ],
+  "why": "服务端已落单但响应丢失；无 token 重试会重复下单"
+ },
+ {
+  "id": "T08",
+  "category": "transient",
+  "instruction": "北京明天天气",
+  "gold_intent": "weather",
+  "fault_plan": {
+   "weather.query": [
+    "http_500",
+    "http_500",
+    "http_500"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "http_500"
+  ],
+  "acceptable": [
+   "fallback"
+  ],
+  "why": ""
+ },
+ {
+  "id": "S01",
+  "category": "schema",
+  "instruction": "上海今天天气",
+  "gold_intent": "weather",
+  "fault_plan": {
+   "weather.query": [
+    "schema_missing"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "schema_missing"
+  ],
+  "acceptable": [
+   "fallback"
+  ],
+  "why": ""
+ },
+ {
+  "id": "S02",
+  "category": "schema",
+  "instruction": "老王黄焖鸡有什么吃的",
+  "gold_intent": "food_menu",
+  "fault_plan": {
+   "food.search": [
+    "schema_type"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "schema_type"
+  ],
+  "acceptable": [
+   "fallback"
+  ],
+  "why": ""
+ },
+ {
+  "id": "S03",
+  "category": "schema",
+  "instruction": "深圳明天天气",
+  "gold_intent": "weather",
+  "fault_plan": {
+   "weather.query": [
+    "schema_type"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "schema_type"
+  ],
+  "acceptable": [
+   "fallback"
+  ],
+  "why": ""
+ },
+ {
+  "id": "R01",
+  "category": "semantic_rule",
+  "instruction": "广州明天天气",
+  "gold_intent": "weather",
+  "fault_plan": {
+   "weather.query": [
+    "sem_range_temp"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "sem_range_temp"
+  ],
+  "acceptable": [
+   "fallback"
+  ],
+  "why": "80°C 超物理范围"
+ },
+ {
+  "id": "R02",
+  "category": "semantic_rule",
+  "instruction": "成都今天天气",
+  "gold_intent": "weather",
+  "fault_plan": {
+   "weather.query": [
+    "sem_low_gt_high"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "sem_low_gt_high"
+  ],
+  "acceptable": [
+   "fallback"
+  ],
+  "why": ""
+ },
+ {
+  "id": "R03",
+  "category": "semantic_rule",
+  "instruction": "杭州后天天气",
+  "gold_intent": "weather",
+  "fault_plan": {
+   "weather.query": [
+    "sem_city"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "sem_city"
+  ],
+  "acceptable": [
+   "fallback"
+  ],
+  "why": "回显城市不一致"
+ },
+ {
+  "id": "R04",
+  "category": "semantic_rule",
+  "instruction": "看看杨国福麻辣烫有什么",
+  "gold_intent": "food_menu",
+  "fault_plan": {
+   "food.search": [
+    "sem_eta_negative"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "sem_eta_negative"
+  ],
+  "acceptable": [
+   "fallback"
+  ],
+  "why": ""
+ },
+ {
+  "id": "R05",
+  "category": "semantic_rule",
+  "instruction": "在老王黄焖鸡点一份黄焖鸡米饭",
+  "gold_intent": "food_order",
+  "fault_plan": {
+   "food.search": [
+    "sem_price_zero"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "sem_price_zero"
+  ],
+  "acceptable": [
+   "fallback",
+   "human"
+  ],
+  "why": "主菜 0 元：soft 规则，严格版抓、宽松版漏"
+ },
+ {
+  "id": "R06",
+  "category": "semantic_rule",
+  "instruction": "在老王黄焖鸡点一份黄焖鸡米饭并付款",
+  "gold_intent": "food_order",
+  "fault_plan": {
+   "food.search": [
+    "sem_price_unit"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "sem_price_unit"
+  ],
+  "acceptable": [
+   "fallback",
+   "human"
+  ],
+  "why": "25.8 变 258：soft 规则（>200）"
+ },
+ {
+  "id": "R07",
+  "category": "semantic_rule",
+  "instruction": "在沙县小吃点一份扁肉",
+  "gold_intent": "food_order",
+  "fault_plan": {
+   "food.order": [
+    "sem_qty"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "sem_qty"
+  ],
+  "acceptable": [
+   "human"
+  ],
+  "why": "订单数量 ×10，回显校验能抓"
+ },
+ {
+  "id": "L01",
+  "category": "semantic_llm",
+  "instruction": "北京后天天气",
+  "gold_intent": "weather",
+  "fault_plan": {
+   "weather.query": [
+    "sem_condition_precip"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "sem_condition_precip"
+  ],
+  "acceptable": [
+   "fallback"
+  ],
+  "why": "「晴」却有 20+mm 降水"
+ },
+ {
+  "id": "L02",
+  "category": "semantic_llm",
+  "instruction": "上海明天天气，要带伞吗",
+  "gold_intent": "weather",
+  "fault_plan": {
+   "weather.query": [
+    "sem_inrange_temp"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "sem_inrange_temp"
+  ],
+  "acceptable": [
+   "fallback"
+  ],
+  "why": "11 月上海 -17~-9°C"
+ },
+ {
+  "id": "L03",
+  "category": "semantic_llm",
+  "instruction": "广州后天天气",
+  "gold_intent": "weather",
+  "fault_plan": {
+   "weather.query": [
+    "sem_condition_season"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "sem_condition_season"
+  ],
+  "acceptable": [
+   "fallback"
+  ],
+  "why": "广州 30°C 下大雪"
+ },
+ {
+  "id": "L04",
+  "category": "semantic_llm",
+  "instruction": "看看杨国福麻辣烫的菜单",
+  "gold_intent": "food_menu",
+  "fault_plan": {
+   "food.search": [
+    "sem_wrong_menu"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "sem_wrong_menu"
+  ],
+  "acceptable": [
+   "fallback"
+  ],
+  "why": "麻辣烫店返回麦当劳菜单"
+ },
+ {
+  "id": "L05",
+  "category": "semantic_llm",
+  "instruction": "看看沙县小吃的菜单，多久能送到",
+  "gold_intent": "food_menu",
+  "fault_plan": {
+   "food.search": [
+    "sem_eta_implausible"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "sem_eta_implausible"
+  ],
+  "acceptable": [
+   "fallback"
+  ],
+  "why": "12.4km 送 3 分钟"
+ },
+ {
+  "id": "L06",
+  "category": "semantic_llm",
+  "instruction": "在沙县小吃点一份拌面并付款",
+  "gold_intent": "food_order",
+  "fault_plan": {
+   "food.search": [
+    "sem_price_unit"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "sem_price_unit"
+  ],
+  "acceptable": [
+   "fallback",
+   "human"
+  ],
+  "why": "拌面 80 元，未过 200 阈值"
+ },
+ {
+  "id": "L07",
+  "category": "semantic_llm",
+  "instruction": "看看一点点的菜单",
+  "gold_intent": "food_menu",
+  "fault_plan": {
+   "food.search": [
+    "sem_price_unit"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "sem_price_unit"
+  ],
+  "acceptable": [
+   "fallback"
+  ],
+  "why": "奶茶 130 元"
+ },
+ {
+  "id": "L08",
+  "category": "semantic_llm",
+  "instruction": "明天杭州要是下雨就帮我从家叫车去公司",
+  "gold_intent": "weather_ride",
+  "fault_plan": {
+   "weather.query": [
+    "sem_condition_season"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "sem_condition_season"
+  ],
+  "acceptable": [
+   "fallback"
+  ],
+  "why": "杭州 15°C 下大雪，会误触发叫车"
+ },
+ {
+  "id": "ST01",
+  "category": "stale",
+  "instruction": "北京今天天气",
+  "gold_intent": "weather",
+  "fault_plan": {
+   "weather.query": [
+    "stale_hard"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "stale_hard"
+  ],
+  "acceptable": [
+   "fallback"
+  ],
+  "why": "3 天前的数据"
+ },
+ {
+  "id": "ST02",
+  "category": "stale",
+  "instruction": "成都明天天气",
+  "gold_intent": "weather",
+  "fault_plan": {
+   "weather.query": [
+    "stale_soft"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "stale_soft"
+  ],
+  "acceptable": [
+   "degraded",
+   "fallback"
+  ],
+  "why": "5 小时前的数据，可降级展示"
+ },
+ {
+  "id": "ST03",
+  "category": "stale",
+  "instruction": "看看杨国福麻辣烫的菜单",
+  "gold_intent": "food_menu",
+  "fault_plan": {
+   "food.search": [
+    "stale_menu"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "stale_menu"
+  ],
+  "acceptable": [
+   "degraded",
+   "fallback"
+  ],
+  "why": "菜单 40 天未更新"
+ },
+ {
+  "id": "P01",
+  "category": "partial",
+  "instruction": "沙县小吃有拌面吗",
+  "gold_intent": "food_menu",
+  "fault_plan": {
+   "food.search": [
+    "partial"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "partial"
+  ],
+  "acceptable": [
+   "degraded",
+   "fallback"
+  ],
+  "why": "分页截断，且要的菜不在"
+ },
+ {
+  "id": "P02",
+  "category": "partial",
+  "instruction": "看看川味小馆的菜单",
+  "gold_intent": "food_menu",
+  "fault_plan": {
+   "food.search": [
+    "partial"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "partial"
+  ],
+  "acceptable": [
+   "degraded",
+   "fallback"
+  ],
+  "why": "has_more=true 只返回 1 道，规则 v1 不查"
+ },
+ {
+  "id": "PAY01",
+  "category": "payment",
+  "instruction": "在沙县小吃点一份鸡腿饭并付款",
+  "gold_intent": "food_order",
+  "fault_plan": {
+   "pay.create": [
+    "timeout_after_charge"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "timeout_after_charge"
+  ],
+  "acceptable": [
+   "ok",
+   "human"
+  ],
+  "why": "已扣款但响应丢失；盲重试=重复扣款"
+ },
+ {
+  "id": "PAY02",
+  "category": "payment",
+  "instruction": "在杨国福麻辣烫点一份炸串拼盘并付款",
+  "gold_intent": "food_order",
+  "fault_plan": {
+   "pay.create": [
+    "timeout_before_charge"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "timeout_before_charge"
+  ],
+  "acceptable": [
+   "ok",
+   "human"
+  ],
+  "why": "未扣款，查单后同 key 重试"
+ },
+ {
+  "id": "PAY03",
+  "category": "payment",
+  "instruction": "在一点点点一杯柠檬绿茶并付款",
+  "gold_intent": "food_order",
+  "fault_plan": {
+   "pay.create": [
+    "http_500"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "http_500"
+  ],
+  "acceptable": [
+   "ok",
+   "human"
+  ],
+  "why": ""
+ },
+ {
+  "id": "PAY04",
+  "category": "payment",
+  "instruction": "在老王黄焖鸡点一份黄焖排骨饭并付款",
+  "gold_intent": "food_order",
+  "fault_plan": {
+   "pay.create": [
+    "amount_mismatch"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "amount_mismatch"
+  ],
+  "acceptable": [
+   "human"
+  ],
+  "why": "实扣是应付的 10 倍"
+ },
+ {
+  "id": "PAY05",
+  "category": "payment",
+  "instruction": "在川味小馆点一份回锅肉并付款",
+  "gold_intent": "food_order",
+  "fault_plan": {
+   "pay.create": [
+    "timeout_after_charge"
+   ],
+   "pay.query": [
+    "processing"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "processing",
+   "timeout_after_charge"
+  ],
+  "acceptable": [
+   "human"
+  ],
+  "why": "查单仍处理中，必须等待/人工"
+ },
+ {
+  "id": "PAY06",
+  "category": "payment",
+  "instruction": "在沙县小吃点一份蒸饺并付款",
+  "gold_intent": "food_order",
+  "fault_plan": {
+   "pay.create": [
+    "timeout_before_charge",
+    "timeout_before_charge"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "timeout_before_charge"
+  ],
+  "acceptable": [
+   "ok",
+   "human"
+  ],
+  "why": "同 key 重试仍超时 → 不再扣，转人工（无损的 ok 也算对）"
+ },
+ {
+  "id": "PAY07",
+  "category": "payment",
+  "instruction": "在一点点点两杯波霸奶茶并付款",
+  "gold_intent": "food_order",
+  "fault_plan": {
+   "food.order": [
+    "timeout_after_create"
+   ],
+   "pay.create": [
+    "timeout_after_charge"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "timeout_after_charge",
+   "timeout_after_create"
+  ],
+  "acceptable": [
+   "ok",
+   "human"
+  ],
+  "why": "下单和支付都丢响应"
+ },
+ {
+  "id": "PAY08",
+  "category": "payment",
+  "instruction": "在杨国福麻辣烫点一份麻辣烫并付款",
+  "gold_intent": "food_order",
+  "fault_plan": {
+   "pay.create": [
+    "http_429"
+   ]
+  },
+  "gt_anomalous": true,
+  "gt_types": [
+   "http_429"
+  ],
+  "acceptable": [
+   "ok",
+   "human"
+  ],
+  "why": ""
+ }
+]

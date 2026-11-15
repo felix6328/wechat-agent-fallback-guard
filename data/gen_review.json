@@ -1,0 +1,974 @@
+[
+ {
+  "gid": "G00-0",
+  "gen_label": "anomalous",
+  "gen_type": "stale",
+  "gen_description": "返回的是缓存的历史数据，日期与请求日期不符",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "日期返回 11-10，与请求不符（不是单纯过期）"
+ },
+ {
+  "gid": "G00-1",
+  "gen_label": "anomalous",
+  "gen_type": "semantic_wrong",
+  "gen_description": "温度单位错误，摄氏度值被误当作华氏度返回",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "华氏度冒充摄氏度"
+ },
+ {
+  "gid": "G00-2",
+  "gen_label": "anomalous",
+  "gen_type": "context_mismatch",
+  "gen_description": "返回了其他城市的天气数据，可能是上游服务错误",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "串城市：上海"
+ },
+ {
+  "gid": "G00-3",
+  "gen_label": "anomalous",
+  "gen_type": "schema_error",
+  "gen_description": "字段类型错误，降水量被误返回为字符串",
+  "decision": "reject",
+  "relabeled": false,
+  "reason": "纯格式：降水量字符串"
+ },
+ {
+  "gid": "G00-4",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "时区转换后时间显示不同，但数据正确",
+  "decision": "clean",
+  "relabeled": false,
+  "reason": "UTC 时间戳，换算后一致"
+ },
+ {
+  "gid": "G00-5",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "源标识变更，但数据来源实际相同",
+  "decision": "clean",
+  "relabeled": false,
+  "reason": "数据源名称变化，内容一致"
+ },
+ {
+  "gid": "G01-0",
+  "gen_label": "anomalous",
+  "gen_type": "stale",
+  "gen_description": "缓存数据未被更新，返回的是过期的天气信息",
+  "decision": "stale",
+  "relabeled": false,
+  "reason": "前一天更新的缓存"
+ },
+ {
+  "gid": "G01-1",
+  "gen_label": "anomalous",
+  "gen_type": "context_mismatch",
+  "gen_description": "返回的是杭州的天气数据（城市字段正确但数据对应错误）",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "数值换成别的城市但城市字段正确（几乎不可检测，保留以示天花板）"
+ },
+ {
+  "gid": "G01-2",
+  "gen_label": "anomalous",
+  "gen_type": "schema_error",
+  "gen_description": "温度单位错误（应为摄氏度但返回了华氏度）",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "华氏度"
+ },
+ {
+  "gid": "G01-3",
+  "gen_label": "anomalous",
+  "gen_type": "partial",
+  "gen_description": "缺失降水数据（上游服务暂时不可用）",
+  "decision": "partial",
+  "relabeled": false,
+  "reason": "降水为 null"
+ },
+ {
+  "gid": "G01-4",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "时区转换正确（UTC时间戳转换为北京时间）",
+  "decision": "clean",
+  "relabeled": false,
+  "reason": "UTC 时间戳"
+ },
+ {
+  "gid": "G01-5",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "数据来源不同但格式一致（第三方服务返回相同数据）",
+  "decision": "clean",
+  "relabeled": false,
+  "reason": "数据源名称变化"
+ },
+ {
+  "gid": "G02-0",
+  "gen_label": "anomalous",
+  "gen_type": "stale",
+  "gen_description": "缓存未更新，返回过期的天气数据",
+  "decision": "stale",
+  "relabeled": false,
+  "reason": "前一天更新"
+ },
+ {
+  "gid": "G02-1",
+  "gen_label": "anomalous",
+  "gen_type": "context_mismatch",
+  "gen_description": "接口返回了另一个城市的天气数据",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "串城市：深圳"
+ },
+ {
+  "gid": "G02-2",
+  "gen_label": "anomalous",
+  "gen_type": "semantic_wrong",
+  "gen_description": "温度单位错误，返回了华氏度但标记为摄氏度",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "华氏度"
+ },
+ {
+  "gid": "G02-3",
+  "gen_label": "anomalous",
+  "gen_type": "partial",
+  "gen_description": "部分字段缺失，降水概率字段被误删",
+  "decision": "partial",
+  "relabeled": false,
+  "reason": "缺降水字段"
+ },
+ {
+  "gid": "G02-4",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "数据源更新，降水概率从0.0变为0.1",
+  "decision": "clean",
+  "relabeled": false,
+  "reason": "降水 0.1 的正常更新"
+ },
+ {
+  "gid": "G02-5",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "时区显示不一致，但数据正确",
+  "decision": "clean",
+  "relabeled": false,
+  "reason": "UTC 时间戳"
+ },
+ {
+  "gid": "G03-0",
+  "gen_label": "anomalous",
+  "gen_type": "stale",
+  "gen_description": "返回的是昨天的天气数据，可能是缓存未更新",
+  "decision": "stale",
+  "relabeled": false,
+  "reason": "前一天数据"
+ },
+ {
+  "gid": "G03-1",
+  "gen_label": "anomalous",
+  "gen_type": "context_mismatch",
+  "gen_description": "温度单位错误，返回的是华氏度但字段仍标记为摄氏度",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "华氏度"
+ },
+ {
+  "gid": "G03-2",
+  "gen_label": "anomalous",
+  "gen_type": "schema_error",
+  "gen_description": "时间戳格式错误，缺少时区信息",
+  "decision": "reject",
+  "relabeled": false,
+  "reason": "纯格式：时间戳缺时区"
+ },
+ {
+  "gid": "G03-3",
+  "gen_label": "anomalous",
+  "gen_type": "semantic_wrong",
+  "gen_description": "降水单位错误，返回的是百分比概率而非毫米",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "晴天却有 10mm 降水（单位错）"
+ },
+ {
+  "gid": "G03-4",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "数据源更新，显示为实时监测数据",
+  "decision": "clean",
+  "relabeled": false,
+  "reason": "数据源 v2、12:00 更新"
+ },
+ {
+  "gid": "G03-5",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "多语言接口返回，字段值包含英文说明",
+  "decision": "clean",
+  "relabeled": false,
+  "reason": "城市/天气附带英文"
+ },
+ {
+  "gid": "G04-0",
+  "gen_label": "anomalous",
+  "gen_type": "stale",
+  "gen_description": "数据长时间未更新，是缓存的历史数据",
+  "decision": "stale",
+  "relabeled": false,
+  "reason": "10 月 1 日的旧数据"
+ },
+ {
+  "gid": "G04-1",
+  "gen_label": "anomalous",
+  "gen_type": "semantic_wrong",
+  "gen_description": "字段值类型错误，温度单位被误作字符串",
+  "decision": "reject",
+  "relabeled": false,
+  "reason": "纯格式：温度带单位字符串"
+ },
+ {
+  "gid": "G04-2",
+  "gen_label": "anomalous",
+  "gen_type": "context_mismatch",
+  "gen_description": "城市与数据不匹配，返回了上海的天气",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "数值换成上海的（城市字段正确）"
+ },
+ {
+  "gid": "G04-3",
+  "gen_label": "anomalous",
+  "gen_type": "partial",
+  "gen_description": "部分数据缺失，降水概率字段被默认值填充",
+  "decision": "partial",
+  "relabeled": false,
+  "reason": "降水为 null"
+ },
+ {
+  "gid": "G04-4",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "时区转换正确，UTC时间格式显示",
+  "decision": "clean",
+  "relabeled": false,
+  "reason": "UTC 时间戳"
+ },
+ {
+  "gid": "G04-5",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "数据源切换，第三方服务返回不同格式但内容一致",
+  "decision": "clean",
+  "relabeled": false,
+  "reason": "杭州市/阴天/秒级时间戳：同义改写"
+ },
+ {
+  "gid": "G05-0",
+  "gen_label": "anomalous",
+  "gen_type": "stale",
+  "gen_description": "返回的是缓存过期的旧数据，日期与请求日期不符",
+  "decision": "stale",
+  "relabeled": false,
+  "reason": "前一天数据"
+ },
+ {
+  "gid": "G05-1",
+  "gen_label": "anomalous",
+  "gen_type": "context_mismatch",
+  "gen_description": "返回了其他城市的天气数据（串数据）",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "串城市：北京"
+ },
+ {
+  "gid": "G05-2",
+  "gen_label": "anomalous",
+  "gen_type": "semantic_wrong",
+  "gen_description": "温度单位错误，实际返回的是华氏度但字段名仍标为摄氏度",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "华氏度"
+ },
+ {
+  "gid": "G05-3",
+  "gen_label": "anomalous",
+  "gen_type": "partial",
+  "gen_description": "部分字段缺失（可能因上游服务故障）",
+  "decision": "partial",
+  "relabeled": false,
+  "reason": "缺降水字段"
+ },
+ {
+  "gid": "G05-4",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "时区转换合理，UTC+8时间戳格式化正确",
+  "decision": "clean",
+  "relabeled": false,
+  "reason": "UTC 时间戳"
+ },
+ {
+  "gid": "G05-5",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "数据源更新合理，降水量由0.3mm精确到0.30mm",
+  "decision": "reject",
+  "relabeled": false,
+  "reason": "与正常返回完全相同"
+ },
+ {
+  "gid": "G06-0",
+  "gen_label": "anomalous",
+  "gen_type": "stale",
+  "gen_description": "返回的是缓存数据，日期为前一天但未更新",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "日期返回前一天"
+ },
+ {
+  "gid": "G06-1",
+  "gen_label": "anomalous",
+  "gen_type": "semantic_wrong",
+  "gen_description": "温度单位错误，实际应为摄氏度但返回了华氏度未标注",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "华氏度"
+ },
+ {
+  "gid": "G06-2",
+  "gen_label": "anomalous",
+  "gen_type": "schema_error",
+  "gen_description": "字段类型错误，降水概率应为百分比但返回了毫米值",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "多云却 20mm 降水"
+ },
+ {
+  "gid": "G06-3",
+  "gen_label": "anomalous",
+  "gen_type": "context_mismatch",
+  "gen_description": "返回了其他城市的天气数据（缓存错位）",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "数值换成别的城市（哈尔滨 11 月高温 8°C 仍可能，难检测）"
+ },
+ {
+  "gid": "G06-4",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "时区不同，更新时间显示UTC但内容正确",
+  "decision": "clean",
+  "relabeled": false,
+  "reason": "UTC 时间戳"
+ },
+ {
+  "gid": "G06-5",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "数据来自上游不同服务商，格式一致但数值偏差合理",
+  "decision": "clean",
+  "relabeled": false,
+  "reason": "另一服务商，数值小幅偏差"
+ },
+ {
+  "gid": "G07-0",
+  "gen_label": "anomalous",
+  "gen_type": "stale",
+  "gen_description": "返回的是缓存的历史数据，日期参数明明是明天但返回的是昨天的天气",
+  "decision": "stale",
+  "relabeled": false,
+  "reason": "前一天数据"
+ },
+ {
+  "gid": "G07-1",
+  "gen_label": "anomalous",
+  "gen_type": "context_mismatch",
+  "gen_description": "城市名称正确但返回的是其他城市的天气数据，可能是数据库查询错误",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "漠河 11 月 15°C/8°C，季节不符"
+ },
+ {
+  "gid": "G07-2",
+  "gen_label": "anomalous",
+  "gen_type": "semantic_wrong",
+  "gen_description": "温度单位错误，实际返回的是华氏度但字段名未标记",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "华氏度"
+ },
+ {
+  "gid": "G07-3",
+  "gen_label": "anomalous",
+  "gen_type": "partial",
+  "gen_description": "返回数据不完整，缺少降水字段，可能是上游服务异常",
+  "decision": "partial",
+  "relabeled": false,
+  "reason": "缺降水字段"
+ },
+ {
+  "gid": "G07-4",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "返回数据正常但提前更新，显示的是最新预测结果",
+  "decision": "clean",
+  "relabeled": false,
+  "reason": "12:00 新预报，小幅变化"
+ },
+ {
+  "gid": "G07-5",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "返回正常但源数据更换，新气象服务的数据略有差异",
+  "decision": "clean",
+  "relabeled": false,
+  "reason": "阵雪、v2 数据源，小幅变化"
+ },
+ {
+  "gid": "G08-0",
+  "gen_label": "anomalous",
+  "gen_type": "stale",
+  "gen_description": "缓存过期但仍返回旧数据，导致天气信息过时",
+  "decision": "stale",
+  "relabeled": false,
+  "reason": "前一天数据，且会把小雨变成晴 → 误不叫车"
+ },
+ {
+  "gid": "G08-1",
+  "gen_label": "anomalous",
+  "gen_type": "semantic_wrong",
+  "gen_description": "单位错误，降水量单位错误导致误解",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "小雨却 65mm（单位错）"
+ },
+ {
+  "gid": "G08-2",
+  "gen_label": "anomalous",
+  "gen_type": "context_mismatch",
+  "gen_description": "返回其他城市的数据，接口返回错误",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "串城市：北京"
+ },
+ {
+  "gid": "G08-3",
+  "gen_label": "anomalous",
+  "gen_type": "schema_error",
+  "gen_description": "字段类型错误，温度字段为字符串",
+  "decision": "reject",
+  "relabeled": false,
+  "reason": "纯格式：温度字符串"
+ },
+ {
+  "gid": "G08-4",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "数据来源不同，但信息完全正确",
+  "decision": "reject",
+  "relabeled": false,
+  "reason": "更新时间是 30 分钟后的未来时间，是否算异常有争议"
+ },
+ {
+  "gid": "G08-5",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "时区 UTC，但时间戳转换为北京时间后正确",
+  "decision": "clean",
+  "relabeled": false,
+  "reason": "UTC 时间戳"
+ },
+ {
+  "gid": "G09-0",
+  "gen_label": "anomalous",
+  "gen_type": "semantic_wrong",
+  "gen_description": "价格单位错误，将人民币价格显示为美元符号但实际数值仍按人民币计",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "价格带美元符号展示给用户"
+ },
+ {
+  "gid": "G09-1",
+  "gen_label": "anomalous",
+  "gen_type": "stale",
+  "gen_description": "返回的是昨日缓存数据，距离和配送时间未更新",
+  "decision": "stale",
+  "relabeled": false,
+  "reason": "昨天的菜单，价格已变"
+ },
+ {
+  "gid": "G09-2",
+  "gen_label": "anomalous",
+  "gen_type": "context_mismatch",
+  "gen_description": "串入另一家餐厅的数据，但restaurant字段仍显示为老王黄焖鸡",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "菜品串成另一家店"
+ },
+ {
+  "gid": "G09-3",
+  "gen_label": "anomalous",
+  "gen_type": "schema_error",
+  "gen_description": "时间字段格式错误，使用UTC时间但未注明时区",
+  "decision": "clean",
+  "relabeled": true,
+  "reason": "生成模型标为异常，实为等价的 UTC 时间戳 → 改标正常"
+ },
+ {
+  "gid": "G09-4",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "价格单位精确到分，虽然格式不同但数值完全正确",
+  "decision": "wrong",
+  "relabeled": true,
+  "reason": "生成模型标为正常，实为以「分」返回的价格（2580 元一份黄焖鸡）→ 改标错误"
+ },
+ {
+  "gid": "G09-5",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "多字段为空但结构完整，实际表示该餐厅暂时无特殊备注",
+  "decision": "clean",
+  "relabeled": false,
+  "reason": "note 为 null"
+ },
+ {
+  "gid": "G10-0",
+  "gen_label": "anomalous",
+  "gen_type": "stale",
+  "gen_description": "缓存数据未更新，菜单时间戳早于当前时间",
+  "decision": "stale",
+  "relabeled": false,
+  "reason": "5 天前的菜单且价格已变"
+ },
+ {
+  "gid": "G10-1",
+  "gen_label": "anomalous",
+  "gen_type": "context_mismatch",
+  "gen_description": "返回了其他商家的菜单数据，但restaurant字段仍为杨国福",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "菜品串成兰州拉面"
+ },
+ {
+  "gid": "G10-2",
+  "gen_label": "anomalous",
+  "gen_type": "schema_error",
+  "gen_description": "价格单位错误，将人民币价格误标记为美元",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "价格为美元数值"
+ },
+ {
+  "gid": "G10-3",
+  "gen_label": "anomalous",
+  "gen_type": "partial",
+  "gen_description": "分页逻辑错误，has_more为true但实际已返回全部数据",
+  "decision": "reject",
+  "relabeled": false,
+  "reason": "has_more=true 但数据完整，对展示影响有争议"
+ },
+ {
+  "gid": "G10-4",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "距离单位转换为英里，但数值保持合理转换",
+  "decision": "reject",
+  "relabeled": false,
+  "reason": "距离英里冒充公里，影响轻微有争议"
+ },
+ {
+  "gid": "G10-5",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "UTC时区显示，但时间戳与北京时间一致",
+  "decision": "clean",
+  "relabeled": false,
+  "reason": "UTC 时间戳"
+ },
+ {
+  "gid": "G11-0",
+  "gen_label": "anomalous",
+  "gen_type": "stale",
+  "gen_description": "菜单数据未更新，显示的是昨天的菜单",
+  "decision": "reject",
+  "relabeled": false,
+  "reason": "只有时间戳变成昨天，数据与真值一致，无害"
+ },
+ {
+  "gid": "G11-1",
+  "gen_label": "anomalous",
+  "gen_type": "context_mismatch",
+  "gen_description": "返回了其他餐厅的数据，可能是缓存未清理",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "返回肯德基"
+ },
+ {
+  "gid": "G11-2",
+  "gen_label": "anomalous",
+  "gen_type": "schema_error",
+  "gen_description": "价格单位错误，显示的是分而非元",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "价格以分返回"
+ },
+ {
+  "gid": "G11-3",
+  "gen_label": "anomalous",
+  "gen_type": "partial",
+  "gen_description": "分页逻辑错误，只返回了部分数据",
+  "decision": "partial",
+  "relabeled": false,
+  "reason": "只返回 2 道菜，has_more=true"
+ },
+ {
+  "gid": "G11-4",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "配送时间较长但合理，因为餐厅正在高峰期",
+  "decision": "clean",
+  "relabeled": false,
+  "reason": "高峰期 45 分钟"
+ },
+ {
+  "gid": "G11-5",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "餐厅较远但数据准确，可能是用户在高德地图搜索的偏僻位置",
+  "decision": "clean",
+  "relabeled": false,
+  "reason": "距离 5.2km、38 分钟，合理"
+ },
+ {
+  "gid": "G12-0",
+  "gen_label": "anomalous",
+  "gen_type": "stale",
+  "gen_description": "缓存过期，返回过时且错误的菜单数据（波霸奶茶价格异常增高）",
+  "decision": "stale",
+  "relabeled": false,
+  "reason": "5 天前菜单，波霸奶茶 33 元"
+ },
+ {
+  "gid": "G12-1",
+  "gen_label": "anomalous",
+  "gen_type": "context_mismatch",
+  "gen_description": "接口返回了错误餐厅的数据（喜茶菜单被误返回）",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "返回喜茶菜单"
+ },
+ {
+  "gid": "G12-2",
+  "gen_label": "anomalous",
+  "gen_type": "partial",
+  "gen_description": "分页参数错误，只返回部分菜单且has_more标记错误",
+  "decision": "partial",
+  "relabeled": false,
+  "reason": "菜单被截断且 has_more 没标（几乎不可检测）"
+ },
+ {
+  "gid": "G12-3",
+  "gen_label": "anomalous",
+  "gen_type": "semantic_wrong",
+  "gen_description": "时区单位错误，delivery_eta_min实际返回的是小时数",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "配送 2.5 分钟（小时当分钟）"
+ },
+ {
+  "gid": "G12-4",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "餐厅打烊时返回空菜单但结构正常",
+  "decision": "clean",
+  "relabeled": false,
+  "reason": "已打烊、空菜单：应如实告知，不该当故障兜底"
+ },
+ {
+  "gid": "G12-5",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "促销活动期间临时添加特价商品但字段结构不变",
+  "decision": "clean",
+  "relabeled": false,
+  "reason": "新增特价商品"
+ },
+ {
+  "gid": "G13-0",
+  "gen_label": "anomalous",
+  "gen_type": "stale",
+  "gen_description": "菜单更新时间早于当前时间，显示的是昨天菜单",
+  "decision": "reject",
+  "relabeled": false,
+  "reason": "只有时间戳变成昨天，数据一致，无害"
+ },
+ {
+  "gid": "G13-1",
+  "gen_label": "anomalous",
+  "gen_type": "context_mismatch",
+  "gen_description": "返回了其他餐厅的菜单数据（串数据）",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "返回披萨店菜单"
+ },
+ {
+  "gid": "G13-2",
+  "gen_label": "anomalous",
+  "gen_type": "semantic_wrong",
+  "gen_description": "配送时间单位错误（分钟显示为小时）",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "配送 1.6 分钟（小时当分钟）"
+ },
+ {
+  "gid": "G13-3",
+  "gen_label": "anomalous",
+  "gen_type": "partial",
+  "gen_description": "缺失部分关键字段（has_more和note字段缺失）",
+  "decision": "reject",
+  "relabeled": false,
+  "reason": "缺 has_more/note，对用户无害"
+ },
+ {
+  "gid": "G13-4",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "价格显示为整数（实际存储为浮点数但显示时省略小数）",
+  "decision": "reject",
+  "relabeled": false,
+  "reason": "与正常返回完全相同"
+ },
+ {
+  "gid": "G13-5",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "距离和配送时间因实时路况而略有波动",
+  "decision": "clean",
+  "relabeled": false,
+  "reason": "路况导致小幅波动"
+ },
+ {
+  "gid": "G14-0",
+  "gen_label": "anomalous",
+  "gen_type": "stale",
+  "gen_description": "缓存未更新，返回了旧版本的菜单数据，缺少用户点的鸡腿饭",
+  "decision": "partial",
+  "relabeled": false,
+  "reason": "旧菜单里没有要点的鸡腿饭"
+ },
+ {
+  "gid": "G14-1",
+  "gen_label": "anomalous",
+  "gen_type": "semantic_wrong",
+  "gen_description": "字段名拼写错误，price_cny错拼为price_cn，导致价格解析失败",
+  "decision": "partial",
+  "relabeled": false,
+  "reason": "price_cny 字段名拼错，下单拿不到价格"
+ },
+ {
+  "gid": "G14-2",
+  "gen_label": "anomalous",
+  "gen_type": "context_mismatch",
+  "gen_description": "返回了错误商家的数据，可能是接口串数据或缓存污染",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "返回肯德基"
+ },
+ {
+  "gid": "G14-3",
+  "gen_label": "anomalous",
+  "gen_type": "schema_error",
+  "gen_description": "字段类型错误，delivery_eta_min被错误地返回为字符串",
+  "decision": "reject",
+  "relabeled": false,
+  "reason": "纯格式：eta 字符串"
+ },
+ {
+  "gid": "G14-4",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "菜单数据已更新，鸡腿饭价格调整为16.5元，属于正常的动态调价",
+  "decision": "clean",
+  "relabeled": false,
+  "reason": "鸡腿饭调价到 16.5"
+ },
+ {
+  "gid": "G14-5",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "配送时间因当前订单量增加而调整到25分钟，属于正常的动态变化",
+  "decision": "clean",
+  "relabeled": false,
+  "reason": "配送 25 分钟"
+ },
+ {
+  "gid": "G15-0",
+  "gen_label": "anomalous",
+  "gen_type": "stale",
+  "gen_description": "菜单缓存数据未更新，显示的是昨天的价格",
+  "decision": "stale",
+  "relabeled": false,
+  "reason": "昨天菜单，价格已变，会按旧价下单"
+ },
+ {
+  "gid": "G15-1",
+  "gen_label": "anomalous",
+  "gen_type": "context_mismatch",
+  "gen_description": "返回的是其他分店的菜单，距离和配送时间错误",
+  "decision": "reject",
+  "relabeled": false,
+  "reason": "分店算不算同一家，产品策略有争议"
+ },
+ {
+  "gid": "G15-2",
+  "gen_label": "anomalous",
+  "gen_type": "schema_error",
+  "gen_description": "价格字段单位错误，实际显示的是分而非元",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "价格以分返回"
+ },
+ {
+  "gid": "G15-3",
+  "gen_label": "anomalous",
+  "gen_type": "partial",
+  "gen_description": "部分字段缺失且使用了默认值，实际接口调用失败",
+  "decision": "partial",
+  "relabeled": false,
+  "reason": "数据加载中、字段默认值、菜单被截断"
+ },
+ {
+  "gid": "G15-4",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "价格因活动临时下调，但其他字段一致",
+  "decision": "clean",
+  "relabeled": false,
+  "reason": "新用户特惠"
+ },
+ {
+  "gid": "G15-5",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "时区转换正确，但UTC时间戳显示在字段中",
+  "decision": "clean",
+  "relabeled": false,
+  "reason": "UTC 时间戳"
+ },
+ {
+  "gid": "G16-0",
+  "gen_label": "anomalous",
+  "gen_type": "stale",
+  "gen_description": "返回的是上一次缓存的订单数据，导致订单ID和状态过时",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "下单返回的是上一笔已送达订单"
+ },
+ {
+  "gid": "G16-1",
+  "gen_label": "anomalous",
+  "gen_type": "context_mismatch",
+  "gen_description": "返回的数据被其他用户请求串扰，包含restaurant和items但实际属于另一个订单",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "串单：别人的订单"
+ },
+ {
+  "gid": "G16-2",
+  "gen_label": "anomalous",
+  "gen_type": "schema_error",
+  "gen_description": "价格单位错误导致字段类型混乱，price_cny实际存储的是字符串",
+  "decision": "reject",
+  "relabeled": false,
+  "reason": "纯格式：价格字符串"
+ },
+ {
+  "gid": "G16-3",
+  "gen_label": "anomalous",
+  "gen_type": "partial",
+  "gen_description": "分页逻辑错误导致只返回部分订单信息，缺少eta_min",
+  "decision": "reject",
+  "relabeled": false,
+  "reason": "下单回执缺 eta，对用户无害"
+ },
+ {
+  "gid": "G16-4",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "时区转换导致eta_min显示为UTC时间，但实际计算正确",
+  "decision": "wrong",
+  "relabeled": true,
+  "reason": "生成模型标为正常，eta=-480 显然错误 → 改标错误"
+ },
+ {
+  "gid": "G16-5",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "上游系统价格更新导致返回最新价格，看起来不同但完全合理",
+  "decision": "reject",
+  "relabeled": false,
+  "reason": "实扣金额与菜单不一致，按产品策略应转人工还是放行有争议"
+ },
+ {
+  "gid": "G17-0",
+  "gen_label": "anomalous",
+  "gen_type": "stale",
+  "gen_description": "缓存了旧订单状态，实际已过期但未更新",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "新订单状态却是已完成"
+ },
+ {
+  "gid": "G17-1",
+  "gen_label": "anomalous",
+  "gen_type": "context_mismatch",
+  "gen_description": "返回了另一个门店的数据（串数据），门店名称不一致",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "订单变成喜茶"
+ },
+ {
+  "gid": "G17-2",
+  "gen_label": "anomalous",
+  "gen_type": "schema_error",
+  "gen_description": "价格单位错误，实际是美元但标记为人民币",
+  "decision": "wrong",
+  "relabeled": false,
+  "reason": "金额按美元数值返回，与应付不一致"
+ },
+ {
+  "gid": "G17-3",
+  "gen_label": "anomalous",
+  "gen_type": "partial",
+  "gen_description": "分页结果显示数据不完整，缺少部分字段",
+  "decision": "partial",
+  "relabeled": false,
+  "reason": "回执缺单价和 eta"
+ },
+ {
+  "gid": "G17-4",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "时区不同导致的 eta 显示差异，但实际合理",
+  "decision": "clean",
+  "relabeled": false,
+  "reason": "eta 15 分钟"
+ },
+ {
+  "gid": "G17-5",
+  "gen_label": "normal",
+  "gen_type": "none",
+  "gen_description": "促销活动导致价格临时下调，但订单正常",
+  "decision": "reject",
+  "relabeled": false,
+  "reason": "促销价低于菜单价，是否转人工有争议"
+ }
+]
