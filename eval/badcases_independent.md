@@ -1,0 +1,966 @@
+# Badcase：`data/independent.json`（自动生成）
+
+每个配置只列种子 42 的处置错误，避免重复。
+
+
+## A 无检测（SDK 式盲重试）（处置错误 61/90）
+
+- **I00-0** 北京今天天气怎么样 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I00-1** 北京今天天气怎么样 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I00-2** 北京今天天气怎么样 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I01-0** 上海明天天气 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_stale 判定=none（none）
+- **I01-1** 上海明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I01-2** 上海明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I01-3** 上海明天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）
+- **I02-0** 广州后天天气 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_stale 判定=none（none）
+- **I02-1** 广州后天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I02-2** 广州后天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I02-3** 广州后天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）
+- **I03-0** 深圳今天天气如何 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_stale 判定=none（none）
+- **I03-1** 深圳今天天气如何 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I03-3** 深圳今天天气如何 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I04-0** 杭州明天天气 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_stale 判定=none（none）
+- **I04-2** 杭州明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I04-3** 杭州明天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）
+- **I05-0** 成都后天天气 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_stale 判定=none（none）
+- **I05-1** 成都后天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I05-2** 成都后天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I05-3** 成都后天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）
+- **I06-0** 哈尔滨今天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I06-1** 哈尔滨今天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I06-2** 哈尔滨今天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I06-3** 哈尔滨今天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I07-0** 漠河明天天气 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_stale 判定=none（none）
+- **I07-1** 漠河明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I07-2** 漠河明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I07-3** 漠河明天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）
+- **I08-0** 明天上海要是下雨就帮我从家叫车去公司 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['fallback', 'human']
+  - FN 漏报 #0 `weather.query` 真值=gen_stale 判定=none（none）
+- **I08-1** 明天上海要是下雨就帮我从家叫车去公司 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback', 'human']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I08-2** 明天上海要是下雨就帮我从家叫车去公司 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback', 'human']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I09-0** 看看老王黄焖鸡的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I09-1** 看看老王黄焖鸡的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I09-2** 看看老王黄焖鸡的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I09-4** 看看老王黄焖鸡的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I10-0** 看看杨国福麻辣烫的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I10-1** 看看杨国福麻辣烫的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I10-2** 看看杨国福麻辣烫的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I11-1** 看看沙县小吃的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I11-2** 看看沙县小吃的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I11-3** 看看沙县小吃的菜单 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_partial 判定=none（none）
+- **I12-0** 看看一点点的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I12-1** 看看一点点的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I12-2** 看看一点点的菜单 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_partial 判定=none（none）
+- **I12-3** 看看一点点的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I13-1** 看看川味小馆的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I13-2** 看看川味小馆的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I14-0** 在沙县小吃点一份鸡腿饭 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['fallback', 'human', 'degraded']
+  - FN 漏报 #0 `food.search` 真值=gen_partial 判定=none（none）
+- **I14-1** 在沙县小吃点一份鸡腿饭 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['fallback', 'human', 'degraded']
+  - FN 漏报 #0 `food.search` 真值=gen_partial 判定=none（none）
+- **I14-2** 在沙县小吃点一份鸡腿饭 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback', 'human']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I15-0** 在杨国福麻辣烫点一份炸串拼盘并付款 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['fallback', 'human', 'degraded']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I15-2** 在杨国福麻辣烫点一份炸串拼盘并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback', 'human']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I15-3** 在杨国福麻辣烫点一份炸串拼盘并付款 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['fallback', 'human', 'degraded']
+  - FN 漏报 #0 `food.search` 真值=gen_partial 判定=none（none）
+- **I16-0** 在老王黄焖鸡点一份黄焖鸡米饭 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I16-1** 在老王黄焖鸡点一份黄焖鸡米饭 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I16-4** 在老王黄焖鸡点一份黄焖鸡米饭 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-0** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-1** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-2** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-3** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_partial 判定=none（none）
+
+## B1 仅规则·宽松（处置错误 38/90）
+
+- **I00-1** 北京今天天气怎么样 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I01-1** 上海明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I02-3** 广州后天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）
+- **I03-3** 深圳今天天气如何 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I03-5** 深圳今天天气如何 — 注入 无；结局 fallback ∉ ['ok']
+  - FP 误报 #0 `weather.query` 真值=None 判定=context_mismatch（rule）请求城市 深圳，返回 深圳 (Shenzhen)
+- **I04-2** 杭州明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I04-5** 杭州明天天气 — 注入 无；结局 fallback ∉ ['ok']
+  - FP 误报 #0 `weather.query` 真值=None 判定=context_mismatch（rule）请求城市 杭州，返回 杭州市
+- **I05-2** 成都后天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I05-3** 成都后天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）
+- **I06-1** 哈尔滨今天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I06-2** 哈尔滨今天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I06-3** 哈尔滨今天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I07-1** 漠河明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I07-2** 漠河明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I07-3** 漠河明天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）
+- **I08-1** 明天上海要是下雨就帮我从家叫车去公司 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback', 'human']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I09-1** 看看老王黄焖鸡的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I09-2** 看看老王黄焖鸡的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I09-4** 看看老王黄焖鸡的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I10-0** 看看杨国福麻辣烫的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I10-1** 看看杨国福麻辣烫的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I10-2** 看看杨国福麻辣烫的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I11-2** 看看沙县小吃的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I11-3** 看看沙县小吃的菜单 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_partial 判定=none（none）
+- **I12-0** 看看一点点的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I12-2** 看看一点点的菜单 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_partial 判定=none（none）
+- **I12-3** 看看一点点的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I12-4** 看看一点点的菜单 — 注入 无；结局 fallback ∉ ['ok', 'degraded']
+  - FP 误报 #0 `food.search` 真值=None 判定=semantic_wrong（rule）配送时长 -1 为负
+- **I13-1** 看看川味小馆的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I13-2** 看看川味小馆的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I14-0** 在沙县小吃点一份鸡腿饭 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['fallback', 'human', 'degraded']
+  - FN 漏报 #0 `food.search` 真值=gen_partial 判定=none（none）
+- **I15-0** 在杨国福麻辣烫点一份炸串拼盘并付款 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['fallback', 'human', 'degraded']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I15-2** 在杨国福麻辣烫点一份炸串拼盘并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback', 'human']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I16-0** 在老王黄焖鸡点一份黄焖鸡米饭 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I16-4** 在老王黄焖鸡点一份黄焖鸡米饭 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-0** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-1** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-2** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+
+## B2 仅规则·严格（处置错误 34/90）
+
+- **I01-1** 上海明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I02-3** 广州后天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）
+- **I03-3** 深圳今天天气如何 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I03-5** 深圳今天天气如何 — 注入 无；结局 fallback ∉ ['ok']
+  - FP 误报 #0 `weather.query` 真值=None 判定=context_mismatch（rule）请求城市 深圳，返回 深圳 (Shenzhen)
+- **I04-2** 杭州明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I04-5** 杭州明天天气 — 注入 无；结局 fallback ∉ ['ok']
+  - FP 误报 #0 `weather.query` 真值=None 判定=context_mismatch（rule）请求城市 杭州，返回 杭州市
+- **I05-3** 成都后天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）
+- **I06-1** 哈尔滨今天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I06-2** 哈尔滨今天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I06-3** 哈尔滨今天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I07-1** 漠河明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I07-4** 漠河明天天气 — 注入 无；结局 fallback ∉ ['ok']
+  - FP 误报 #0 `weather.query` 真值=None 判定=semantic_wrong（rule）[soft] temp_low_c=-34 少见
+  - FP 误报 #1 `weather_backup.query` 真值=None 判定=semantic_wrong（rule）[soft] temp_low_c=-32 少见
+- **I07-5** 漠河明天天气 — 注入 无；结局 fallback ∉ ['ok']
+  - FP 误报 #0 `weather.query` 真值=None 判定=semantic_wrong（rule）[soft] temp_low_c=-30 少见
+  - FP 误报 #1 `weather_backup.query` 真值=None 判定=semantic_wrong（rule）[soft] temp_low_c=-32 少见
+- **I08-1** 明天上海要是下雨就帮我从家叫车去公司 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback', 'human']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I09-1** 看看老王黄焖鸡的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I09-2** 看看老王黄焖鸡的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I10-0** 看看杨国福麻辣烫的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I10-1** 看看杨国福麻辣烫的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I10-2** 看看杨国福麻辣烫的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I11-3** 看看沙县小吃的菜单 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_partial 判定=none（none）
+- **I12-0** 看看一点点的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I12-2** 看看一点点的菜单 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_partial 判定=none（none）
+- **I12-3** 看看一点点的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I12-4** 看看一点点的菜单 — 注入 无；结局 fallback ∉ ['ok', 'degraded']
+  - FP 误报 #0 `food.search` 真值=None 判定=semantic_wrong（rule）配送时长 -1 为负
+- **I13-1** 看看川味小馆的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I13-2** 看看川味小馆的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I13-5** 看看川味小馆的菜单 — 注入 无；结局 fallback ∉ ['ok', 'degraded']
+  - FP 误报 #0 `food.search` 真值=None 判定=semantic_wrong（rule）[soft] 配送时长 100 分钟偏长
+- **I14-0** 在沙县小吃点一份鸡腿饭 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['fallback', 'human', 'degraded']
+  - FN 漏报 #0 `food.search` 真值=gen_partial 判定=none（none）
+- **I15-0** 在杨国福麻辣烫点一份炸串拼盘并付款 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['fallback', 'human', 'degraded']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I16-0** 在老王黄焖鸡点一份黄焖鸡米饭 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I16-4** 在老王黄焖鸡点一份黄焖鸡米饭 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-0** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-1** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-2** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+
+## E 严格规则 + v2 蒸馏规则（处置错误 30/90）
+
+- **I01-1** 上海明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I02-3** 广州后天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）
+- **I03-5** 深圳今天天气如何 — 注入 无；结局 fallback ∉ ['ok']
+  - FP 误报 #0 `weather.query` 真值=None 判定=context_mismatch（rule）请求城市 深圳，返回 深圳 (Shenzhen)
+- **I04-5** 杭州明天天气 — 注入 无；结局 fallback ∉ ['ok']
+  - FP 误报 #0 `weather.query` 真值=None 判定=context_mismatch（rule）请求城市 杭州，返回 杭州市
+- **I05-3** 成都后天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）
+- **I06-1** 哈尔滨今天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I06-3** 哈尔滨今天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I07-1** 漠河明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I07-4** 漠河明天天气 — 注入 无；结局 fallback ∉ ['ok']
+  - FP 误报 #0 `weather.query` 真值=None 判定=semantic_wrong（rule）[soft] temp_low_c=-34 少见
+  - FP 误报 #1 `weather_backup.query` 真值=None 判定=semantic_wrong（rule）[soft] temp_low_c=-32 少见
+- **I07-5** 漠河明天天气 — 注入 无；结局 fallback ∉ ['ok']
+  - FP 误报 #0 `weather.query` 真值=None 判定=semantic_wrong（rule）[soft] temp_low_c=-30 少见
+  - FP 误报 #1 `weather_backup.query` 真值=None 判定=semantic_wrong（rule）[soft] temp_low_c=-32 少见
+- **I08-1** 明天上海要是下雨就帮我从家叫车去公司 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback', 'human']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I09-1** 看看老王黄焖鸡的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I09-2** 看看老王黄焖鸡的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I10-0** 看看杨国福麻辣烫的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I10-1** 看看杨国福麻辣烫的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I10-2** 看看杨国福麻辣烫的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I11-3** 看看沙县小吃的菜单 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_partial 判定=none（none）
+- **I12-0** 看看一点点的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I12-2** 看看一点点的菜单 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_partial 判定=none（none）
+- **I12-3** 看看一点点的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I12-4** 看看一点点的菜单 — 注入 无；结局 fallback ∉ ['ok', 'degraded']
+  - FP 误报 #0 `food.search` 真值=None 判定=semantic_wrong（rule）配送时长 -1 为负
+- **I13-1** 看看川味小馆的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I13-5** 看看川味小馆的菜单 — 注入 无；结局 fallback ∉ ['ok', 'degraded']
+  - FP 误报 #0 `food.search` 真值=None 判定=semantic_wrong（rule）[soft] 配送时长 100 分钟偏长
+- **I14-0** 在沙县小吃点一份鸡腿饭 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['fallback', 'human', 'degraded']
+  - FN 漏报 #0 `food.search` 真值=gen_partial 判定=none（none）
+- **I15-0** 在杨国福麻辣烫点一份炸串拼盘并付款 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['fallback', 'human', 'degraded']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I16-0** 在老王黄焖鸡点一份黄焖鸡米饭 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I16-4** 在老王黄焖鸡点一份黄焖鸡米饭 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-0** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-1** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-2** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+
+## H-7B 规则 + Qwen2.5-7B（免费）（处置错误 33/90）
+
+- **I01-1** 上海明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I02-3** 广州后天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）
+- **I03-3** 深圳今天天气如何 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I03-5** 深圳今天天气如何 — 注入 无；结局 fallback ∉ ['ok']
+  - FP 误报 #0 `weather.query` 真值=None 判定=context_mismatch（rule）请求城市 深圳，返回 深圳 (Shenzhen)
+- **I04-2** 杭州明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I04-5** 杭州明天天气 — 注入 无；结局 fallback ∉ ['ok']
+  - FP 误报 #0 `weather.query` 真值=None 判定=context_mismatch（rule）请求城市 杭州，返回 杭州市
+- **I05-3** 成都后天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）
+- **I06-1** 哈尔滨今天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I06-2** 哈尔滨今天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I06-3** 哈尔滨今天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I07-1** 漠河明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I07-4** 漠河明天天气 — 注入 无；结局 fallback ∉ ['ok']
+  - FP 误报 #0 `weather.query` 真值=None 判定=semantic_wrong（llm）
+  - FP 误报 #1 `weather_backup.query` 真值=None 判定=semantic_wrong（llm）漠河11月最低温-32°C不合理
+- **I07-5** 漠河明天天气 — 注入 无；结局 fallback ∉ ['ok']
+  - FP 误报 #0 `weather.query` 真值=None 判定=semantic_wrong（llm）11月漠河最低温-30°C极低，不符合常理
+  - FP 误报 #1 `weather_backup.query` 真值=None 判定=semantic_wrong（llm）漠河11月最低温-32°C不合理
+- **I08-1** 明天上海要是下雨就帮我从家叫车去公司 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback', 'human']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I09-1** 看看老王黄焖鸡的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I09-2** 看看老王黄焖鸡的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I10-0** 看看杨国福麻辣烫的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I10-1** 看看杨国福麻辣烫的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I10-2** 看看杨国福麻辣烫的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I11-2** 看看沙县小吃的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）LLM 裁决放行：价格偏高，但可能是真实情况
+- **I11-3** 看看沙县小吃的菜单 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_partial 判定=none（none）
+- **I12-0** 看看一点点的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I12-2** 看看一点点的菜单 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_partial 判定=none（none）
+- **I12-3** 看看一点点的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I12-4** 看看一点点的菜单 — 注入 无；结局 fallback ∉ ['ok', 'degraded']
+  - FP 误报 #0 `food.search` 真值=None 判定=semantic_wrong（rule）配送时长 -1 为负
+- **I13-1** 看看川味小馆的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I13-2** 看看川味小馆的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I13-5** 看看川味小馆的菜单 — 注入 无；结局 fallback ∉ ['ok', 'degraded']
+  - FP 误报 #0 `food.search` 真值=None 判定=semantic_wrong（llm）配送时长100分钟与距离不符
+- **I15-0** 在杨国福麻辣烫点一份炸串拼盘并付款 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['fallback', 'human', 'degraded']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I15-2** 在杨国福麻辣烫点一份炸串拼盘并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback', 'human']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）LLM 裁决放行：
+- **I16-0** 在老王黄焖鸡点一份黄焖鸡米饭 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-0** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-2** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+
+## H-V4F 规则 + DeepSeek-V4-Flash（处置错误 28/90）
+
+- **I01-1** 上海明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I02-3** 广州后天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）
+- **I03-5** 深圳今天天气如何 — 注入 无；结局 fallback ∉ ['ok']
+  - FP 误报 #0 `weather.query` 真值=None 判定=context_mismatch（rule）请求城市 深圳，返回 深圳 (Shenzhen)
+- **I04-2** 杭州明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I04-5** 杭州明天天气 — 注入 无；结局 fallback ∉ ['ok']
+  - FP 误报 #0 `weather.query` 真值=None 判定=context_mismatch（rule）请求城市 杭州，返回 杭州市
+- **I05-3** 成都后天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）
+- **I06-3** 哈尔滨今天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I07-1** 漠河明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I07-2** 漠河明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）LLM 裁决放行：漠河11月低温-26°C属正常范围，小雪与降水1.2mm一致，数据合理
+- **I07-3** 漠河明天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）LLM 裁决放行：漠河11月低温-32℃属正常极寒，小雪与低温一致，数据更新及时
+- **I08-1** 明天上海要是下雨就帮我从家叫车去公司 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback', 'human']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I09-1** 看看老王黄焖鸡的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I09-4** 看看老王黄焖鸡的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）LLM 裁决放行：价格以分为单位，2580分=25.8元，正常；菜单匹配，无异常
+- **I10-0** 看看杨国福麻辣烫的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I10-1** 看看杨国福麻辣烫的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I11-2** 看看沙县小吃的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）LLM 裁决放行：沙县小吃价格单位可能为分，800分=8元，符合常规
+- **I11-3** 看看沙县小吃的菜单 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_partial 判定=none（none）
+- **I12-0** 看看一点点的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I12-2** 看看一点点的菜单 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_partial 判定=none（none）
+- **I12-3** 看看一点点的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I12-4** 看看一点点的菜单 — 注入 无；结局 fallback ∉ ['ok', 'degraded']
+  - FP 误报 #0 `food.search` 真值=None 判定=semantic_wrong（rule）配送时长 -1 为负
+- **I15-0** 在杨国福麻辣烫点一份炸串拼盘并付款 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['fallback', 'human', 'degraded']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I15-2** 在杨国福麻辣烫点一份炸串拼盘并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback', 'human']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）LLM 裁决放行：价格单位分，3200元=32元，1800元=18元，600元=6元，均正常
+- **I16-0** 在老王黄焖鸡点一份黄焖鸡米饭 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I16-4** 在老王黄焖鸡点一份黄焖鸡米饭 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-0** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-1** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-2** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+
+## H-V3.2 规则 + DeepSeek-V3.2（处置错误 19/90）
+
+- **I01-1** 上海明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I02-3** 广州后天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）
+- **I03-5** 深圳今天天气如何 — 注入 无；结局 fallback ∉ ['ok']
+  - FP 误报 #0 `weather.query` 真值=None 判定=context_mismatch（rule）请求城市 深圳，返回 深圳 (Shenzhen)
+- **I04-2** 杭州明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I04-5** 杭州明天天气 — 注入 无；结局 fallback ∉ ['ok']
+  - FP 误报 #0 `weather.query` 真值=None 判定=context_mismatch（rule）请求城市 杭州，返回 杭州市
+- **I05-3** 成都后天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）
+- **I06-2** 哈尔滨今天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I06-3** 哈尔滨今天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I07-2** 漠河明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）LLM 裁决放行：漠河冬季严寒，低温-26度符合常理
+- **I07-3** 漠河明天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）LLM 裁决放行：漠河11月低温-32度符合当地气候，数据合理
+- **I08-1** 明天上海要是下雨就帮我从家叫车去公司 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback', 'human']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I09-1** 看看老王黄焖鸡的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I10-0** 看看杨国福麻辣烫的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I12-2** 看看一点点的菜单 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_partial 判定=none（none）
+- **I12-4** 看看一点点的菜单 — 注入 无；结局 fallback ∉ ['ok', 'degraded']
+  - FP 误报 #0 `food.search` 真值=None 判定=semantic_wrong（rule）配送时长 -1 为负
+- **I15-0** 在杨国福麻辣烫点一份炸串拼盘并付款 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['fallback', 'human', 'degraded']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I15-2** 在杨国福麻辣烫点一份炸串拼盘并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback', 'human']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）LLM 裁决放行：菜单包含用户所需菜品，价格虽高但属同一商户。
+- **I17-0** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-2** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+
+## D-V4F 纯 LLM 质检（V4-Flash）（处置错误 36/90）
+
+- **I01-0** 上海明天天气 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_stale 判定=none（none）
+- **I01-1** 上海明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I01-3** 上海明天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）
+- **I02-0** 广州后天天气 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_stale 判定=none（none）
+- **I02-3** 广州后天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）
+- **I03-0** 深圳今天天气如何 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_stale 判定=none（none）
+- **I04-2** 杭州明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I04-3** 杭州明天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）
+- **I05-0** 成都后天天气 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_stale 判定=none（none）
+- **I05-2** 成都后天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I05-3** 成都后天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）
+- **I06-3** 哈尔滨今天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I07-0** 漠河明天天气 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_stale 判定=none（none）
+- **I07-1** 漠河明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I07-2** 漠河明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I07-3** 漠河明天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）
+- **I08-0** 明天上海要是下雨就帮我从家叫车去公司 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['fallback', 'human']
+  - FN 漏报 #0 `weather.query` 真值=gen_stale 判定=none（none）
+- **I08-1** 明天上海要是下雨就帮我从家叫车去公司 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback', 'human']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I09-1** 看看老王黄焖鸡的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I09-4** 看看老王黄焖鸡的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I10-0** 看看杨国福麻辣烫的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I10-1** 看看杨国福麻辣烫的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I11-2** 看看沙县小吃的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I11-3** 看看沙县小吃的菜单 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_partial 判定=none（none）
+- **I12-0** 看看一点点的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I12-2** 看看一点点的菜单 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_partial 判定=none（none）
+- **I12-3** 看看一点点的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I14-1** 在沙县小吃点一份鸡腿饭 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['fallback', 'human', 'degraded']
+  - FN 漏报 #0 `food.search` 真值=gen_partial 判定=none（none）
+- **I15-0** 在杨国福麻辣烫点一份炸串拼盘并付款 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['fallback', 'human', 'degraded']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I15-2** 在杨国福麻辣烫点一份炸串拼盘并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback', 'human']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I16-0** 在老王黄焖鸡点一份黄焖鸡米饭 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I16-4** 在老王黄焖鸡点一份黄焖鸡米饭 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-0** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-1** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-2** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-3** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_partial 判定=none（none）
+
+## CAS 级联 7B→V3.2（7B 判异常才升级）（处置错误 32/90）
+
+- **I01-1** 上海明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I02-3** 广州后天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）
+- **I03-3** 深圳今天天气如何 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I03-5** 深圳今天天气如何 — 注入 无；结局 fallback ∉ ['ok']
+  - FP 误报 #0 `weather.query` 真值=None 判定=context_mismatch（rule）请求城市 深圳，返回 深圳 (Shenzhen)
+- **I04-2** 杭州明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I04-5** 杭州明天天气 — 注入 无；结局 fallback ∉ ['ok']
+  - FP 误报 #0 `weather.query` 真值=None 判定=context_mismatch（rule）请求城市 杭州，返回 杭州市
+- **I05-3** 成都后天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）
+- **I06-1** 哈尔滨今天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I06-2** 哈尔滨今天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I06-3** 哈尔滨今天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I07-1** 漠河明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I07-2** 漠河明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）LLM 裁决放行：漠河冬季严寒，低温-26度符合常理
+- **I07-3** 漠河明天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）LLM 裁决放行：漠河11月低温-32度符合当地气候，数据合理
+- **I08-1** 明天上海要是下雨就帮我从家叫车去公司 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback', 'human']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I09-1** 看看老王黄焖鸡的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I09-2** 看看老王黄焖鸡的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I10-0** 看看杨国福麻辣烫的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I10-1** 看看杨国福麻辣烫的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I10-2** 看看杨国福麻辣烫的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I11-2** 看看沙县小吃的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）LLM 裁决放行：价格偏高，但可能是真实情况
+- **I11-3** 看看沙县小吃的菜单 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_partial 判定=none（none）
+- **I12-0** 看看一点点的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I12-2** 看看一点点的菜单 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_partial 判定=none（none）
+- **I12-3** 看看一点点的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I12-4** 看看一点点的菜单 — 注入 无；结局 fallback ∉ ['ok', 'degraded']
+  - FP 误报 #0 `food.search` 真值=None 判定=semantic_wrong（rule）配送时长 -1 为负
+- **I13-1** 看看川味小馆的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I13-2** 看看川味小馆的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I15-0** 在杨国福麻辣烫点一份炸串拼盘并付款 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['fallback', 'human', 'degraded']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I15-2** 在杨国福麻辣烫点一份炸串拼盘并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback', 'human']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）LLM 裁决放行：
+- **I16-0** 在老王黄焖鸡点一份黄焖鸡米饭 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-0** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-2** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+
+## CAS 级联 V4F→V3.2（异常或置信<0.9 升级）（处置错误 28/90）
+
+- **I01-1** 上海明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I02-3** 广州后天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）
+- **I03-5** 深圳今天天气如何 — 注入 无；结局 fallback ∉ ['ok']
+  - FP 误报 #0 `weather.query` 真值=None 判定=context_mismatch（rule）请求城市 深圳，返回 深圳 (Shenzhen)
+- **I04-2** 杭州明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I04-5** 杭州明天天气 — 注入 无；结局 fallback ∉ ['ok']
+  - FP 误报 #0 `weather.query` 真值=None 判定=context_mismatch（rule）请求城市 杭州，返回 杭州市
+- **I05-3** 成都后天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）
+- **I06-2** 哈尔滨今天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I06-3** 哈尔滨今天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I07-2** 漠河明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）LLM 裁决放行：漠河11月低温-26°C属正常范围，小雪与降水1.2mm一致，数据合理
+- **I07-3** 漠河明天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）LLM 裁决放行：漠河11月低温-32℃属正常极寒，小雪与低温一致，数据更新及时
+- **I08-1** 明天上海要是下雨就帮我从家叫车去公司 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback', 'human']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I09-1** 看看老王黄焖鸡的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I09-4** 看看老王黄焖鸡的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）LLM 裁决放行：价格以分为单位，2580分=25.8元，正常；菜单匹配，无异常
+- **I10-0** 看看杨国福麻辣烫的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I10-1** 看看杨国福麻辣烫的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I11-2** 看看沙县小吃的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）LLM 裁决放行：沙县小吃价格单位可能为分，800分=8元，符合常规
+- **I11-3** 看看沙县小吃的菜单 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_partial 判定=none（none）
+- **I12-0** 看看一点点的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I12-2** 看看一点点的菜单 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_partial 判定=none（none）
+- **I12-3** 看看一点点的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I12-4** 看看一点点的菜单 — 注入 无；结局 fallback ∉ ['ok', 'degraded']
+  - FP 误报 #0 `food.search` 真值=None 判定=semantic_wrong（rule）配送时长 -1 为负
+- **I15-0** 在杨国福麻辣烫点一份炸串拼盘并付款 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['fallback', 'human', 'degraded']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I15-2** 在杨国福麻辣烫点一份炸串拼盘并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback', 'human']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）LLM 裁决放行：价格单位分，3200元=32元，1800元=18元，600元=6元，均正常
+- **I16-0** 在老王黄焖鸡点一份黄焖鸡米饭 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I16-4** 在老王黄焖鸡点一份黄焖鸡米饭 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-0** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-1** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-2** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+
+## T 分层：决策/写同步 + 展示异步（V4F）（处置错误 37/90）
+
+- **I00-1** 北京今天天气怎么样 — 注入 ['gen_wrong']；先展示后更正
+- **I01-1** 上海明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I02-3** 广州后天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）
+- **I03-3** 深圳今天天气如何 — 注入 ['gen_wrong']；先展示后更正
+- **I03-5** 深圳今天天气如何 — 注入 无；结局 fallback ∉ ['ok']
+  - FP 误报 #0 `weather.query` 真值=None 判定=context_mismatch（rule）请求城市 深圳，返回 深圳 (Shenzhen)
+- **I04-2** 杭州明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I04-5** 杭州明天天气 — 注入 无；结局 fallback ∉ ['ok']
+  - FP 误报 #0 `weather.query` 真值=None 判定=context_mismatch（rule）请求城市 杭州，返回 杭州市
+- **I05-2** 成都后天天气 — 注入 ['gen_wrong']；先展示后更正
+- **I05-3** 成都后天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）
+- **I06-1** 哈尔滨今天天气 — 注入 ['gen_wrong']；先展示后更正
+- **I06-2** 哈尔滨今天天气 — 注入 ['gen_wrong']；先展示后更正
+- **I06-3** 哈尔滨今天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I07-1** 漠河明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I07-2** 漠河明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）LLM 裁决放行：漠河11月低温-26°C属正常范围，小雪与降水1.2mm一致，数据合理
+- **I07-3** 漠河明天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）LLM 裁决放行：漠河11月低温-32℃属正常极寒，小雪与低温一致，数据更新及时
+- **I08-1** 明天上海要是下雨就帮我从家叫车去公司 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback', 'human']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I09-1** 看看老王黄焖鸡的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I09-2** 看看老王黄焖鸡的菜单 — 注入 ['gen_wrong']；先展示后更正
+- **I09-4** 看看老王黄焖鸡的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）LLM 裁决放行：价格以分为单位，2580分=25.8元，正常；菜单匹配，无异常
+- **I10-0** 看看杨国福麻辣烫的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I10-1** 看看杨国福麻辣烫的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I10-2** 看看杨国福麻辣烫的菜单 — 注入 ['gen_wrong']；先展示后更正
+- **I11-2** 看看沙县小吃的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）LLM 裁决放行：沙县小吃价格单位可能为分，800分=8元，符合常规
+- **I11-3** 看看沙县小吃的菜单 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_partial 判定=none（none）
+- **I12-0** 看看一点点的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I12-2** 看看一点点的菜单 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_partial 判定=none（none）
+- **I12-3** 看看一点点的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I12-4** 看看一点点的菜单 — 注入 无；结局 fallback ∉ ['ok', 'degraded']
+  - FP 误报 #0 `food.search` 真值=None 判定=semantic_wrong（rule）配送时长 -1 为负
+- **I13-1** 看看川味小馆的菜单 — 注入 ['gen_wrong']；先展示后更正
+- **I13-2** 看看川味小馆的菜单 — 注入 ['gen_wrong']；先展示后更正
+- **I15-0** 在杨国福麻辣烫点一份炸串拼盘并付款 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['fallback', 'human', 'degraded']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I15-2** 在杨国福麻辣烫点一份炸串拼盘并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback', 'human']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）LLM 裁决放行：价格单位分，3200元=32元，1800元=18元，600元=6元，均正常
+- **I16-0** 在老王黄焖鸡点一份黄焖鸡米饭 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I16-4** 在老王黄焖鸡点一份黄焖鸡米饭 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-0** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-1** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-2** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+
+## T+C 分层 + 判定缓存（V4F）（处置错误 37/90）
+
+- **I00-1** 北京今天天气怎么样 — 注入 ['gen_wrong']；先展示后更正
+- **I01-1** 上海明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I02-3** 广州后天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）
+- **I03-3** 深圳今天天气如何 — 注入 ['gen_wrong']；先展示后更正
+- **I03-5** 深圳今天天气如何 — 注入 无；结局 fallback ∉ ['ok']
+  - FP 误报 #0 `weather.query` 真值=None 判定=context_mismatch（rule）请求城市 深圳，返回 深圳 (Shenzhen)
+- **I04-2** 杭州明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I04-5** 杭州明天天气 — 注入 无；结局 fallback ∉ ['ok']
+  - FP 误报 #0 `weather.query` 真值=None 判定=context_mismatch（rule）请求城市 杭州，返回 杭州市
+- **I05-2** 成都后天天气 — 注入 ['gen_wrong']；先展示后更正
+- **I05-3** 成都后天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）
+- **I06-1** 哈尔滨今天天气 — 注入 ['gen_wrong']；先展示后更正
+- **I06-2** 哈尔滨今天天气 — 注入 ['gen_wrong']；先展示后更正
+- **I06-3** 哈尔滨今天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I07-1** 漠河明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I07-2** 漠河明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）LLM 裁决放行：漠河11月低温-26°C属正常范围，小雪与降水1.2mm一致，数据合理
+- **I07-3** 漠河明天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）LLM 裁决放行：漠河11月低温-32℃属正常极寒，小雪与低温一致，数据更新及时
+- **I08-1** 明天上海要是下雨就帮我从家叫车去公司 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback', 'human']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I09-1** 看看老王黄焖鸡的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I09-2** 看看老王黄焖鸡的菜单 — 注入 ['gen_wrong']；先展示后更正
+- **I09-4** 看看老王黄焖鸡的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）LLM 裁决放行：价格以分为单位，2580分=25.8元，正常；菜单匹配，无异常
+- **I10-0** 看看杨国福麻辣烫的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I10-1** 看看杨国福麻辣烫的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I10-2** 看看杨国福麻辣烫的菜单 — 注入 ['gen_wrong']；先展示后更正
+- **I11-2** 看看沙县小吃的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）LLM 裁决放行：沙县小吃价格单位可能为分，800分=8元，符合常规
+- **I11-3** 看看沙县小吃的菜单 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_partial 判定=none（none）
+- **I12-0** 看看一点点的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I12-2** 看看一点点的菜单 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_partial 判定=none（none）
+- **I12-3** 看看一点点的菜单 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）
+- **I12-4** 看看一点点的菜单 — 注入 无；结局 fallback ∉ ['ok', 'degraded']
+  - FP 误报 #0 `food.search` 真值=None 判定=semantic_wrong（rule）配送时长 -1 为负
+- **I13-1** 看看川味小馆的菜单 — 注入 ['gen_wrong']；先展示后更正
+- **I13-2** 看看川味小馆的菜单 — 注入 ['gen_wrong']；先展示后更正
+- **I15-0** 在杨国福麻辣烫点一份炸串拼盘并付款 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['fallback', 'human', 'degraded']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I15-2** 在杨国福麻辣烫点一份炸串拼盘并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback', 'human']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）LLM 裁决放行：价格单位分，3200元=32元，1800元=18元，600元=6元，均正常
+- **I16-0** 在老王黄焖鸡点一份黄焖鸡米饭 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I16-4** 在老王黄焖鸡点一份黄焖鸡米饭 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-0** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-1** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-2** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+
+## T 分层：决策/写同步 + 展示异步（V3.2）（处置错误 34/90）
+
+- **I00-1** 北京今天天气怎么样 — 注入 ['gen_wrong']；先展示后更正
+- **I01-1** 上海明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I02-3** 广州后天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）
+- **I03-3** 深圳今天天气如何 — 注入 ['gen_wrong']；先展示后更正
+- **I03-5** 深圳今天天气如何 — 注入 无；结局 fallback ∉ ['ok']
+  - FP 误报 #0 `weather.query` 真值=None 判定=context_mismatch（rule）请求城市 深圳，返回 深圳 (Shenzhen)
+- **I04-2** 杭州明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I04-5** 杭州明天天气 — 注入 无；结局 fallback ∉ ['ok']
+  - FP 误报 #0 `weather.query` 真值=None 判定=context_mismatch（rule）请求城市 杭州，返回 杭州市
+- **I05-2** 成都后天天气 — 注入 ['gen_wrong']；先展示后更正
+- **I05-3** 成都后天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）
+- **I06-1** 哈尔滨今天天气 — 注入 ['gen_wrong']；先展示后更正
+- **I06-2** 哈尔滨今天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I06-3** 哈尔滨今天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I07-1** 漠河明天天气 — 注入 ['gen_wrong']；先展示后更正
+- **I07-2** 漠河明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）LLM 裁决放行：漠河冬季严寒，低温-26度符合常理
+- **I07-3** 漠河明天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）LLM 裁决放行：漠河11月低温-32度符合当地气候，数据合理
+- **I08-1** 明天上海要是下雨就帮我从家叫车去公司 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback', 'human']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I09-1** 看看老王黄焖鸡的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I09-2** 看看老王黄焖鸡的菜单 — 注入 ['gen_wrong']；先展示后更正
+- **I09-4** 看看老王黄焖鸡的菜单 — 注入 ['gen_wrong']；先展示后更正
+- **I10-0** 看看杨国福麻辣烫的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I10-1** 看看杨国福麻辣烫的菜单 — 注入 ['gen_wrong']；先展示后更正
+- **I10-2** 看看杨国福麻辣烫的菜单 — 注入 ['gen_wrong']；先展示后更正
+- **I11-2** 看看沙县小吃的菜单 — 注入 ['gen_wrong']；先展示后更正
+- **I11-3** 看看沙县小吃的菜单 — 注入 ['gen_partial']；先展示后更正
+- **I12-0** 看看一点点的菜单 — 注入 ['gen_stale']；先展示后更正
+- **I12-2** 看看一点点的菜单 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_partial 判定=none（none）
+- **I12-3** 看看一点点的菜单 — 注入 ['gen_wrong']；先展示后更正
+- **I12-4** 看看一点点的菜单 — 注入 无；结局 fallback ∉ ['ok', 'degraded']
+  - FP 误报 #0 `food.search` 真值=None 判定=semantic_wrong（rule）配送时长 -1 为负
+- **I13-1** 看看川味小馆的菜单 — 注入 ['gen_wrong']；先展示后更正
+- **I13-2** 看看川味小馆的菜单 — 注入 ['gen_wrong']；先展示后更正
+- **I15-0** 在杨国福麻辣烫点一份炸串拼盘并付款 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['fallback', 'human', 'degraded']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I15-2** 在杨国福麻辣烫点一份炸串拼盘并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback', 'human']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）LLM 裁决放行：菜单包含用户所需菜品，价格虽高但属同一商户。
+- **I17-0** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-2** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+
+## T+C 分层 + 判定缓存（V3.2）（处置错误 34/90）
+
+- **I00-1** 北京今天天气怎么样 — 注入 ['gen_wrong']；先展示后更正
+- **I01-1** 上海明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I02-3** 广州后天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）
+- **I03-3** 深圳今天天气如何 — 注入 ['gen_wrong']；先展示后更正
+- **I03-5** 深圳今天天气如何 — 注入 无；结局 fallback ∉ ['ok']
+  - FP 误报 #0 `weather.query` 真值=None 判定=context_mismatch（rule）请求城市 深圳，返回 深圳 (Shenzhen)
+- **I04-2** 杭州明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I04-5** 杭州明天天气 — 注入 无；结局 fallback ∉ ['ok']
+  - FP 误报 #0 `weather.query` 真值=None 判定=context_mismatch（rule）请求城市 杭州，返回 杭州市
+- **I05-2** 成都后天天气 — 注入 ['gen_wrong']；先展示后更正
+- **I05-3** 成都后天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）
+- **I06-1** 哈尔滨今天天气 — 注入 ['gen_wrong']；先展示后更正
+- **I06-2** 哈尔滨今天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I06-3** 哈尔滨今天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I07-1** 漠河明天天气 — 注入 ['gen_wrong']；先展示后更正
+- **I07-2** 漠河明天天气 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）LLM 裁决放行：漠河冬季严寒，低温-26度符合常理
+- **I07-3** 漠河明天天气 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `weather.query` 真值=gen_partial 判定=none（none）LLM 裁决放行：漠河11月低温-32度符合当地气候，数据合理
+- **I08-1** 明天上海要是下雨就帮我从家叫车去公司 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback', 'human']
+  - FN 漏报 #0 `weather.query` 真值=gen_wrong 判定=none（none）
+- **I09-1** 看看老王黄焖鸡的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I09-2** 看看老王黄焖鸡的菜单 — 注入 ['gen_wrong']；先展示后更正
+- **I09-4** 看看老王黄焖鸡的菜单 — 注入 ['gen_wrong']；先展示后更正
+- **I10-0** 看看杨国福麻辣烫的菜单 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I10-1** 看看杨国福麻辣烫的菜单 — 注入 ['gen_wrong']；先展示后更正
+- **I10-2** 看看杨国福麻辣烫的菜单 — 注入 ['gen_wrong']；先展示后更正
+- **I11-2** 看看沙县小吃的菜单 — 注入 ['gen_wrong']；先展示后更正
+- **I11-3** 看看沙县小吃的菜单 — 注入 ['gen_partial']；先展示后更正
+- **I12-0** 看看一点点的菜单 — 注入 ['gen_stale']；先展示后更正
+- **I12-2** 看看一点点的菜单 — 注入 ['gen_partial']；暴露错误数据 gen_partial；结局 ok ∉ ['degraded', 'fallback']
+  - FN 漏报 #0 `food.search` 真值=gen_partial 判定=none（none）
+- **I12-3** 看看一点点的菜单 — 注入 ['gen_wrong']；先展示后更正
+- **I12-4** 看看一点点的菜单 — 注入 无；结局 fallback ∉ ['ok', 'degraded']
+  - FP 误报 #0 `food.search` 真值=None 判定=semantic_wrong（rule）配送时长 -1 为负
+- **I13-1** 看看川味小馆的菜单 — 注入 ['gen_wrong']；先展示后更正
+- **I13-2** 看看川味小馆的菜单 — 注入 ['gen_wrong']；先展示后更正
+- **I15-0** 在杨国福麻辣烫点一份炸串拼盘并付款 — 注入 ['gen_stale']；暴露错误数据 gen_stale；结局 ok ∉ ['fallback', 'human', 'degraded']
+  - FN 漏报 #0 `food.search` 真值=gen_stale 判定=none（none）
+- **I15-2** 在杨国福麻辣烫点一份炸串拼盘并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['fallback', 'human']
+  - FN 漏报 #0 `food.search` 真值=gen_wrong 判定=none（none）LLM 裁决放行：菜单包含用户所需菜品，价格虽高但属同一商户。
+- **I17-0** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）
+- **I17-2** 在一点点点两杯波霸奶茶并付款 — 注入 ['gen_wrong']；暴露错误数据 gen_wrong；结局 ok ∉ ['human']
+  - FN 漏报 #1 `food.order` 真值=gen_wrong 判定=none（none）

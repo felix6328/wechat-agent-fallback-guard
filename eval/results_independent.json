@@ -1,0 +1,1324 @@
+{
+ "testset": "data/independent.json",
+ "seeds": [
+  42,
+  7,
+  2026
+ ],
+ "n_cases": 90,
+ "summaries": {
+  "A": {
+   "name": "A 无检测（SDK 式盲重试）",
+   "recall": 0.0,
+   "precision": null,
+   "f1": 0.0,
+   "fpr": 0.0,
+   "fallback_success": 0.0,
+   "clean_pass": 1.0,
+   "task_success": 0.32222222222222224,
+   "harm_rate": 0.6777777777777778,
+   "corrected_rate": 0.0,
+   "latency_p50": 245.6685099018414,
+   "latency_p95": 1434.4105396106888,
+   "cost_per_1k": 0.0,
+   "llm_calls_per_case": 0.0,
+   "confusion": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 183,
+    "tn": 177,
+    "precision": null,
+    "recall": 0.0,
+    "f1": 0.0,
+    "fpr": 0.0
+   },
+   "ci95": {
+    "recall": [
+     0.0,
+     0.0
+    ],
+    "precision": [
+     null,
+     null
+    ],
+    "fpr": [
+     0.0,
+     0.0
+    ],
+    "fallback_success": [
+     0.0,
+     0.0
+    ],
+    "clean_pass": [
+     1.0,
+     1.0
+    ],
+    "harm_rate": [
+     0.5775,
+     0.7777777777777778
+    ],
+    "latency_p50": [
+     208.28057302119777,
+     339.1956293546613
+    ],
+    "cost_per_1k": [
+     0.0,
+     0.0
+    ]
+   },
+   "seed_std": {
+    "recall": 0.0,
+    "precision": null,
+    "fpr": 0.0,
+    "fallback_success": 0.0,
+    "clean_pass": 0.0,
+    "harm_rate": 0.0,
+    "latency_p50": 8.603320131571033,
+    "cost_per_1k": 0.0
+   },
+   "seeds": [
+    7,
+    42,
+    2026
+   ],
+   "n_rows": 270,
+   "n_cases": 90,
+   "harm_cases": 183,
+   "dup_charge": 0,
+   "dup_order": 0,
+   "cache_hits": 0,
+   "escalations": 0,
+   "llm_calls": 0,
+   "llm_failed": 0,
+   "cost_total": 0.0,
+   "outcomes": {
+    "ok": 270,
+    "degraded": 0,
+    "fallback": 0,
+    "human": 0,
+    "failed": 0
+   }
+  },
+  "B1": {
+   "name": "B1 仅规则·宽松",
+   "recall": 0.4262295081967213,
+   "precision": 0.896551724137931,
+   "f1": 0.5777777777777777,
+   "fpr": 0.039473684210526314,
+   "fallback_success": 0.4262295081967213,
+   "clean_pass": 0.896551724137931,
+   "task_success": 0.5777777777777777,
+   "harm_rate": 0.3888888888888889,
+   "corrected_rate": 0.0,
+   "latency_p50": 383.57946506926874,
+   "latency_p95": 1363.5265801370706,
+   "cost_per_1k": 0.0,
+   "llm_calls_per_case": 0.0,
+   "confusion": {
+    "tp": 78,
+    "fp": 9,
+    "fn": 105,
+    "tn": 219,
+    "precision": 0.896551724137931,
+    "recall": 0.4262295081967213,
+    "f1": 0.5777777777777777,
+    "fpr": 0.039473684210526314
+   },
+   "ci95": {
+    "recall": [
+     0.2982456140350877,
+     0.5614035087719298
+    ],
+    "precision": [
+     0.7777777777777778,
+     1.0
+    ],
+    "fpr": [
+     0.0,
+     0.08695652173913043
+    ],
+    "fallback_success": [
+     0.2982456140350877,
+     0.5614035087719298
+    ],
+    "clean_pass": [
+     0.7726948051948052,
+     1.0
+    ],
+    "harm_rate": [
+     0.28888888888888886,
+     0.4888888888888889
+    ],
+    "latency_p50": [
+     347.7449880364246,
+     439.8481540079873
+    ],
+    "cost_per_1k": [
+     0.0,
+     0.0
+    ]
+   },
+   "seed_std": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "fpr": 0.0,
+    "fallback_success": 0.0,
+    "clean_pass": 0.0,
+    "harm_rate": 0.0,
+    "latency_p50": 24.2798590187136,
+    "cost_per_1k": 0.0
+   },
+   "seeds": [
+    7,
+    42,
+    2026
+   ],
+   "n_rows": 270,
+   "n_cases": 90,
+   "harm_cases": 105,
+   "dup_charge": 0,
+   "dup_order": 0,
+   "cache_hits": 0,
+   "escalations": 0,
+   "llm_calls": 0,
+   "llm_failed": 0,
+   "cost_total": 0.0,
+   "outcomes": {
+    "ok": 183,
+    "degraded": 0,
+    "fallback": 81,
+    "human": 6,
+    "failed": 0
+   }
+  },
+  "B2": {
+   "name": "B2 仅规则·严格",
+   "recall": 0.5409836065573771,
+   "precision": 0.75,
+   "f1": 0.6285714285714287,
+   "fpr": 0.1375,
+   "fallback_success": 0.5409836065573771,
+   "clean_pass": 0.7931034482758621,
+   "task_success": 0.6222222222222222,
+   "harm_rate": 0.3111111111111111,
+   "corrected_rate": 0.0,
+   "latency_p50": 402.9348998419539,
+   "latency_p95": 1363.5265801370706,
+   "cost_per_1k": 0.0,
+   "llm_calls_per_case": 0.0,
+   "confusion": {
+    "tp": 99,
+    "fp": 33,
+    "fn": 84,
+    "tn": 207,
+    "precision": 0.75,
+    "recall": 0.5409836065573771,
+    "f1": 0.6285714285714287,
+    "fpr": 0.1375
+   },
+   "ci95": {
+    "recall": [
+     0.4126984126984127,
+     0.6612903225806451
+    ],
+    "precision": [
+     0.6170212765957447,
+     0.8918918918918919
+    ],
+    "fpr": [
+     0.05403603603603604,
+     0.2375
+    ],
+    "fallback_success": [
+     0.4126984126984127,
+     0.6612903225806451
+    ],
+    "clean_pass": [
+     0.6296296296296297,
+     0.9286330049261083
+    ],
+    "harm_rate": [
+     0.2222222222222222,
+     0.4111111111111111
+    ],
+    "latency_p50": [
+     364.9764598128271,
+     449.8683137086439
+    ],
+    "cost_per_1k": [
+     0.0,
+     0.0
+    ]
+   },
+   "seed_std": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "fpr": 0.0,
+    "fallback_success": 0.0,
+    "clean_pass": 0.0,
+    "harm_rate": 0.0,
+    "latency_p50": 24.997132294076035,
+    "cost_per_1k": 0.0
+   },
+   "seeds": [
+    7,
+    42,
+    2026
+   ],
+   "n_rows": 270,
+   "n_cases": 90,
+   "harm_cases": 84,
+   "dup_charge": 0,
+   "dup_order": 0,
+   "cache_hits": 0,
+   "escalations": 0,
+   "llm_calls": 0,
+   "llm_failed": 0,
+   "cost_total": 0.0,
+   "outcomes": {
+    "ok": 153,
+    "degraded": 0,
+    "fallback": 111,
+    "human": 6,
+    "failed": 0
+   }
+  },
+  "E": {
+   "name": "E 严格规则 + v2 蒸馏规则",
+   "recall": 0.6065573770491803,
+   "precision": 0.7708333333333334,
+   "f1": 0.6788990825688073,
+   "fpr": 0.13253012048192772,
+   "fallback_success": 0.6065573770491803,
+   "clean_pass": 0.7931034482758621,
+   "task_success": 0.6666666666666666,
+   "harm_rate": 0.26666666666666666,
+   "corrected_rate": 0.0,
+   "latency_p50": 422.2420842670435,
+   "latency_p95": 1363.5265801370706,
+   "cost_per_1k": 0.0,
+   "llm_calls_per_case": 0.0,
+   "confusion": {
+    "tp": 111,
+    "fp": 33,
+    "fn": 72,
+    "tn": 216,
+    "precision": 0.7708333333333334,
+    "recall": 0.6065573770491803,
+    "f1": 0.6788990825688073,
+    "fpr": 0.13253012048192772
+   },
+   "ci95": {
+    "recall": [
+     0.4775947187141217,
+     0.7288135593220338
+    ],
+    "precision": [
+     0.6415094339622641,
+     0.9038690476190476
+    ],
+    "fpr": [
+     0.0520799512987013,
+     0.22860426929392444
+    ],
+    "fallback_success": [
+     0.4775947187141217,
+     0.7288135593220338
+    ],
+    "clean_pass": [
+     0.6296296296296297,
+     0.9286330049261083
+    ],
+    "harm_rate": [
+     0.17777777777777778,
+     0.36666666666666664
+    ],
+    "latency_p50": [
+     380.9651353106888,
+     457.78071101305784
+    ],
+    "cost_per_1k": [
+     0.0,
+     0.0
+    ]
+   },
+   "seed_std": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "fpr": 0.0,
+    "fallback_success": 0.0,
+    "clean_pass": 0.0,
+    "harm_rate": 0.0,
+    "latency_p50": 20.655736406171386,
+    "cost_per_1k": 0.0
+   },
+   "seeds": [
+    7,
+    42,
+    2026
+   ],
+   "n_rows": 270,
+   "n_cases": 90,
+   "harm_cases": 72,
+   "dup_charge": 0,
+   "dup_order": 0,
+   "cache_hits": 0,
+   "escalations": 0,
+   "llm_calls": 0,
+   "llm_failed": 0,
+   "cost_total": 0.0,
+   "outcomes": {
+    "ok": 141,
+    "degraded": 0,
+    "fallback": 123,
+    "human": 6,
+    "failed": 0
+   }
+  },
+  "H7": {
+   "name": "H-7B 规则 + Qwen2.5-7B（免费）",
+   "recall": 0.5573770491803278,
+   "precision": 0.7555555555555555,
+   "f1": 0.6415094339622641,
+   "fpr": 0.1375,
+   "fallback_success": 0.5573770491803278,
+   "clean_pass": 0.7931034482758621,
+   "task_success": 0.6333333333333333,
+   "harm_rate": 0.3,
+   "corrected_rate": 0.0,
+   "latency_p50": 2961.3105716560667,
+   "latency_p95": 10482.186327488527,
+   "cost_per_1k": 0.0,
+   "llm_calls_per_case": 1.1666666666666667,
+   "confusion": {
+    "tp": 102,
+    "fp": 33,
+    "fn": 81,
+    "tn": 207,
+    "precision": 0.7555555555555555,
+    "recall": 0.5573770491803278,
+    "f1": 0.6415094339622641,
+    "fpr": 0.1375
+   },
+   "ci95": {
+    "recall": [
+     0.42857142857142855,
+     0.6724216300940439
+    ],
+    "precision": [
+     0.62,
+     0.8937124931805781
+    ],
+    "fpr": [
+     0.05478335318642048,
+     0.23460648148148144
+    ],
+    "fallback_success": [
+     0.42857142857142855,
+     0.6724216300940439
+    ],
+    "clean_pass": [
+     0.6296296296296297,
+     0.9286330049261083
+    ],
+    "harm_rate": [
+     0.2111111111111111,
+     0.4
+    ],
+    "latency_p50": [
+     2454.6986351335095,
+     3759.1166059203015
+    ],
+    "cost_per_1k": [
+     0.0,
+     0.0
+    ]
+   },
+   "seed_std": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "fpr": 0.0,
+    "fallback_success": 0.0,
+    "clean_pass": 0.0,
+    "harm_rate": 0.0,
+    "latency_p50": 12.702829345565915,
+    "cost_per_1k": 0.0
+   },
+   "seeds": [
+    7,
+    42,
+    2026
+   ],
+   "n_rows": 270,
+   "n_cases": 90,
+   "harm_cases": 81,
+   "dup_charge": 0,
+   "dup_order": 0,
+   "cache_hits": 0,
+   "escalations": 0,
+   "llm_calls": 315,
+   "llm_failed": 0,
+   "cost_total": 0.0,
+   "outcomes": {
+    "ok": 150,
+    "degraded": 0,
+    "fallback": 108,
+    "human": 12,
+    "failed": 0
+   }
+  },
+  "HF": {
+   "name": "H-V4F 规则 + DeepSeek-V4-Flash",
+   "recall": 0.5901639344262295,
+   "precision": 0.9230769230769231,
+   "f1": 0.7200000000000001,
+   "fpr": 0.0375,
+   "fallback_success": 0.5901639344262295,
+   "clean_pass": 0.896551724137931,
+   "task_success": 0.6888888888888889,
+   "harm_rate": 0.2777777777777778,
+   "corrected_rate": 0.0,
+   "latency_p50": 2658.4117237179466,
+   "latency_p95": 9405.345732808826,
+   "cost_per_1k": 2.3369666666666666,
+   "llm_calls_per_case": 1.1555555555555554,
+   "confusion": {
+    "tp": 108,
+    "fp": 9,
+    "fn": 75,
+    "tn": 231,
+    "precision": 0.9230769230769231,
+    "recall": 0.5901639344262295,
+    "f1": 0.7200000000000001,
+    "fpr": 0.0375
+   },
+   "ci95": {
+    "recall": [
+     0.46150793650793653,
+     0.7142857142857143
+    ],
+    "precision": [
+     0.8292508710801393,
+     1.0
+    ],
+    "fpr": [
+     0.0,
+     0.08237745098039213
+    ],
+    "fallback_success": [
+     0.46150793650793653,
+     0.7142857142857143
+    ],
+    "clean_pass": [
+     0.7726948051948052,
+     1.0
+    ],
+    "harm_rate": [
+     0.18888888888888888,
+     0.37777777777777777
+    ],
+    "latency_p50": [
+     2455.738525144374,
+     3204.8887683959333
+    ],
+    "cost_per_1k": [
+     2.0972366666666664,
+     2.5635225
+    ]
+   },
+   "seed_std": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "fpr": 0.0,
+    "fallback_success": 0.0,
+    "clean_pass": 0.0,
+    "harm_rate": 0.0,
+    "latency_p50": 17.558357487091467,
+    "cost_per_1k": 0.0003681787005727743
+   },
+   "seeds": [
+    7,
+    42,
+    2026
+   ],
+   "n_rows": 270,
+   "n_cases": 90,
+   "harm_cases": 75,
+   "dup_charge": 0,
+   "dup_order": 0,
+   "cache_hits": 0,
+   "escalations": 0,
+   "llm_calls": 312,
+   "llm_failed": 0,
+   "cost_total": 0.630981,
+   "outcomes": {
+    "ok": 153,
+    "degraded": 0,
+    "fallback": 111,
+    "human": 6,
+    "failed": 0
+   }
+  },
+  "H32": {
+   "name": "H-V3.2 规则 + DeepSeek-V3.2",
+   "recall": 0.7377049180327869,
+   "precision": 0.9375,
+   "f1": 0.8256880733944955,
+   "fpr": 0.0379746835443038,
+   "fallback_success": 0.7377049180327869,
+   "clean_pass": 0.896551724137931,
+   "task_success": 0.7888888888888889,
+   "harm_rate": 0.17777777777777778,
+   "corrected_rate": 0.0,
+   "latency_p50": 4707.68369979793,
+   "latency_p95": 10078.212070721234,
+   "cost_per_1k": 2.787088888888889,
+   "llm_calls_per_case": 1.1555555555555554,
+   "confusion": {
+    "tp": 135,
+    "fp": 9,
+    "fn": 48,
+    "tn": 228,
+    "precision": 0.9375,
+    "recall": 0.7377049180327869,
+    "f1": 0.8256880733944955,
+    "fpr": 0.0379746835443038
+   },
+   "ci95": {
+    "recall": [
+     0.618956043956044,
+     0.8412698412698413
+    ],
+    "precision": [
+     0.86,
+     1.0
+    ],
+    "fpr": [
+     0.0,
+     0.08335843373493973
+    ],
+    "fallback_success": [
+     0.618956043956044,
+     0.8412698412698413
+    ],
+    "clean_pass": [
+     0.7726948051948052,
+     1.0
+    ],
+    "harm_rate": [
+     0.1,
+     0.26666666666666666
+    ],
+    "latency_p50": [
+     4436.9328800492785,
+     5692.419029648558
+    ],
+    "cost_per_1k": [
+     2.508116111111111,
+     3.064122222222222
+    ]
+   },
+   "seed_std": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "fpr": 0.0,
+    "fallback_success": 0.0,
+    "clean_pass": 0.0,
+    "harm_rate": 0.0,
+    "latency_p50": 40.297656582440055,
+    "cost_per_1k": 0.0003399346342396267
+   },
+   "seeds": [
+    7,
+    42,
+    2026
+   ],
+   "n_rows": 270,
+   "n_cases": 90,
+   "harm_cases": 48,
+   "dup_charge": 0,
+   "dup_order": 0,
+   "cache_hits": 0,
+   "escalations": 0,
+   "llm_calls": 312,
+   "llm_failed": 0,
+   "cost_total": 0.752514,
+   "outcomes": {
+    "ok": 126,
+    "degraded": 3,
+    "fallback": 126,
+    "human": 15,
+    "failed": 0
+   }
+  },
+  "DF": {
+   "name": "D-V4F 纯 LLM 质检（V4-Flash）",
+   "recall": 0.4098360655737705,
+   "precision": 0.9615384615384616,
+   "f1": 0.574712643678161,
+   "fpr": 0.013888888888888888,
+   "fallback_success": 0.4098360655737705,
+   "clean_pass": 1.0,
+   "task_success": 0.6,
+   "harm_rate": 0.4,
+   "corrected_rate": 0.0,
+   "latency_p50": 3128.328867592244,
+   "latency_p95": 13518.36078787506,
+   "cost_per_1k": 2.9729666666666668,
+   "llm_calls_per_case": 1.4777777777777779,
+   "confusion": {
+    "tp": 75,
+    "fp": 3,
+    "fn": 108,
+    "tn": 213,
+    "precision": 0.9615384615384616,
+    "recall": 0.4098360655737705,
+    "f1": 0.574712643678161,
+    "fpr": 0.013888888888888888
+   },
+   "ci95": {
+    "recall": [
+     0.2806514236410699,
+     0.5312752016129032
+    ],
+    "precision": [
+     0.8666666666666667,
+     1.0
+    ],
+    "fpr": [
+     0.0,
+     0.045454545454545456
+    ],
+    "fallback_success": [
+     0.2806514236410699,
+     0.5312752016129032
+    ],
+    "clean_pass": [
+     1.0,
+     1.0
+    ],
+    "harm_rate": [
+     0.3,
+     0.5002777777777775
+    ],
+    "latency_p50": [
+     2660.034112497168,
+     3645.760862010997
+    ],
+    "cost_per_1k": [
+     2.6818966666666664,
+     3.2665308333333334
+    ]
+   },
+   "seed_std": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "fpr": 0.0,
+    "fallback_success": 0.0,
+    "clean_pass": 0.0,
+    "harm_rate": 0.0,
+    "latency_p50": 2.422543657589564,
+    "cost_per_1k": 0.0002160246899469734
+   },
+   "seeds": [
+    7,
+    42,
+    2026
+   ],
+   "n_rows": 270,
+   "n_cases": 90,
+   "harm_cases": 108,
+   "dup_charge": 0,
+   "dup_order": 0,
+   "cache_hits": 0,
+   "escalations": 0,
+   "llm_calls": 399,
+   "llm_failed": 0,
+   "cost_total": 0.802701,
+   "outcomes": {
+    "ok": 192,
+    "degraded": 6,
+    "fallback": 69,
+    "human": 3,
+    "failed": 0
+   }
+  },
+  "C7": {
+   "name": "CAS 级联 7B→V3.2（7B 判异常才升级）",
+   "recall": 0.5245901639344263,
+   "precision": 0.9142857142857143,
+   "f1": 0.6666666666666666,
+   "fpr": 0.039473684210526314,
+   "fallback_success": 0.5245901639344263,
+   "clean_pass": 0.896551724137931,
+   "task_success": 0.6444444444444445,
+   "harm_rate": 0.32222222222222224,
+   "corrected_rate": 0.0,
+   "latency_p50": 2961.3105716560667,
+   "latency_p95": 13692.493914254976,
+   "cost_per_1k": 0.3274222222222222,
+   "llm_calls_per_case": 1.1222222222222222,
+   "confusion": {
+    "tp": 96,
+    "fp": 9,
+    "fn": 87,
+    "tn": 219,
+    "precision": 0.9142857142857143,
+    "recall": 0.5245901639344263,
+    "f1": 0.6666666666666666,
+    "fpr": 0.039473684210526314
+   },
+   "ci95": {
+    "recall": [
+     0.4,
+     0.6418753009147808
+    ],
+    "precision": [
+     0.8107328482328483,
+     1.0
+    ],
+    "fpr": [
+     0.0,
+     0.0864331723027375
+    ],
+    "fallback_success": [
+     0.4,
+     0.6418753009147808
+    ],
+    "clean_pass": [
+     0.7726948051948052,
+     1.0
+    ],
+    "harm_rate": [
+     0.23333333333333334,
+     0.4222222222222222
+    ],
+    "latency_p50": [
+     2454.6986351335095,
+     4066.413134753816
+    ],
+    "cost_per_1k": [
+     0.16269944444444445,
+     0.49971888888888866
+    ]
+   },
+   "seed_std": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "fpr": 0.0,
+    "fallback_success": 0.0,
+    "clean_pass": 0.0,
+    "harm_rate": 0.0,
+    "latency_p50": 12.702829345565915,
+    "cost_per_1k": 0.0
+   },
+   "seeds": [
+    7,
+    42,
+    2026
+   ],
+   "n_rows": 270,
+   "n_cases": 90,
+   "harm_cases": 87,
+   "dup_charge": 0,
+   "dup_order": 0,
+   "cache_hits": 0,
+   "escalations": 36,
+   "llm_calls": 303,
+   "llm_failed": 0,
+   "cost_total": 0.088404,
+   "outcomes": {
+    "ok": 165,
+    "degraded": 0,
+    "fallback": 93,
+    "human": 12,
+    "failed": 0
+   }
+  },
+  "CF": {
+   "name": "CAS 级联 V4F→V3.2（异常或置信<0.9 升级）",
+   "recall": 0.5901639344262295,
+   "precision": 0.9230769230769231,
+   "f1": 0.7200000000000001,
+   "fpr": 0.0375,
+   "fallback_success": 0.5901639344262295,
+   "clean_pass": 0.896551724137931,
+   "task_success": 0.6888888888888889,
+   "harm_rate": 0.2777777777777778,
+   "corrected_rate": 0.0,
+   "latency_p50": 2897.9632855219415,
+   "latency_p95": 11698.344641521657,
+   "cost_per_1k": 2.6654444444444447,
+   "llm_calls_per_case": 1.1555555555555554,
+   "confusion": {
+    "tp": 108,
+    "fp": 9,
+    "fn": 75,
+    "tn": 231,
+    "precision": 0.9230769230769231,
+    "recall": 0.5901639344262295,
+    "f1": 0.7200000000000001,
+    "fpr": 0.0375
+   },
+   "ci95": {
+    "recall": [
+     0.46549902865468673,
+     0.7142857142857143
+    ],
+    "precision": [
+     0.8333333333333334,
+     1.0
+    ],
+    "fpr": [
+     0.0,
+     0.08333333333333333
+    ],
+    "fallback_success": [
+     0.46549902865468673,
+     0.7142857142857143
+    ],
+    "clean_pass": [
+     0.7726948051948052,
+     1.0
+    ],
+    "harm_rate": [
+     0.18888888888888888,
+     0.37777777777777777
+    ],
+    "latency_p50": [
+     2542.895468052468,
+     3382.8990259243205
+    ],
+    "cost_per_1k": [
+     2.3725047222222226,
+     2.9772608333333337
+    ]
+   },
+   "seed_std": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "fpr": 0.0,
+    "fallback_success": 0.0,
+    "clean_pass": 0.0,
+    "harm_rate": 0.0,
+    "latency_p50": 47.09591999253793,
+    "cost_per_1k": 0.00036817870057296193
+   },
+   "seeds": [
+    7,
+    42,
+    2026
+   ],
+   "n_rows": 270,
+   "n_cases": 90,
+   "harm_cases": 75,
+   "dup_charge": 0,
+   "dup_order": 0,
+   "cache_hits": 0,
+   "escalations": 36,
+   "llm_calls": 312,
+   "llm_failed": 0,
+   "cost_total": 0.71967,
+   "outcomes": {
+    "ok": 153,
+    "degraded": 0,
+    "fallback": 111,
+    "human": 6,
+    "failed": 0
+   }
+  },
+  "TF": {
+   "name": "T 分层：决策/写同步 + 展示异步（V4F）",
+   "recall": 0.5901639344262295,
+   "precision": 0.9230769230769231,
+   "f1": 0.7200000000000001,
+   "fpr": 0.0375,
+   "fallback_success": 0.4426229508196721,
+   "clean_pass": 0.896551724137931,
+   "task_success": 0.5888888888888889,
+   "harm_rate": 0.2777777777777778,
+   "corrected_rate": 0.1,
+   "latency_p50": 508.2691233663886,
+   "latency_p95": 5852.527123195792,
+   "cost_per_1k": 2.3369666666666666,
+   "llm_calls_per_case": 1.1555555555555554,
+   "confusion": {
+    "tp": 108,
+    "fp": 9,
+    "fn": 75,
+    "tn": 231,
+    "precision": 0.9230769230769231,
+    "recall": 0.5901639344262295,
+    "f1": 0.7200000000000001,
+    "fpr": 0.0375
+   },
+   "ci95": {
+    "recall": [
+     0.46150793650793653,
+     0.7142857142857143
+    ],
+    "precision": [
+     0.8292508710801393,
+     1.0
+    ],
+    "fpr": [
+     0.0,
+     0.08237745098039213
+    ],
+    "fallback_success": [
+     0.31744047619047616,
+     0.5758167613636364
+    ],
+    "clean_pass": [
+     0.7726948051948052,
+     1.0
+    ],
+    "harm_rate": [
+     0.18888888888888888,
+     0.37777777777777777
+    ],
+    "latency_p50": [
+     393.692818425368,
+     1866.1112159477252
+    ],
+    "cost_per_1k": [
+     2.0972366666666664,
+     2.5635225
+    ]
+   },
+   "seed_std": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "fpr": 0.0,
+    "fallback_success": 0.0,
+    "clean_pass": 0.0,
+    "harm_rate": 0.0,
+    "latency_p50": 52.513228835505565,
+    "cost_per_1k": 0.0003681787005727743
+   },
+   "seeds": [
+    7,
+    42,
+    2026
+   ],
+   "n_rows": 270,
+   "n_cases": 90,
+   "harm_cases": 75,
+   "dup_charge": 0,
+   "dup_order": 0,
+   "cache_hits": 0,
+   "escalations": 0,
+   "llm_calls": 312,
+   "llm_failed": 0,
+   "cost_total": 0.630981,
+   "outcomes": {
+    "ok": 153,
+    "degraded": 0,
+    "fallback": 111,
+    "human": 6,
+    "failed": 0
+   }
+  },
+  "TFC": {
+   "name": "T+C 分层 + 判定缓存（V4F）",
+   "recall": 0.5901639344262295,
+   "precision": 0.9230769230769231,
+   "f1": 0.7200000000000001,
+   "fpr": 0.0375,
+   "fallback_success": 0.4426229508196721,
+   "clean_pass": 0.896551724137931,
+   "task_success": 0.5888888888888889,
+   "harm_rate": 0.2777777777777778,
+   "corrected_rate": 0.1,
+   "latency_p50": 422.2420842670435,
+   "latency_p95": 3374.0118821103547,
+   "cost_per_1k": 0.7117666666666667,
+   "llm_calls_per_case": 1.1555555555555554,
+   "confusion": {
+    "tp": 108,
+    "fp": 9,
+    "fn": 75,
+    "tn": 231,
+    "precision": 0.9230769230769231,
+    "recall": 0.5901639344262295,
+    "f1": 0.7200000000000001,
+    "fpr": 0.0375
+   },
+   "ci95": {
+    "recall": [
+     0.46150793650793653,
+     0.7142857142857143
+    ],
+    "precision": [
+     0.8292508710801393,
+     1.0
+    ],
+    "fpr": [
+     0.0,
+     0.08237745098039213
+    ],
+    "fallback_success": [
+     0.31744047619047616,
+     0.5758167613636364
+    ],
+    "clean_pass": [
+     0.7726948051948052,
+     1.0
+    ],
+    "harm_rate": [
+     0.18888888888888888,
+     0.37777777777777777
+    ],
+    "latency_p50": [
+     365.8514947077973,
+     461.8632695407621
+    ],
+    "cost_per_1k": [
+     0.6257994444444445,
+     0.7990669444444444
+    ]
+   },
+   "seed_std": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "fpr": 0.0,
+    "fallback_success": 0.0,
+    "clean_pass": 0.0,
+    "harm_rate": 0.0,
+    "latency_p50": 15.467104329790542,
+    "cost_per_1k": 0.9318413102065218
+   },
+   "seeds": [
+    7,
+    42,
+    2026
+   ],
+   "n_rows": 270,
+   "n_cases": 90,
+   "harm_cases": 75,
+   "dup_charge": 0,
+   "dup_order": 0,
+   "cache_hits": 217,
+   "escalations": 0,
+   "llm_calls": 312,
+   "llm_failed": 0,
+   "cost_total": 0.192177,
+   "outcomes": {
+    "ok": 153,
+    "degraded": 0,
+    "fallback": 111,
+    "human": 6,
+    "failed": 0
+   }
+  },
+  "T32": {
+   "name": "T 分层：决策/写同步 + 展示异步（V3.2）",
+   "recall": 0.7377049180327869,
+   "precision": 0.9375,
+   "f1": 0.8256880733944955,
+   "fpr": 0.0379746835443038,
+   "fallback_success": 0.4918032786885246,
+   "clean_pass": 0.896551724137931,
+   "task_success": 0.6222222222222222,
+   "harm_rate": 0.17777777777777778,
+   "corrected_rate": 0.16666666666666666,
+   "latency_p50": 508.2691233663886,
+   "latency_p95": 9739.105997530807,
+   "cost_per_1k": 2.787088888888889,
+   "llm_calls_per_case": 1.1555555555555554,
+   "confusion": {
+    "tp": 135,
+    "fp": 9,
+    "fn": 48,
+    "tn": 228,
+    "precision": 0.9375,
+    "recall": 0.7377049180327869,
+    "f1": 0.8256880733944955,
+    "fpr": 0.0379746835443038
+   },
+   "ci95": {
+    "recall": [
+     0.618956043956044,
+     0.8412698412698413
+    ],
+    "precision": [
+     0.86,
+     1.0
+    ],
+    "fpr": [
+     0.0,
+     0.08335843373493973
+    ],
+    "fallback_success": [
+     0.3593528891509434,
+     0.6129032258064516
+    ],
+    "clean_pass": [
+     0.7726948051948052,
+     1.0
+    ],
+    "harm_rate": [
+     0.1,
+     0.26666666666666666
+    ],
+    "latency_p50": [
+     398.3017175224073,
+     3976.845501732453
+    ],
+    "cost_per_1k": [
+     2.508116111111111,
+     3.064122222222222
+    ]
+   },
+   "seed_std": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "fpr": 0.0,
+    "fallback_success": 0.0,
+    "clean_pass": 0.0,
+    "harm_rate": 0.0,
+    "latency_p50": 52.513228835505565,
+    "cost_per_1k": 0.0003399346342396267
+   },
+   "seeds": [
+    7,
+    42,
+    2026
+   ],
+   "n_rows": 270,
+   "n_cases": 90,
+   "harm_cases": 48,
+   "dup_charge": 0,
+   "dup_order": 0,
+   "cache_hits": 0,
+   "escalations": 0,
+   "llm_calls": 312,
+   "llm_failed": 0,
+   "cost_total": 0.752514,
+   "outcomes": {
+    "ok": 126,
+    "degraded": 3,
+    "fallback": 126,
+    "human": 15,
+    "failed": 0
+   }
+  },
+  "T32C": {
+   "name": "T+C 分层 + 判定缓存（V3.2）",
+   "recall": 0.7377049180327869,
+   "precision": 0.9375,
+   "f1": 0.8256880733944955,
+   "fpr": 0.0379746835443038,
+   "fallback_success": 0.4918032786885246,
+   "clean_pass": 0.896551724137931,
+   "task_success": 0.6222222222222222,
+   "harm_rate": 0.17777777777777778,
+   "corrected_rate": 0.16666666666666666,
+   "latency_p50": 413.4528816714191,
+   "latency_p95": 7584.156968082102,
+   "cost_per_1k": 0.8581037037037038,
+   "llm_calls_per_case": 1.1555555555555554,
+   "confusion": {
+    "tp": 135,
+    "fp": 9,
+    "fn": 48,
+    "tn": 228,
+    "precision": 0.9375,
+    "recall": 0.7377049180327869,
+    "f1": 0.8256880733944955,
+    "fpr": 0.0379746835443038
+   },
+   "ci95": {
+    "recall": [
+     0.618956043956044,
+     0.8412698412698413
+    ],
+    "precision": [
+     0.86,
+     1.0
+    ],
+    "fpr": [
+     0.0,
+     0.08335843373493973
+    ],
+    "fallback_success": [
+     0.3593528891509434,
+     0.6129032258064516
+    ],
+    "clean_pass": [
+     0.7726948051948052,
+     1.0
+    ],
+    "harm_rate": [
+     0.1,
+     0.26666666666666666
+    ],
+    "latency_p50": [
+     365.57884196578385,
+     459.8511606742757
+    ],
+    "cost_per_1k": [
+     0.7514048148148149,
+     0.9708562962962962
+    ]
+   },
+   "seed_std": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "fpr": 0.0,
+    "fallback_success": 0.0,
+    "clean_pass": 0.0,
+    "harm_rate": 0.0,
+    "latency_p50": 22.486649835166833,
+    "cost_per_1k": 1.1229743905897582
+   },
+   "seeds": [
+    7,
+    42,
+    2026
+   ],
+   "n_rows": 270,
+   "n_cases": 90,
+   "harm_cases": 48,
+   "dup_charge": 0,
+   "dup_order": 0,
+   "cache_hits": 216,
+   "escalations": 0,
+   "llm_calls": 312,
+   "llm_failed": 0,
+   "cost_total": 0.231688,
+   "outcomes": {
+    "ok": 126,
+    "degraded": 3,
+    "fallback": 126,
+    "human": 15,
+    "failed": 0
+   }
+  }
+ },
+ "prices": {
+  "Qwen/Qwen2.5-7B-Instruct": {
+   "in": 0.0,
+   "out": 0.0,
+   "note": "价格页标注 (Free)"
+  },
+  "deepseek-ai/DeepSeek-V3.2": {
+   "in": 4.0,
+   "out": 6.0,
+   "cache": 0.4,
+   "note": "价格页标价"
+  },
+  "deepseek-ai/DeepSeek-V4-Flash": {
+   "in": 3.0,
+   "out": 9.0,
+   "cache": 0.3,
+   "note": "分时计价：0–2 点 / 8–24 点 ¥3 / ¥9；2–8 点 ¥1.5 / ¥4.5。本项目调用都在白天，按白天价估算"
+  },
+  "zai-org/GLM-4.5-Air": {
+   "in": 1.0,
+   "out": 6.0,
+   "note": "价格页标价；只用于生成独立测试集，不做质检"
+  }
+ },
+ "generated_at": "2026-11-15 20:20:29 +0800"
+}
