@@ -337,7 +337,7 @@ LLM 挂了：soft 可疑项回退为保守规则（宁可多兜底）；规则�
 
 完整的 14 个配置 × 3 个测试集见 `eval/tradeoff.md`，图见 `docs/tradeoff.png`：
 
-![时延 / 成本 / 受损率权衡](docs/tradeoff.png)
+![时延 / 成本 / 受损率权衡](tradeoff.png)
 
 **怎么读这张表：**
 

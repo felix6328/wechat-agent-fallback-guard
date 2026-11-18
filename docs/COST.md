@@ -51,6 +51,6 @@
 
 ## v2 高德天气评测
 
-最近一次对照回放费用估算为 **¥0.2000**，口径与上文一致。当次高德网络调用 2 次，缓存读取 56 次。基础数据见 [v2 评测报告](eval/results_real.md) 和机器可读摘要 [results_real.json](eval/results_real.json)。
+最近一次对照回放费用估算为 **¥0.2000**，口径与上文一致。当次高德网络调用 2 次，缓存读取 56 次。基础数据见 [v2 评测报告](../eval/results_real.md) 和机器可读摘要 [results_real.json](../eval/results_real.json)。
 
 v2 本地日志累计费用估算为 ¥0.1165，含早期采集不完整的一轮评测。

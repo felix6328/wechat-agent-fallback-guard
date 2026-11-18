@@ -1,4 +1,4 @@
-"""从 data/cost/llm.jsonl（不入库、不含密钥）汇总生成 COST.md。不调 API。"""
+"""从 data/cost/llm.jsonl（不入库、不含密钥）汇总生成 docs/COST.md。不调 API。"""
 import json
 import sys
 from collections import defaultdict
@@ -43,6 +43,6 @@ for k, v in st.items():
         L.append(f"| {k} | {1000 * v['cost_total'] / v['episodes']:.2f} | {v.get('cache_hits', 0)} / {v['llm_calls']} |")
 L.append("\n- 按每天 100 万次 Agent 会话（**假设值**，不是微信数据）：同步混合方案约 ¥2,500–3,000 / 天；分层 + 判定缓存约 ¥1,100–1,300 / 天。")
 L.append("- 这是公网 API 标价。平台自研模型内部部署、蒸馏成专用小模型后，边际成本会再降一个量级以上（推断，未测）。")
-L.append("- 真正的约束仍是时延：见 DESIGN.md §11。")
-(ROOT / "COST.md").write_text("\n".join(L), encoding="utf-8")
+L.append("- 真正的约束仍是时延：见 docs/DESIGN.md §11。")
+(ROOT / "docs/COST.md").write_text("\n".join(L), encoding="utf-8")
 print("\n".join(L[-12:]))

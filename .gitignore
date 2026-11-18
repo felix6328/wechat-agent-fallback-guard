@@ -23,3 +23,9 @@ NOTES_PRIVATE.md
 # Local provider caches and sandboxes
 /cache/
 /secrets/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.egg-info/

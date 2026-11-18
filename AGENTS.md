@@ -29,8 +29,8 @@ This repo is a personal portfolio project by the author (AI PM internship applic
 
 ## Deliverables every repo must have
 - `README.md` that **opens with the user scenario** (one sentence: who, what moment, what pain, what the tool does, the result) and a scenario diagram, then results, then architecture.
-- `DEMO.md`: a 3–5 minute demo script with exact commands.
-- `面试讲法.md`: a 30-second pitch and likely interview follow-ups with honest answers (in Chinese).
+- `docs/DEMO.md`: a 3–5 minute demo script with exact commands.
+- `docs/面试讲法.md`: a 30-second pitch and likely interview follow-ups with honest answers (in Chinese).
 - `eval/` with reproducible results and a badcase list.
 
 ## Project-specific (wechat-agent-fallback-guard v2)

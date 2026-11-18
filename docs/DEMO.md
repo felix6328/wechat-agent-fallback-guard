@@ -46,4 +46,4 @@ python scripts/pay_sandbox_demo.py refund --session portfolio-run-01 --order dem
 
 如果网关仍显示待确认，到沙箱控制台核对状态，再用同一会话重查。测试事件日志在 `cache/alipay/events.jsonl`，记录沙箱交易号、状态和动作，买家账号留在控制台。
 
-完成付款恢复、关闭或退款验证后，运行 `python eval/run_real_eval.py --payment-only`。它从本地日志写入 [支付宝沙箱联调记录](eval/sandbox_log.md)，同时更新现有接口评测中的支付结果。
+完成付款恢复、关闭或退款验证后，运行 `python eval/run_real_eval.py --payment-only`。它从本地日志写入 [支付宝沙箱联调记录](../eval/sandbox_log.md)，同时更新现有接口评测中的支付结果。
