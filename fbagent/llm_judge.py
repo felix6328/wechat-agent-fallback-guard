@@ -110,8 +110,9 @@ class LLMVerdict:
 
 
 class LLMJudge:
-    def __init__(self, model: str, use_cache: bool = True, timeout: float = 60.0, prompt_version: str = "v1"):
+    def __init__(self, model: str, use_cache: bool = True, timeout: float = 60.0, prompt_version: str = "v1", now=None):
         self.model = model
+        self.now = now or W.NOW
         self.prompt_version = prompt_version
         self.system = SYSTEM if prompt_version == "v1" else SYSTEM_V2
         self.key = load_siliconflow_api_key()
@@ -140,7 +141,7 @@ class LLMJudge:
         if not self.available:
             return None
         messages = [
-            {"role": "system", "content": self.system.format(now=W.ts(W.NOW))},
+            {"role": "system", "content": self.system.format(now=W.ts(self.now))},
             {"role": "user", "content": USER_TMPL.format(
                 instruction=instruction, args=json.dumps(args, ensure_ascii=False), op=op,
                 data=json.dumps(data, ensure_ascii=False), soft="；".join(soft_flags) or "无")},

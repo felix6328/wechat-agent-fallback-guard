@@ -14,7 +14,8 @@ from dataclasses import dataclass, field, replace
 from typing import Optional
 
 from .llm_judge import LLMJudge
-from .mock_apis import Env, OP_TIER, ToolResult
+from .backends.base import Backend
+from .mock_apis import OP_TIER, ToolResult
 from .parser import parse
 from .paths import CONFIGS
 from . import rules as R
@@ -144,12 +145,15 @@ class Agent:
         return a
 
     # ------------------------------------------------------------ 主流程
-    def run(self, instruction: str, env: Env, case_id: str = "") -> AgentResult:
+    def run(self, instruction: str, env: Backend, case_id: str = "", input_plan: dict | None = None) -> AgentResult:
         src, pms, pcost = "wordlist", 0.0, 0.0
-        if self.llm_parser is not None:
+        if input_plan is not None:
+            plan, src = input_plan, "structured"
+        elif self.llm_parser is not None:
             plan, src, pms, pcost = self.llm_parser.parse(instruction)
         else:
             plan = parse(instruction)
+        plan = env.prepare_plan(plan)
         res = AgentResult(case_id, self.variant, plan)
         res.parse_source, res.parse_ms, res.parse_cost = src, pms, pcost
         self.instruction, self.env, self.res = instruction, env, res
@@ -193,6 +197,9 @@ class Agent:
         seq = POLICY["backoff_ms"].get(kind, POLICY["backoff_ms"]["default"])
         ms = seq[min(attempt, len(seq) - 1)]
         self.res.backoff_ms += ms
+        wait = getattr(self.env, "wait", None)
+        if wait is not None:
+            wait(ms)
         self.res.actions.append(f"退避 {ms}ms 后重试")
 
     def _read_with_retry(self, op, args, ctx, defer=False):
@@ -252,10 +259,15 @@ class Agent:
             self._say_weather(r, caveat=f"（注意：该数据更新于 {r.data['updated_at']}，可能不是最新）")
             self.res.bump("degraded")
             return r.data
+        if not getattr(self.env, "has_weather_backup", True):
+            self.res.reply = f"{plan['city']}的天气数据暂时不可靠，请查阅当地气象预报。"
+            self.res.actions.append("策略：暂停展示异常天气，提示核对当地预报")
+            self.res.bump("fallback")
+            return None
         # fallback：备用气象源
         self.res.actions.append("策略：切换备用气象源")
         b, ba = self._read_with_retry("weather_backup.query", args, args)
-        if not ba.anomalous:
+        if not ba.anomalous and not (b.data or {}).get("errcode"):
             self._say_weather(b, caveat="（主数据源异常，以下来自备用气象源，粒度较粗）")
             self.res.bump("fallback")
             return b.data
@@ -269,6 +281,8 @@ class Agent:
         txt = f"{d['city']} {d['date']}：{d['condition']}，{d['temp_low_c']}~{d['temp_high_c']}°C"
         if "precip_mm" in d:
             txt += f"，降水 {d['precip_mm']}mm"
+        if r.observed_at is not None:
+            txt += f"（{d.get('source', '天气服务')}，发布于 {d.get('updated_at', '未知')}）"
         self.res.reply = txt + (caveat or "")
         self.res.shown.append((r.call_id, bool(caveat)))
 
@@ -395,6 +409,22 @@ class Agent:
 
     # ------------------------------------------------------------ 支付（永不盲重试）
     def _pay(self, od):
+        start_payment = getattr(self.env, "start_payment", None)
+        if start_payment is not None:
+            trade, trace = start_payment(od)
+            self.res.actions.extend(f"沙箱：{action}" for action in trace)
+            if trade is None:
+                self.res.reply = "模拟外卖订单已创建。启用支付宝沙箱后可测试付款。"
+                self.res.bump("human")
+            elif trade.state == "PAID":
+                self.res.reply = f"支付宝沙箱查单确认已支付 {trade.amount} 元。"
+            elif trade.state == "PENDING" and trade.checkout:
+                self.res.reply = f"沙箱收银台已就绪，待你付款 {trade.amount} 元：{trade.checkout}"
+                self.res.bump("human")
+            else:
+                self.res.reply = "沙箱订单待核对，请先查单并核对金额。"
+                self.res.bump("human")
+            return
         amount = od["total_cny"]
         key = None if self.variant == "naive" else f"pay-{od['order_id']}"
         pargs = {"order_id": od["order_id"], "amount_cny": amount}
@@ -436,7 +466,7 @@ class Agent:
                     self.res.reply = f"已支付 {p2.data['amount_cny']} 元，订单 {od['order_id']}。"
                     self.res.shown.append((p2.call_id, False))
                     return
-            self.res.reply = "支付结果确认中，请勿重复支付。结果会通过微信支付通知你，如有疑问可联系客服。"
+            self.res.reply = "支付结果确认中，请勿重复支付。支付结果会通过支付平台通知你，如有疑问可联系客服。"
             self.res.actions.append("策略：查单无法确认 → 转人工/等待通知，绝不再发起扣款")
             self.res.bump("human")
             return

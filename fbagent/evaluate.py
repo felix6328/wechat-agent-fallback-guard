@@ -10,11 +10,12 @@ from .mock_apis import Env, WRONG_DATA_KINDS, DISCLOSABLE_KINDS, TRANSPORT_KINDS
 
 
 def run_case(case: dict, variant: str, judge=None, rules_version="v1", seed=42, random_faults=None,
-             async_display=False, verdict_cache=None, llm_parser=None) -> dict:
-    env = Env(case["id"], case.get("fault_plan", {}), seed=seed, random_faults=random_faults)
+             async_display=False, verdict_cache=None, llm_parser=None, env=None) -> dict:
+    if env is None:
+        env = Env(case["id"], case.get("fault_plan", {}), seed=seed, random_faults=random_faults)
     agent = Agent(variant, judge, rules_version, async_display=async_display, verdict_cache=verdict_cache,
                   llm_parser=llm_parser)
-    res = agent.run(case["instruction"], env, case["id"])
+    res = agent.run(case["instruction"], env, case["id"], input_plan=case.get("input_plan"))
     calls = []
     for a in res.assessments:
         r = env.calls[a.call_id]

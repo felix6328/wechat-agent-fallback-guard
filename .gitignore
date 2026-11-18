@@ -19,3 +19,7 @@ eval/traces*.jsonl
 
 # 个人笔记（面试准备、署名说明）
 NOTES_PRIVATE.md
+
+# Local provider caches and sandboxes
+/cache/
+/secrets/

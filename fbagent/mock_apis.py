@@ -14,7 +14,7 @@ import hashlib
 import json
 import random
 from dataclasses import dataclass, field
-from datetime import timedelta
+from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Any, Optional
 
@@ -55,6 +55,7 @@ class ToolResult:
     http_code: int = 200
     latency_ms: float = 0.0
     data: Optional[dict] = None
+    observed_at: datetime | None = None
 
     def brief(self) -> dict:
         return {"call_id": self.call_id, "op": self.op, "args": self.args, "status": self.status,
@@ -85,6 +86,9 @@ class Env:
         self.orders: list[dict] = []
         self.order_tokens: dict[str, dict] = {}
         self.virtual_ms = 0.0
+
+    def prepare_plan(self, plan: dict) -> dict:
+        return plan
 
     # ---------------- 故障选择 ----------------
     def _next_fault(self, op: str):

@@ -1,0 +1,278 @@
+{
+  "weather": [
+    {
+      "id": "weather_01",
+      "instruction": "帮我查一下北京今天的天气",
+      "city": "北京",
+      "day_offset": 0,
+      "fault": null
+    },
+    {
+      "id": "weather_02",
+      "instruction": "帮我查一下上海明天的天气",
+      "city": "上海",
+      "day_offset": 1,
+      "fault": null
+    },
+    {
+      "id": "weather_03",
+      "instruction": "帮我查一下广州后天的天气",
+      "city": "广州",
+      "day_offset": 2,
+      "fault": null
+    },
+    {
+      "id": "weather_04",
+      "instruction": "帮我查一下深圳今天的天气",
+      "city": "深圳",
+      "day_offset": 0,
+      "fault": null
+    },
+    {
+      "id": "weather_05",
+      "instruction": "帮我查一下杭州明天的天气",
+      "city": "杭州",
+      "day_offset": 1,
+      "fault": null
+    },
+    {
+      "id": "weather_06",
+      "instruction": "帮我查一下成都后天的天气",
+      "city": "成都",
+      "day_offset": 2,
+      "fault": null
+    },
+    {
+      "id": "weather_07",
+      "instruction": "帮我查一下哈尔滨今天的天气",
+      "city": "哈尔滨",
+      "day_offset": 0,
+      "fault": null
+    },
+    {
+      "id": "weather_08",
+      "instruction": "帮我查一下武汉明天的天气",
+      "city": "武汉",
+      "day_offset": 1,
+      "fault": null
+    },
+    {
+      "id": "weather_09",
+      "instruction": "帮我查一下南京后天的天气",
+      "city": "南京",
+      "day_offset": 2,
+      "fault": null
+    },
+    {
+      "id": "weather_10",
+      "instruction": "帮我查一下西安今天的天气",
+      "city": "西安",
+      "day_offset": 0,
+      "fault": null
+    },
+    {
+      "id": "weather_11",
+      "instruction": "帮我查一下重庆明天的天气",
+      "city": "重庆",
+      "day_offset": 1,
+      "fault": null
+    },
+    {
+      "id": "weather_12",
+      "instruction": "帮我查一下福州后天的天气",
+      "city": "福州",
+      "day_offset": 2,
+      "fault": null
+    },
+    {
+      "id": "weather_13",
+      "instruction": "帮我查一下厦门今天的天气",
+      "city": "厦门",
+      "day_offset": 0,
+      "fault": null
+    },
+    {
+      "id": "weather_14",
+      "instruction": "帮我查一下海口明天的天气",
+      "city": "海口",
+      "day_offset": 1,
+      "fault": null
+    },
+    {
+      "id": "weather_15",
+      "instruction": "帮我查一下昆明后天的天气",
+      "city": "昆明",
+      "day_offset": 2,
+      "fault": null
+    },
+    {
+      "id": "weather_16",
+      "instruction": "帮我查一下长沙今天的天气",
+      "city": "长沙",
+      "day_offset": 0,
+      "fault": null
+    },
+    {
+      "id": "weather_17",
+      "instruction": "帮我查一下乌鲁木齐明天的天气",
+      "city": "乌鲁木齐",
+      "day_offset": 1,
+      "fault": null
+    },
+    {
+      "id": "weather_18",
+      "instruction": "帮我查一下沈阳后天的天气",
+      "city": "沈阳",
+      "day_offset": 2,
+      "fault": null
+    },
+    {
+      "id": "weather_19",
+      "instruction": "帮我查一下南宁今天的天气",
+      "city": "南宁",
+      "day_offset": 0,
+      "fault": null
+    },
+    {
+      "id": "weather_20",
+      "instruction": "帮我查一下青岛明天的天气",
+      "city": "青岛",
+      "day_offset": 1,
+      "fault": null
+    },
+    {
+      "id": "weather_21",
+      "instruction": "帮我查一下广州明天的天气",
+      "city": "广州",
+      "day_offset": 1,
+      "fault": "sem_city"
+    },
+    {
+      "id": "weather_22",
+      "instruction": "帮我查一下北京今天的天气",
+      "city": "北京",
+      "day_offset": 0,
+      "fault": "sem_city"
+    },
+    {
+      "id": "weather_23",
+      "instruction": "帮我查一下成都后天的天气",
+      "city": "成都",
+      "day_offset": 2,
+      "fault": "sem_range_temp"
+    },
+    {
+      "id": "weather_24",
+      "instruction": "帮我查一下杭州今天的天气",
+      "city": "杭州",
+      "day_offset": 0,
+      "fault": "sem_range_temp"
+    },
+    {
+      "id": "weather_25",
+      "instruction": "帮我查一下深圳明天的天气",
+      "city": "深圳",
+      "day_offset": 1,
+      "fault": "sem_inrange_temp"
+    },
+    {
+      "id": "weather_26",
+      "instruction": "帮我查一下海口后天的天气",
+      "city": "海口",
+      "day_offset": 2,
+      "fault": "sem_inrange_temp"
+    },
+    {
+      "id": "weather_27",
+      "instruction": "帮我查一下广州今天的天气",
+      "city": "广州",
+      "day_offset": 0,
+      "fault": "sem_condition_season"
+    },
+    {
+      "id": "weather_28",
+      "instruction": "帮我查一下厦门明天的天气",
+      "city": "厦门",
+      "day_offset": 1,
+      "fault": "sem_condition_season"
+    },
+    {
+      "id": "weather_29",
+      "instruction": "帮我查一下南宁今天的天气",
+      "city": "南宁",
+      "day_offset": 0,
+      "fault": "sem_condition_season"
+    },
+    {
+      "id": "weather_30",
+      "instruction": "帮我查一下南京后天的天气",
+      "city": "南京",
+      "day_offset": 2,
+      "fault": "schema_missing"
+    },
+    {
+      "id": "weather_31",
+      "instruction": "帮我查一下上海明天的天气",
+      "city": "上海",
+      "day_offset": 1,
+      "fault": "schema_missing"
+    },
+    {
+      "id": "weather_32",
+      "instruction": "帮我查一下武汉今天的天气",
+      "city": "武汉",
+      "day_offset": 0,
+      "fault": "stale_soft"
+    },
+    {
+      "id": "weather_33",
+      "instruction": "帮我查一下西安明天的天气",
+      "city": "西安",
+      "day_offset": 1,
+      "fault": "stale_hard"
+    },
+    {
+      "id": "weather_34",
+      "instruction": "帮我查一下哈尔滨今天的天气",
+      "city": "哈尔滨",
+      "day_offset": 0,
+      "fault": "http_429"
+    },
+    {
+      "id": "weather_35",
+      "instruction": "帮我查一下福州后天的天气",
+      "city": "福州",
+      "day_offset": 2,
+      "fault": "http_500"
+    },
+    {
+      "id": "weather_36",
+      "instruction": "帮我查一下青岛今天的天气",
+      "city": "青岛",
+      "day_offset": 0,
+      "fault": "timeout"
+    }
+  ],
+  "payment_manual": [
+    {
+      "id": "pay_01",
+      "instruction": "创建一笔沙箱订单，支付前查询状态",
+      "expect": "PENDING_OR_NOT_FOUND"
+    },
+    {
+      "id": "pay_02",
+      "instruction": "用沙箱账号付款后丢弃第一次已支付响应，再查同一笔订单",
+      "expect": "PAID_SAME_TRADE_NO"
+    },
+    {
+      "id": "pay_03",
+      "instruction": "用相同会话和业务订单重复进入支付流程",
+      "expect": "NO_SECOND_TRADE"
+    },
+    {
+      "id": "pay_04",
+      "instruction": "用同一订单查单核对金额后关闭待支付单或退款",
+      "expect": "CLOSED_OR_REFUNDED"
+    }
+  ]
+}

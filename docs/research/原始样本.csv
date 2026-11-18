@@ -1,0 +1,72 @@
+﻿编号,来源类型,来源,URL,日期,摘录或转述(≤60字),痛点类别,严重度,获取方式
+1,新闻(引黑猫投诉),中新网,https://www.chinanews.com/cj/2026/08-27/10685375.shtml,2026-08-27,“下单前AI助手明确说这是正品，结果是山寨扩容机。”,A 错误信息被当真(幻觉/过期数据),金钱,网页打开
+2,新闻(引黑猫投诉),中新网,https://www.chinanews.com/cj/2026/08-27/10685375.shtml,2026-08-27,“AI客服告诉我机票购买后两小时内可以免费退…最后被扣了25%手续费。”,A 错误信息被当真(幻觉/过期数据),金钱,网页打开
+3,新闻(引黑猫投诉),中新网,https://www.chinanews.com/cj/2026/08-27/10685375.shtml,2026-08-27,“AI客服明确承诺补偿我10张无门槛券，人工客服拒绝兑换！”,C AI承诺不兑现/人工不认账,信任,网页打开
+4,新闻(中消协案例),新华网,http://hn.xinhuanet.com/20260806/f73655ad5c46453898520311fbb53480/c.html,2026-08-06,AI客服称2.87万车款已含过户费，交易时被要求另付1000元,A 错误信息被当真(幻觉/过期数据),金钱,网页打开
+5,新闻,搜狐科技,https://www.sohu.com/a/1072906609_115565,2026,AI客服称电压力锅有蒸架蒸格，收货后没有，商家只愿赔20元,A 错误信息被当真(幻觉/过期数据),金钱,搜索引擎正文摘录(未单独打开)
+6,新闻(中消协案例),搜狐科技,https://www.sohu.com/a/1072906609_115565,2026,智能门锁故障一家三口被锁门外约50分钟，只等来AI客服，自费100元开锁,D 找不到人工/转人工被拦截,金钱,搜索引擎正文摘录(未单独打开)
+7,新闻,搜狐科技,https://www.sohu.com/a/1072906609_115565,2026,外卖用户称常联系不上人工，AI客服反复问细节、不给方案,D 找不到人工/转人工被拦截,时间,搜索引擎正文摘录(未单独打开)
+8,新闻实测,齐鲁壹点/网易,https://www.163.com/dy/article/KTFGJLB90530WJIN.html,2026-05-21,豆包称“席位已预留锁定…即可看到待支付订单”，12306里并无订单,B 假成功:声称已完成实际没做,时间,网页打开
+9,新闻(网友),齐鲁壹点/网易,https://www.163.com/dy/article/KTFGJLB90530WJIN.html,2026-05-21,网友@小宇:豆包推荐的川菜馆不存在，导航过去是一片空地,A 错误信息被当真(幻觉/过期数据),时间,网页打开
+10,新闻(网友),齐鲁壹点/网易,https://www.163.com/dy/article/KTFGJLB90530WJIN.html,2026-05-21,网友@阿琳:豆包推荐3家酒店，2家已停业，1家地址错误,A 错误信息被当真(幻觉/过期数据),时间,网页打开
+11,新闻,澎湃号(瑞安融媒),https://m.thepaper.cn/newsDetail_forward_33204502,2026-05-21,豆包称退票只扣5%，实际扣40%损失600元；承诺赔付后称“我是AI没法转账”,A 错误信息被当真(幻觉/过期数据),金钱,网页打开
+12,新闻,凤凰网(华商报),https://i.ifeng.com/c/8qJVmVWrAs2,2026-01-29,豆包编造业绩预告并给出伪造的交易所链接，用户据此买股亏4.8万余元,A 错误信息被当真(幻觉/过期数据),金钱,网页打开
+13,新闻实测,人民网,http://society.people.com.cn/n1/2026/1102/c428181-40825960.html,2026-11-02,记者多次要求转人工，外卖平台智能客服反复说“人工现在确实比较忙”,D 找不到人工/转人工被拦截,时间,网页打开
+14,新闻实测,人民网,http://society.people.com.cn/n1/2026/1102/c428181-40825960.html,2026-11-02,某出行平台以订单状态设门槛，没有订单的用户多次尝试仍无法转人工,D 找不到人工/转人工被拦截,时间,网页打开
+15,新闻(公开案例),人民网,http://society.people.com.cn/n1/2026/1102/c428181-40825960.html,2026-11-02,按AI指引取消家政订单改地址，原服务权益随之失效，平台只补偿20元,E AI越权执行不可逆操作,金钱,网页打开
+16,新闻,上观新闻/封面,https://m.jfdaily.com/wx/detail.do?id=945341,2025-07-12,用户指出DeepSeek错误后，AI编造“可获5000元奖励”并附领取流程,C AI承诺不兑现/人工不认账,信任,网页打开
+17,新闻,上观新闻/封面,https://m.jfdaily.com/wx/detail.do?id=945341,2025-07-12,用户按AI推荐去医院看病，“结果跑空了三次”,A 错误信息被当真(幻觉/过期数据),时间,网页打开
+18,新闻实测,上观新闻/封面,https://m.jfdaily.com/wx/detail.do?id=945341,2025-07-12,记者问DeepSeek人工客服电话，AI给出号码称来自官网，查证无效,A 错误信息被当真(幻觉/过期数据),时间,网页打开
+19,新闻(微博),开封日报/新浪,https://www.sina.cn/news/detail/5338742588178708.html,2026-09-02,外卖送错餐，AI客服承诺“24小时内全额退款”，人工称“AI客服的回复不具有效应”,C AI承诺不兑现/人工不认账,金钱,网页打开
+20,微博,博主@百车全说三刀,https://www.sina.cn/news/detail/5342012538880166.html,2026-09-11,问豆包两次都说10号候车室近北广场，结果要横穿北京西站,A 错误信息被当真(幻觉/过期数据),时间,网页打开
+21,新闻,新快报/新浪,https://finance.sina.cn/tech/2026-04-03/detail-inhteccp4019485.d.html?vt=4,2026-04-03,豆包称海珠湿地南北门都有地铁，用户指出后才改口南门没有,A 错误信息被当真(幻觉/过期数据),时间,网页打开
+22,新闻,新快报/新浪,https://finance.sina.cn/tech/2026-04-03/detail-inhteccp4019485.d.html?vt=4,2026-04-03,DeepSeek两次答错天河体育中心所属街道,A 错误信息被当真(幻觉/过期数据),时间,网页打开
+23,新闻实测,新快报/新浪,https://finance.sina.cn/tech/2026-04-03/detail-inhteccp4019485.d.html?vt=4,2026-04-03,元宝前两次答错球队最后主场进球者，反复提示后才答对,A 错误信息被当真(幻觉/过期数据),信任,网页打开
+24,消费投诉,消费保,https://www.xfb365.com/tousu/102612726,2026-11-16,豆包乱编联通通话时长与咪咕规则，还搞错订单倒计时、错配客服号码,A 错误信息被当真(幻觉/过期数据),信任,网页打开
+25,新闻(网友),观察者网/新浪,https://finance.sina.com.cn/stock/t/2026-01-31/doc-inhketnf6053161.shtml,2026-01-31,网友称问同样的税务问题，只有元宝给出错误计算答案,A 错误信息被当真(幻觉/过期数据),信任,网页打开
+26,新闻实测,山东财经网,https://www.sdenews.cn/html/2026/11/02/533397.shtml,2026-11-02,AI攻略推荐的早餐店不存在，推荐乘坐的香山索道已停运两年,A 错误信息被当真(幻觉/过期数据),时间,网页打开
+27,新闻,中新网/新浪,https://finance.sina.com.cn/jjxw/2026-06-16/doc-inicrcpr4385589.shtml,2026-06-16,问AI摄影展闭展时间，到北京才发现已提前闭展，往返高铁1000多元,A 错误信息被当真(幻觉/过期数据),金钱,网页打开
+28,新闻,中新网/新浪,https://finance.sina.com.cn/jjxw/2026-06-16/doc-inicrcpr4385589.shtml,2026-06-16,AI说茶博园免费，开车一小时到了被要求买票，两人花136元,A 错误信息被当真(幻觉/过期数据),金钱,网页打开
+29,新闻,中新网/新浪,https://finance.sina.com.cn/jjxw/2026-06-16/doc-inicrcpr4385589.shtml,2026-06-16,AI排的路线前门到颐和园只留半小时，实际地铁要1小时以上,A 错误信息被当真(幻觉/过期数据),时间,网页打开
+30,评论(中国消费者报),中国消费者报,https://zxb.ccn.com.cn/html/zxb/20260908/139548.html,2026-09-08,同意AI托管后，1000元的声卡被AI客服擅自降到400元卖出,E AI越权执行不可逆操作,金钱,网页打开
+31,评论(中国消费者报),中国消费者报,https://zxb.ccn.com.cn/html/zxb/20260908/139548.html,2026-09-08,骑手被罚50元，AI客服同意退款，人工称“智能客服回复仅供参考”,C AI承诺不兑现/人工不认账,金钱,网页打开
+32,新闻(判例),央视网/法治日报,https://news.cctv.com/2026/01/14/ARTILLvY3HvU3WSHBOvCD2P0260114.shtml,2026-01-14,AI给错高校校区信息，坚称存在并“承诺赔偿10万元”，法院认定承诺无效,C AI承诺不兑现/人工不认账,信任,网页打开
+33,新闻实测,新京报贝壳财经,https://m.bjnews.com.cn/detail/1765335074129085.html,2025-12-10,豆包手机执行“买天津到北京高铁票”，遍历车次数分钟后自动停止,F 任务中断/无路可走且无提示,时间,网页打开
+34,新闻实测,新京报贝壳财经,https://m.bjnews.com.cn/detail/1765335074129085.html,2025-12-10,让它播放某歌手传唱度最高的歌，实际播了歌单第一首，并非最高,B 假成功:声称已完成实际没做,信任,网页打开
+35,新闻(网友提问),每日人物/腾讯新闻,https://news.qq.com/rain/a/20260917A08GJD00,2026-09-17,网友问：“无法完成的任务它会拒绝执行并告诉用户原因吗？”,F 任务中断/无路可走且无提示,信任,网页打开
+36,新闻实测,AI新榜/腾讯新闻,https://news.qq.com/rain/a/20260115A078MD00,2026-01-15,千问推荐的首选商品售罄，待下单页找不到切换店铺入口，只能重新发起,F 任务中断/无路可走且无提示,时间,网页打开
+37,新闻实测,AI新榜/腾讯新闻,https://news.qq.com/rain/a/20260115A078MD00,2026-01-15,点千问推荐的“户外保暖产品”链接，跳到了京东一款蚕丝枕,B 假成功:声称已完成实际没做,信任,网页打开
+38,个人博客测评,墨玩,https://limowan.com/ai/ai_product_test/Agent%E7%82%B9%E5%A4%96%E5%8D%96%E7%9C%9F%E7%9A%84%E5%AE%9E%E7%94%A8%E5%90%97/,2026-02-11,Agent点外卖每步都要等响应，“和我手动下单比起来，效率差远了”,O 其他(效率体验),时间,网页打开
+39,黑猫投诉,黑猫投诉,https://tousu.sina.com.cn/complaint/view/17381848536,2025-04-12,微信支付显示失败、自动弹出支付宝再付，第二天发现重复扣款15.8元,P 支付状态不明/重复扣款(用户侧),金钱,搜索引擎正文摘录(未单独打开)
+40,黑猫投诉,黑猫投诉,https://tousu.sina.cn/complaint/view/17377404482,2024-11-11,支付两次显示失败，银行卡却被扣三笔，支付宝和银行客服都联系不上,P 支付状态不明/重复扣款(用户侧),金钱,搜索引擎正文摘录(未单独打开)
+41,黑猫投诉,黑猫投诉,https://tousu.sina.com.cn/complaint/view/17374087680,2024-06-28,App显示话费充值失败，微信却显示支付成功已扣款；客服是机器人,P 支付状态不明/重复扣款(用户侧),金钱,网页打开
+42,黑猫投诉,黑猫投诉,https://tousu.sina.cn/complaint/view/17394748745,2026-03-19,买手机时反复提示“支付失败请勿重复支付”，银行卡实扣13276.4元，商户称未支付,P 支付状态不明/重复扣款(用户侧),金钱,网页打开
+43,黑猫投诉,黑猫投诉,https://tousu.sina.cn/complaint/view/17377546751,2024-11-15,美团拼单付完款查不到订单，看不到是否成功，客服联系不上,P 支付状态不明/重复扣款(用户侧),金钱,网页打开
+44,黑猫投诉,黑猫投诉,https://tousu.sina.cn/complaint/view/17371447585,2024-02-11,同一订单重复支付2次只退了一次，7天没动静，订单也找不到,P 支付状态不明/重复扣款(用户侧),金钱,网页打开
+45,新闻(旧案),北京青年报/澎湃,https://www.thepaper.cn/newsDetail_forward_1895863,2017-12-07,美团故障时支付成功订单未生成，网友称“付了9次，就退我一次钱”,P 支付状态不明/重复扣款(用户侧),金钱,网页打开
+46,黑猫投诉,黑猫投诉,https://tousu.sina.cn/complaint/view/17389655905,2025-11-06,想退未使用的简历优化服务，在线客服转人工“也没有办法转接”,D 找不到人工/转人工被拦截,时间,网页打开
+47,新闻(英文),Elliott Report,https://www.elliottshow.com/p/consumer-alert-when-a-chatbot-makes,2025-03-31,Expedia聊天机器人称3519美元套餐24小时内可全额退，取消后只退一半,A 错误信息被当真(幻觉/过期数据),金钱,搜索引擎正文摘录(未单独打开)
+48,LinkedIn帖子,Lukas Naugle,https://www.linkedin.com/posts/lukasnaugle_a-3-second-chat-with-an-ai-bot-cost-me-500-activity-7349165092401205249-LBNT,2025-07,想延住一晚，Expedia虚拟客服3秒内取消整单，500美元不可退且无法撤销,E AI越权执行不可逆操作,金钱,搜索引擎正文摘录(未单独打开)
+49,Reddit帖子,r/travel,https://www.reddit.com/r/travel/comments/1ok4cq6/problem_cancelling_hotel_reservation_with/,2025-10,Priceline的Penny称已取消并退款，几天后订单仍有效，酒店照扣不退,B 假成功:声称已完成实际没做,金钱,搜索引擎正文摘录(未单独打开)
+50,新闻(英文),Washington Post,https://www.washingtonpost.com/technology/2025/02/07/openai-operator-ai-agent-chatgpt/,2025-02-07,只让Operator找便宜鸡蛋，它未经确认就下单并扣卡31.43美元,E AI越权执行不可逆操作,金钱,搜索引擎正文摘录(未单独打开)
+51,博客(引判例),camjontravel,https://camjontravel.com/stop-trusting-ai-travel-planning-chatgpt-ruining-vacations/,2025-12,加航客服机器人错称丧亲票价可事后申请，用户买1600加元机票后被拒,A 错误信息被当真(幻觉/过期数据),金钱,搜索引擎正文摘录(未单独打开)
+52,微信开放社区,微信开放社区,https://developers.weixin.qq.com/community/pay/doc/0004ca6955c510d2e9c4a367b61c00,2026-03,开发者称5秒内已正确应答，仍重复收到支付回调通知,R 开发者侧:重试导致重复扣款/回调重复,时间,搜索引擎正文摘录(未单独打开)
+53,GitHub issue,openai/openai-agents-js#1104,https://github.com/openai/openai-agents-js/issues/1104,2026-03-17,被拒绝的工具调用也标成completed，模型称两封邮件都已发出,X 开发者侧:工具失败被当成功,信任,GitHub API打开
+54,GitHub issue,anomalyco/opencode#16969,https://github.com/anomalyco/opencode/issues/16969,2026-03-11,MCP返回isError=true，界面状态却显示completed(成功),X 开发者侧:工具失败被当成功,信任,GitHub API打开
+55,GitHub issue,vercel/ai#13048,https://github.com/vercel/ai/issues/13048,2026-03-04,需审批的工具报错后，模型收到的是“{}”，于是幻觉为成功,X 开发者侧:工具失败被当成功,信任,GitHub API打开
+56,GitHub issue,can1357/oh-my-pi#11585,https://github.com/can1357/oh-my-pi/issues/11585,2026-09-10,isError在两条路径上丢失，失败的工具调用以成功身份到达模型,X 开发者侧:工具失败被当成功,信任,GitHub API打开
+57,GitHub issue,langchain-ai/deepagents#5938,https://github.com/langchain-ai/deepagents/issues/5938,2026-08-28,流式路径把失败的工具调用一律报告为completed,X 开发者侧:工具失败被当成功,信任,GitHub API打开
+58,GitHub issue,NVIDIA/NemoClaw#1452,https://github.com/NVIDIA/NemoClaw/issues/1452,2026-04-03,执行失败后Agent编造统计结果和文件路径，称“已保存到工作区”,X 开发者侧:工具失败被当成功,信任,网页打开
+59,GitHub issue,openclaw/openclaw#60497,https://github.com/openclaw/openclaw/issues/60497,2026-04-03,exec报command not found，Agent丢弃错误并输出伪造的创建成功,X 开发者侧:工具失败被当成功,信任,GitHub API打开
+60,GitHub issue,anthropics/claude-code#67477,https://github.com/anthropics/claude-code/issues/67477,2026-06-11,MCP调用静默失败，模型当作截图已拿到，继续写代码和下结论,X 开发者侧:工具失败被当成功,时间,网页打开
+61,GitHub issue,anthropics/claude-code#33559,https://github.com/anthropics/claude-code/issues/33559,2026-03-12,工具返回isError，自主模式下模型仍当作成功继续，造成静默数据丢失,X 开发者侧:工具失败被当成功,信任,GitHub API打开
+62,GitHub issue,langchain-ai/langchain#23365,https://github.com/langchain-ai/langchain/issues/23365,2024-06-24,Agent没有真正调用工具就给出回答(用户配置问题导致),X 开发者侧:工具失败被当成功,信任,GitHub API打开
+63,GitHub issue,sonichi/sutando#4499,https://github.com/sonichi/sutando/issues/4499,2026-09-20,语音Agent称“已为你下单凉鞋”，实际没调用任何购买工具,B 假成功:声称已完成实际没做,信任,GitHub API打开
+64,GitHub issue,openai/codex#47877,https://github.com/openai/codex/issues/47877,2026-09-24,send_message_to_thread返回成功，目标会话里却什么都没有,X 开发者侧:工具失败被当成功,时间,GitHub API打开
+65,GitHub issue,NVIDIA/NeMo-Agent-Toolkit#2362,https://github.com/NVIDIA/NeMo-Agent-Toolkit/issues/2362,2026-10-16,MCP工具失败被当普通输出返回，下游分不清失败和成功,X 开发者侧:工具失败被当成功,信任,GitHub API打开
+66,GitHub issue,etelyatn/UnrealCortex#226,https://github.com/etelyatn/UnrealCortex/issues/226,2026-11-13,读代码发现写入失败也返回true，错误从不设isError(作者未实测),X 开发者侧:工具失败被当成功,信任,GitHub API打开
+67,GitHub issue,stripe/ai#402,https://github.com/stripe/ai/issues/402,2026-05-03,Agent超时后把付款工具当新调用重试，生成新幂等键，扣了两次款,R 开发者侧:重试导致重复扣款/回调重复,金钱,网页打开
+68,GitHub issue,square/square-mcp-server#31,https://github.com/square/square-mcp-server/issues/31,2026-09-04,工具描述让模型每次换新幂等键；有人实测48次重试中6次重复退款,R 开发者侧:重试导致重复扣款/回调重复,金钱,网页打开
+69,GitHub issue,crewAIInc/crewAI#5802,https://github.com/crewAIInc/crewAI/issues/5802,2026-05-14,任务重试时已执行的付款/邮件工具会再执行一次，无去重保护,R 开发者侧:重试导致重复扣款/回调重复,金钱,GitHub API打开
+70,GitHub issue,ahmad-codex/purser#30,https://github.com/ahmad-codex/purser/issues/30,2026-11-02,提交后超时只报普通错误，钱可能已付，Agent重试会付两次；建议加unknown状态,R 开发者侧:重试导致重复扣款/回调重复,金钱,GitHub API打开
+71,GitHub issue,Calgooon/x402#7,https://github.com/Calgooon/x402/issues/7,2026-10-19,付费请求超时后自动重付最多3次，两次调用产生6笔付款,R 开发者侧:重试导致重复扣款/回调重复,金钱,GitHub API打开

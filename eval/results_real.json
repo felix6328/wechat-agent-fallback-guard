@@ -1,0 +1,69 @@
+{
+  "captured_at": "2026-11-17T00:47:25+08:00",
+  "seeds": [
+    42,
+    7,
+    2026
+  ],
+  "captured": 29,
+  "expected": 29,
+  "network_requests": 2,
+  "cache_hits": 56,
+  "network_fetch": {
+    "n": 1,
+    "p50_ms": 6005.9,
+    "p95_ms": 6005.9
+  },
+  "variants": {
+    "hybrid": {
+      "samples": 108,
+      "clean_samples": 60,
+      "harm": 0,
+      "false_alarms": 0,
+      "failed": 0,
+      "decision_p50_ms": 5243.356228433549,
+      "decision_p95_ms": 14449.92059376091,
+      "model_failures": 0,
+      "cost_cny": 0.20001
+    },
+    "naive": {
+      "samples": 108,
+      "clean_samples": 60,
+      "harm": 33,
+      "false_alarms": 0,
+      "failed": 6,
+      "decision_p50_ms": 0.00029243528842926025,
+      "decision_p95_ms": 300.0005273614079,
+      "model_failures": 0,
+      "cost_cny": 0.0
+    },
+    "rules_strict": {
+      "samples": 108,
+      "clean_samples": 60,
+      "harm": 15,
+      "false_alarms": 0,
+      "failed": 0,
+      "decision_p50_ms": 0.0002905726432800293,
+      "decision_p95_ms": 300.0006656628102,
+      "model_failures": 0,
+      "cost_cny": 0.0
+    }
+  },
+  "capture_errors": [],
+  "payment": {
+    "verified": true,
+    "orders": 1,
+    "duplicate_trade_orders": 0,
+    "closed_orders": 1,
+    "refunded_orders": 1,
+    "trade_numbers": {
+      "wxg583a9f0aaf2826139722b0fcc7159386a371": [
+        "2026111722001498880510744505"
+      ]
+    },
+    "closed_trade_numbers": {
+      "wxg6dd0de6a318162490f47926dee9b770c041c": "2026111722001498880510747608"
+    }
+  },
+  "amap_request_cap": 120
+}

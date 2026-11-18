@@ -52,9 +52,9 @@ class RuleVerdict:
         return [f for f in self.flags if f.severity == "soft"]
 
 
-def _age_hours(s: str) -> Optional[float]:
+def _age_hours(s: str, now: datetime = W.NOW) -> Optional[float]:
     try:
-        return (W.NOW - datetime.fromisoformat(s)).total_seconds() / 3600
+        return (now - datetime.fromisoformat(s)).total_seconds() / 3600
     except Exception:
         return None
 
@@ -111,7 +111,7 @@ def _check(r: ToolResult, request_ctx: dict, version: str = "v1") -> RuleVerdict
         if request_ctx.get("date") and d["date"] != request_ctx["date"]:
             add("hard", "context_mismatch", f"请求日期 {request_ctx['date']}，返回 {d['date']}")
         if op == "weather.query":
-            age = _age_hours(d["updated_at"])
+            age = _age_hours(d["updated_at"], r.observed_at or W.NOW)
             if age is None:
                 add("hard", "schema_error", "updated_at 无法解析")
             elif age > 24:

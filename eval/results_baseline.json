@@ -1,0 +1,220 @@
+{
+ "testset": "data/testset.json",
+ "seeds": [
+  42,
+  7,
+  2026
+ ],
+ "n_cases": 58,
+ "summaries": {
+  "A": {
+   "name": "A 无检测（SDK 式盲重试）",
+   "recall": 0.0,
+   "precision": null,
+   "f1": 0.0,
+   "fpr": 0.0,
+   "fallback_success": 0.20512820512820512,
+   "clean_pass": 1.0,
+   "task_success": 0.46551724137931033,
+   "harm_rate": 0.46551724137931033,
+   "corrected_rate": 0.0,
+   "latency_p50": 434.3766246836955,
+   "latency_p95": 6900.0,
+   "cost_per_1k": 0.0,
+   "llm_calls_per_case": 0.0,
+   "confusion": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 72,
+    "tn": 192,
+    "precision": null,
+    "recall": 0.0,
+    "f1": 0.0,
+    "fpr": 0.0
+   },
+   "ci95": {
+    "recall": [
+     0.0,
+     0.0
+    ],
+    "precision": [
+     null,
+     null
+    ],
+    "fpr": [
+     0.0,
+     0.0
+    ],
+    "fallback_success": [
+     0.08571428571428572,
+     0.35139109697933224
+    ],
+    "clean_pass": [
+     1.0,
+     1.0
+    ],
+    "harm_rate": [
+     0.3275862068965517,
+     0.603448275862069
+    ],
+    "latency_p50": [
+     316.3118891641735,
+     887.6882653105675
+    ],
+    "cost_per_1k": [
+     0.0,
+     0.0
+    ]
+   },
+   "seed_std": {
+    "recall": 0.0,
+    "precision": null,
+    "fpr": 0.0,
+    "fallback_success": 0.0,
+    "clean_pass": 0.0,
+    "harm_rate": 0.0,
+    "latency_p50": 13.307048646505597,
+    "cost_per_1k": 0.0
+   },
+   "seeds": [
+    7,
+    42,
+    2026
+   ],
+   "n_rows": 174,
+   "n_cases": 58,
+   "harm_cases": 81,
+   "dup_charge": 9,
+   "dup_order": 6,
+   "cache_hits": 0,
+   "escalations": 0,
+   "llm_calls": 0,
+   "llm_failed": 0,
+   "cost_total": 0.0,
+   "outcomes": {
+    "ok": 162,
+    "degraded": 0,
+    "fallback": 0,
+    "human": 0,
+    "failed": 12
+   }
+  },
+  "B2": {
+   "name": "B2 仅规则·严格",
+   "recall": 0.6666666666666666,
+   "precision": 0.7272727272727273,
+   "f1": 0.6956521739130435,
+   "fpr": 0.08571428571428572,
+   "fallback_success": 0.7692307692307693,
+   "clean_pass": 0.7894736842105263,
+   "task_success": 0.7758620689655172,
+   "harm_rate": 0.13793103448275862,
+   "corrected_rate": 0.0,
+   "latency_p50": 450.6746304120527,
+   "latency_p95": 6981.64254392639,
+   "cost_per_1k": 0.0,
+   "llm_calls_per_case": 0.0,
+   "confusion": {
+    "tp": 48,
+    "fp": 18,
+    "fn": 24,
+    "tn": 192,
+    "precision": 0.7272727272727273,
+    "recall": 0.6666666666666666,
+    "f1": 0.6956521739130435,
+    "fpr": 0.08571428571428572
+   },
+   "ci95": {
+    "recall": [
+     0.46153846153846156,
+     0.8636363636363636
+    ],
+    "precision": [
+     0.5217391304347826,
+     0.9230769230769231
+    ],
+    "fpr": [
+     0.024375725900116146,
+     0.1774193548387097
+    ],
+    "fallback_success": [
+     0.6285548172757475,
+     0.9
+    ],
+    "clean_pass": [
+     0.5714285714285714,
+     0.95
+    ],
+    "harm_rate": [
+     0.05172413793103448,
+     0.2413793103448276
+    ],
+    "latency_p50": [
+     381.0699131453018,
+     648.806873103057
+    ],
+    "cost_per_1k": [
+     0.0,
+     0.0
+    ]
+   },
+   "seed_std": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "fpr": 0.0,
+    "fallback_success": 0.0,
+    "clean_pass": 0.0,
+    "harm_rate": 0.0,
+    "latency_p50": 24.545600320984114,
+    "cost_per_1k": 0.0
+   },
+   "seeds": [
+    7,
+    42,
+    2026
+   ],
+   "n_rows": 174,
+   "n_cases": 58,
+   "harm_cases": 24,
+   "dup_charge": 0,
+   "dup_order": 0,
+   "cache_hits": 0,
+   "escalations": 0,
+   "llm_calls": 0,
+   "llm_failed": 0,
+   "cost_total": 0.0,
+   "outcomes": {
+    "ok": 99,
+    "degraded": 9,
+    "fallback": 54,
+    "human": 12,
+    "failed": 0
+   }
+  }
+ },
+ "prices": {
+  "Qwen/Qwen2.5-7B-Instruct": {
+   "in": 0.0,
+   "out": 0.0,
+   "note": "价格页标注 (Free)"
+  },
+  "deepseek-ai/DeepSeek-V3.2": {
+   "in": 4.0,
+   "out": 6.0,
+   "cache": 0.4,
+   "note": "价格页标价"
+  },
+  "deepseek-ai/DeepSeek-V4-Flash": {
+   "in": 3.0,
+   "out": 9.0,
+   "cache": 0.3,
+   "note": "分时计价：0–2 点 / 8–24 点 ¥3 / ¥9；2–8 点 ¥1.5 / ¥4.5。本项目调用都在白天，按白天价估算"
+  },
+  "zai-org/GLM-4.5-Air": {
+   "in": 1.0,
+   "out": 6.0,
+   "note": "价格页标价；只用于生成独立测试集，不做质检"
+  }
+ },
+ "generated_at": "2026-11-17 00:29:32 +0800"
+}

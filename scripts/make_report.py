@@ -6,6 +6,15 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
+
+# v1 轨迹里的旧文案提到「微信支付」，与当前实现（支付宝沙箱，fbagent/agent.py 第 469 行）不一致。
+# 轨迹文件保留原样作为历史记录，只在渲染演示页时统一成当前文案。
+LEGACY_REPLY = {"结果会通过微信支付通知你": "支付结果会通过支付平台通知你"}
+def legacy(text: str) -> str:
+    for old, new in LEGACY_REPLY.items():
+        text = text.replace(old, new)
+    return text
+
 ROOT = Path(__file__).resolve().parent.parent
 SHOW_KEYS = ["A", "B2", "H32", "T32C"]
 rows = [json.loads(l) for l in open(ROOT / "eval" / "traces.jsonl", encoding="utf-8")]
@@ -57,7 +66,7 @@ for cid, c in cases.items():
         if r["harm"]["duplicate_order"]:
             harm.append("重复下单")
         parts.append(f'<div class="col {cls}"><b>{e(names.get(name, name))}</b><br><span class="tag" style="background:{color[r["outcome"]]}">{r["outcome"]}</span> '
-                     f'{r["latency_ms"]:.0f}ms {"｜⚠ " + "、".join(harm) if harm else ""}<br><code>{acts}</code><br>💬 {e(r["reply"])}</div>')
+                     f'{r["latency_ms"]:.0f}ms {"｜⚠ " + "、".join(harm) if harm else ""}<br><code>{acts}</code><br>💬 {e(legacy(r["reply"]))}</div>')
     parts.append("</div></div>")
 parts.append("""<script>const h=decodeURIComponent(location.hash.slice(1));if(h){const f=document.getElementById('f');f.value=h;f.onchange();}</script>""")
 (ROOT / "app" / "report.html").write_text("\n".join(parts), encoding="utf-8")
